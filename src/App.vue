@@ -86,11 +86,9 @@
   import Sidebar from '@/components/sidebar/Sidebar.vue';
   import CheckersInfoVideo from '@/components/CheckersInfoVideo.vue';
   import CheckersFooter from '@/components/CheckersFooter.vue';
-
   import {EventBus} from "./components/EventBus";
   import {EVENTS} from "./components/Constants";
   import '../node_modules/normalize.css/normalize.css';
-
 
   @Component({
     components: {
@@ -169,18 +167,7 @@
 
   .page-header {
     height: 550px;
-    background: url('./assets/left-hero-pic.png') left center no-repeat, url('./assets/right-hero-pic.png') right center no-repeat, url('./assets/header-bg.jpg') center center repeat;
     position: relative;
-
-    @media @medium-res-laptop {
-      background: url('./assets/left-hero-pic.png') -20% center no-repeat, url('./assets/right-hero-pic.png') 120% center no-repeat, url('./assets/header-bg.jpg') center center repeat;
-    }
-
-    @media @smart-phone {
-      background: url('./assets/mobile-hero-pic.jpg') top left no-repeat;
-      background-size: cover;
-      height: 64vh;
-    }
   }
 
   .hero-pics {
@@ -229,7 +216,7 @@
 
   .page-footer {
     height: 550px;
-    background-image: url('./assets/hero-footer-right.png'), url('./assets/hero-footer.jpg');
+
     background-position: top right, top center;
     background-repeat: no-repeat, no-repeat;
     background-size: contain, cover;
@@ -237,7 +224,6 @@
 
     @media @smart-phone {
       height: unset;
-      background-image: url('./assets/mobile-footer-item.png'), url('./assets/mobile-bg.jpg');
       background-position: 0px 20px, top center;
       background-repeat: no-repeat, repeat;
       background-size: contain, contain;

@@ -76,7 +76,7 @@
   @import '../css/variables';
 
   .info-video {
-    background: url('../assets/light-grey-texture.jpg') repeat;
+
 
     &-heading {
       text-align: center;
