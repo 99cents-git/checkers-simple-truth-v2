@@ -10,23 +10,22 @@
         <div class="breadcrumbs-crumbs h-100 d-flex align-items-center justify-content-center">
           <ul class="d-flex flex-row">
             <li><a href="https://www.checkers.co.za">Home</a></li>
-            <li>Meal Kits</li>
+            <li><a href="https://www.checkers.co.za/live-better.html">Live Better</a></li>
+            <li>Simple Truth</li>
           </ul>
         </div>
       </div>
     </div>
     <div class="page-header">
       <div class="page-header-text w-100 d-flex align-items-center justify-content-center">
-        <img src="./assets/ready-to-chef-header-text.svg" class="img-fluid" alt="">
+        <img src="./assets/simple-truth-logo.svg" class="img-fluid" alt="">
       </div>
     </div>
     <div class="promise d-flex align-items-center">
       <ul class="width-constrain d-flex justify-content-between flex-column flex-lg-row w-100 pb-3 pb-lg-0">
-        <li class="promise-label">OUR QUALITY PROMISE</li>
-        <li class="promise-item"><span class="d-none d-xl-inline-block">LOCALLY SOURCED,&nbsp;</span>FRESH INGREDIENTS
-        </li>
-        <li class="promise-item">NO WASTAGE</li>
-        <li class="promise-item">SEASONAL INGREDIENTS</li>
+        <li class="promise-item">NO ARTIFICIAL COLOURS OR FLAVOURS</li>
+        <li class="promise-item">NO ARTIFICIAL SWEETENERS</li>
+        <li class="promise-item">NO ADDED MSG</li>
       </ul>
     </div>
     <div class="intro">
@@ -168,6 +167,7 @@
   .page-header {
     height: 550px;
     position: relative;
+    background: url('./assets/hero-left.png') left center no-repeat, url('./assets/hero-right.png') right center no-repeat, url('./assets/hero-tile.jpg') center center repeat;
   }
 
   .hero-pics {
@@ -199,7 +199,7 @@
     }
 
     img {
-      width: 50%;
+      height: 80%;
       max-width: 950px;
       transition: transform 1s;
 
