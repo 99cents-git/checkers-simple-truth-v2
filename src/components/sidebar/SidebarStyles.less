@@ -1,0 +1,193 @@
+@import '../../css/variables';
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8vw;
+  height: 8vw;
+  margin-top: -4vw;
+  margin-left: -4vw;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-top-color: #333;
+  animation: spinner .6s linear infinite;
+}
+
+.sidebar {
+  position: fixed;
+  width: 35vw;
+  top: 0;
+  left: -35vw;
+  height: 100vh;
+  background: white;
+  z-index: 100;
+  opacity: 1;
+  transition: all @anim-speed;
+  box-shadow: -5px 0 20px transparent;
+
+  &.is-right {
+    left: unset;
+    right: -35vw;
+
+    &.visible {
+      left: unset;
+      right: 0;
+    }
+  }
+
+  @media @uhd {
+    font-size: 140%;
+  }
+
+  @media @smart-phone {
+    width: 100vw;
+    left: -100vw;
+
+    &.is-right {
+      left: unset;
+      right: -100vw;
+
+      &.visible {
+        left: unset;
+        right: 0;
+      }
+    }
+  }
+
+  &.visible {
+    left: 0;
+    transition: all @anim-speed;
+    box-shadow: -5px 0 20px fade(black, 50%);
+  }
+
+  &-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 99;
+
+    @media @smart-phone {
+
+    }
+  }
+
+  &-video {
+    line-height: 0;
+  }
+
+  &-tcs {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  &-content {
+    .cover-parent;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+
+    .is-portrait & {
+      flex-direction: column;
+    }
+  }
+
+  &-image {
+
+    height: 19.7vw;
+    background: @grey-ed;
+    position: relative;
+
+    @media @smart-phone {
+      height: 56.25vw;
+    }
+
+    &-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: center center;
+      background-size: cover;
+    }
+
+  }
+
+  &-flash {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    z-index: 99;
+  }
+
+  &-price {
+    position: absolute;
+    bottom: 7%;
+    left: 4%;
+    background: linear-gradient(180deg, #333333 0%, #282828 100%);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    font-weight: 900;
+    color: @orange-e5;
+    border-radius: 40px;
+    z-index: 99;
+
+    &-rands {
+      font-size: 2.8rem;
+      line-height: 2.8rem;
+
+      @media @smart-phone {
+        font-size: 2rem;
+      }
+    }
+
+    &-cents {
+      font-size: 1.8rem;
+      line-height: 2rem;
+
+      @media @smart-phone {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &-details {
+    flex: 1;
+    overflow: auto;
+    text-align: center;
+
+    &-entry {
+      margin-bottom: 1rem;
+      .header {
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .product {
+    font-size: 1.8rem;
+    line-height: 1.7rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media @uhd {
+      font-size: 2.4rem;
+      line-height: 2.4rem;
+    }
+  }
+
+  .video-button {
+
+  }
+
+}

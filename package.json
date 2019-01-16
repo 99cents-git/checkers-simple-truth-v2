@@ -1,0 +1,35 @@
+{
+  "name": "checkers-framework",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.3.28",
+    "@types/modernizr": "^3.5.2",
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "gulp": "^4.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-string-replace": "^1.1.2",
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.1",
+    "vue": "^2.5.17",
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^7.0.0",
+    "vue-router": "^3.0.1",
+    "vue-youtube-embed": "^2.2.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-plugin-typescript": "^3.2.0",
+    "@vue/cli-service": "^3.2.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "typescript": "^3.0.0",
+    "vue-template-compiler": "^2.5.17",
+    "yarn": "^1.13.0"
+  }
+}
