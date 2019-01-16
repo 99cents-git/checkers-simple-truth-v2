@@ -3,23 +3,15 @@
     <div class="checkers-card-spacer" v-if="cardConfig.cardProportion" :style="{paddingTop: cardConfig.cardProportion + '%'}"></div>
     <div class="checkers-card-content d-flex flex-column">
       <div class="checkers-card-image" v-if="cardConfig.hasImage">
-        <div class="checkers-card-price px-3 py-2 px-lg-4 py-lg-3 d-flex" v-if="cardConfig.hasPrice">
-          <div class="checkers-card-price-rands pr-1" v-html="cardConfig.priceRands"></div>
-          <div class="checkers-card-price-cents" v-html="cardConfig.priceCents"></div>
-        </div>
-        <div class="checkers-card-flash">
-          <img :src="'https://s3.amazonaws.com/checkershosting/mealkits/flash-'+cardConfig.flash+'.svg'" alt="">
-        </div>
         <div class="checkers-card-image-wrapper">
-          <img :src="'https://s3.amazonaws.com/checkershosting/mealkits/kits/'+cardConfig.imagePath" class="img-fluid" alt="">
+          <img :src="'./static/'+cardConfig.imagePath" class="img-fluid" alt="">
         </div>
       </div>
       <div class="checkers-card-footer d-flex flex-column p-4">
         <h2 class="checkers-card-header-text" v-html="cardConfig.headerText"></h2>
-        <div class="checkers-card-subheader-text mb-3" v-html="cardConfig.subheaderText"></div>
-        <div class="checkers-card-description mb-3" v-html="cardConfig.descriptionText"></div>
-        <div class="checkers-card-cta mt-auto" v-if="cardConfig.hasCTA">
-          <ActionButton buttonType="text" buttonAction="show-info" buttonLabel="What's in the box?" :buttonId="cardConfig.id"></ActionButton>
+        <div class="checkers-card-subheader-text" v-html="cardConfig.subheaderText"></div>
+        <div class="checkers-card-cta" v-if="cardConfig.hasCTA">
+          <ActionButton buttonType="text" buttonAction="show-info" buttonLabel="View full range" :buttonId="cardConfig.id"></ActionButton>
         </div>
       </div>
     </div>
@@ -69,10 +61,15 @@
       }
     }
 
+    &-header-text {
+      margin: 0;
+    }
+
 
     &-subheader-text {
       font-size: 1.3rem;
       line-height: 1.4rem;
+      padding: 0 20px;
     }
 
     &-description {
@@ -136,6 +133,8 @@
     &-footer {
       flex: 27;
       text-align: center;
+      display: flex;
+      justify-content: space-between;
 
       @media @smart-phone {
         flex: 40;

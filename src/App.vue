@@ -22,20 +22,29 @@
       </div>
     </div>
     <div class="promise d-flex align-items-center">
-      <ul class="width-constrain d-flex justify-content-between flex-column flex-lg-row w-100 pb-3 pb-lg-0">
+      <ul class="width-constrain d-flex justify-content-around flex-column flex-lg-row w-100 pb-3 pb-lg-0">
         <li class="promise-item">NO ARTIFICIAL COLOURS OR FLAVOURS</li>
         <li class="promise-item">NO ARTIFICIAL SWEETENERS</li>
         <li class="promise-item">NO ADDED MSG</li>
       </ul>
     </div>
     <div class="intro">
-      <CheckersInfoVideo>
-        <template slot="heading">GET YOUR PERFECTLY PORTIONED MEAL KITS IN-STORE NOW!</template>
-        <template slot="subheading">With Ready to Chef Meal Kits, you can cook gourmet meals at home with confidence.
-          With over 20 new easy to follow recipes with all the main ingredients you need, your meal times will always be
-          effortless and delicious!
-        </template>
-      </CheckersInfoVideo>
+      <div class="py-4 pt-lg-5 pb-lg-4">
+        <div class="width-constrain">
+          <div class="mb-3">
+            <h1>
+              EXPLORE THE SIMPLE TRUTH RANGE
+            </h1>
+          </div>
+          <div class="info-subheading mb-4">
+            Our Simple Truth range is designed to give you a variety of healthier choices to complement your lifestyle and it includes no artificial colours, flavours or sweeteners and no added MSG. Explore our gluten free, organic and eco-friendly products – and so much more – below.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-filters d-flex flex-wrap width-constrain">
+        <div v-for="filter in filterCategories" :key="filter.id" class="filter-item" v-html="filter.label">
+        </div>
     </div>
     <router-view/>
     <div class="page-footer">
@@ -115,6 +124,10 @@
       this.$store.commit('closeDrawer');
       document.body.classList.remove('no-scroll');
     }
+
+    get filterCategories() {
+      return this.$store.state.filterCategories
+    }
   }
 </script>
 <style>
@@ -122,7 +135,7 @@
   @import './css/overrides.less';
 </style>
 <style lang="less">
-  @import './css/variables';
+  @import './css/variables.less';
 
   html {
 
@@ -143,6 +156,7 @@
   }
 
   #app {
+
   }
 
   .sidebar-cover {
@@ -168,26 +182,21 @@
     height: 550px;
     position: relative;
     background: url('./assets/hero-left.png') left center no-repeat, url('./assets/hero-right.png') right center no-repeat, url('./assets/hero-tile.jpg') center center repeat;
-  }
 
-  .hero-pics {
-    overflow: hidden;
-
-    &-left {
-      @media @medium-res-laptop {
-        transform: translateX(-10%);
-      }
-      @media @smart-phone {
-        transform: translateX(-25%)
-      }
+    @media @desktop {
+      background-position: left center, right center, center center;
     }
-    &-right {
-      @media @medium-res-laptop {
-        transform: translateX(10%);
-      }
-      @media @smart-phone {
-        transform: translateX(25%)
-      }
+
+    @media @high-res-laptop {
+      background-position: -10vw center, 127% center, center center;
+    }
+
+    @media @medium-res-laptop {
+      background-position: -40% center, 140% center, center center;
+    }
+
+    @media @smart-phone {
+
     }
   }
 
@@ -319,7 +328,8 @@
   .promise {
     height: 80px;
     background: @grey-333;
-    color: white;
+    font-weight: 900;
+    color: @green-light;
     font-size: 1.2rem;
     white-space: nowrap;
     cursor: default;
@@ -459,6 +469,50 @@
     }
   }
 
+  .info {
+    &-heading {
+      text-align: center;
+      font-weight: 900;
+      font-size: 1.8rem;
+      color: #333;
+      line-height: 1.8rem;
+    }
+
+    &-subheading {
+      text-align: center;
+      max-width: @narrow-content-width;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+  }
+
+  .content-filters {
+    max-width: 1440px;
+    margin: 0 auto;
+    background: url('assets/filter-bg.jpg') repeat;
+    padding: 30px 0;
+    justify-content: center;
+
+    .filter-item {
+      background: fade(#3A6500, 30);
+      height: 70px;
+      width: 20%;
+      border-radius: 35px;
+      color: white;
+      text-transform: uppercase;
+      margin: 1rem;
+      display: flex;
+      padding: 0 30px;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.4rem;
+    }
+
+  }
+
   ul {
 
     li {
@@ -505,11 +559,11 @@
     color: @grey-333 !important;
     line-height: 1.8rem !important;
     padding: 0 !important;
-    margin: 0 0 0.5rem 0 !important;
     text-align: center;
   }
 
   p:last-of-type {
     margin-bottom: 0;
   }
+
 </style>

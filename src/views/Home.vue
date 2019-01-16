@@ -1,6 +1,5 @@
 <template>
   <div class="home width-constrain py-5">
-    <h1 class="mb-4">EXPLORE THIS WEEK’S TASTY MENU</h1>
     <div class="card-grid" >
       <CheckersCard v-for="card in homeCards" :key="card.id" v-bind:cardConfig="card"/>
     </div>
