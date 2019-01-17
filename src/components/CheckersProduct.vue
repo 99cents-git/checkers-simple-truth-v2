@@ -1,17 +1,18 @@
 <template>
-  <div @click="triggerClick" class="checkers-card">
-    <div class="checkers-card-spacer" v-if="cardConfig.cardProportion" :style="{paddingTop: cardConfig.cardProportion + '%'}"></div>
-    <div class="checkers-card-content d-flex flex-column">
-      <div class="checkers-card-image" v-if="cardConfig.hasImage">
-        <div class="checkers-card-image-wrapper">
-          <img :src="'./static/'+cardConfig.imagePath" class="img-fluid" alt="">
+  <div @click="triggerClick" class="checkers-product">
+    <div class="checkers-product-spacer" v-if="productConfig.cardProportion" :style="{paddingTop: productConfig.cardProportion + '%'}"></div>
+    <div class="checkers-product-content d-flex flex-column">
+
+      <div class="checkers-product-image" v-if="productConfig.imagePath">
+        <div class="checkers-product-image-wrapper">
+          <img :src="'./static/'+productConfig.imagePath" class="img-fluid" alt="">
         </div>
       </div>
-      <div class="checkers-card-footer d-flex flex-column p-4">
-        <h2 class="checkers-card-header-text" v-html="cardConfig.headerText"></h2>
-        <div class="checkers-card-subheader-text" v-html="cardConfig.subheaderText"></div>
-        <div class="checkers-card-cta" v-if="cardConfig.hasCTA">
-          <ActionButton buttonType="text" buttonAction="show-info" buttonLabel="View full range" :buttonId="cardConfig.id"></ActionButton>
+      <div class="checkers-product-footer d-flex flex-column p-4">
+        <h2 class="checkers-product-header-text" v-html="productConfig.productName"></h2>
+        <div class="checkers-product-subheader-text" v-html="productConfig.description"></div>
+        <div class="checkers-product-cta">
+          <ActionButton buttonType="text" buttonAction="show-info" buttonLabel="Learn More" :buttonId="productConfig.id"></ActionButton>
         </div>
       </div>
     </div>
@@ -19,25 +20,25 @@
 </template>
 <script lang="ts">
   /// <reference path="../interfaces.ts" />
-  import {Component, Emit, Prop, Vue} from 'vue-property-decorator';
+  import {Component, Prop, Vue} from 'vue-property-decorator';
   import ActionButton from '@/components/ActionButton.vue';
   import {EventBus} from "./EventBus";
 
   @Component({
     components: {ActionButton}
   })
-  export default class CheckersCard extends Vue {
-    @Prop() cardConfig!: ProductCard;
+  export default class CheckersProduct extends Vue {
+    @Prop() productConfig!: any;
 
     triggerClick():void {
-      EventBus.$emit('button-clicked', {buttonAction: 'show-info', card: this.cardConfig});
+      EventBus.$emit('button-clicked', {buttonAction: 'show-info', card: this.productConfig});
     }
   }
 </script>
 <style lang="less">
   @import '../css/variables';
 
-  .checkers-card {
+  .checkers-product {
     position: relative;
     background: @grey-ed;
     transform: scale(1);

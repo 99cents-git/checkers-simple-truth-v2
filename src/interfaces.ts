@@ -18,3 +18,14 @@ interface HomeCard {
   flash?: string
   sidebarHeading?:string
 }
+
+interface ProductCard {
+  id: number
+  cardProportion: number
+  imagePath?:string
+  flash?: string
+  tags: string[]
+  productName: string
+  description: string
+  nutrionalInfo: string[]
+}

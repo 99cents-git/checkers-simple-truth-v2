@@ -93,6 +93,18 @@ export default new Vuex.Store({
         subheaderText: `Our range of affordable cleaning products is eco-friendly, cruelty-free and made with biodegradable materials.`
       }
     ],
+    productCards: [
+      {
+        id: 1,
+        cardProportion: 78.4,
+        imagePath: 'buttermilk_rusks.png',
+        flash: 'new',
+        tags: ['vegetarian', 'sweet-snacks', 'dairy-free'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      }
+    ],
     sideDrawerOpen: false,
     sideDrawerId: 1,
     videoId: 'pga8mV8LJnE'

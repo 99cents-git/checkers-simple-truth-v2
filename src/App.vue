@@ -139,7 +139,7 @@
     }
 
     public toggleItem(_event:MouseEvent):void {
-      console.log(_event.target.data('id'));
+
     }
   }
 </script>
