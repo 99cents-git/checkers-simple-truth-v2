@@ -17,12 +17,15 @@
       </div>
     </div>
     <div class="page-header">
-      <div class="page-header-text w-100 d-flex align-items-center justify-content-center">
-        <img src="./assets/simple-truth-logo.svg" class="img-fluid" alt="">
+      <div class="page-header-text w-100 ">
+        <picture>
+          <source media="(max-width: 640px)" srcset="./assets/simple-truth-logo-m.svg">
+          <img src="./assets/simple-truth-logo.svg">
+        </picture>
       </div>
     </div>
     <div class="promise d-flex align-items-center">
-      <ul class="width-constrain d-flex justify-content-around flex-column flex-lg-row w-100 pb-3 pb-lg-0">
+      <ul class="width-constrain d-flex justify-content-around flex-column flex-lg-row w-100 py-3 py-sm-0 pb-lg-0">
         <li class="promise-item">NO ARTIFICIAL COLOURS OR FLAVOURS</li>
         <li class="promise-item">NO ARTIFICIAL SWEETENERS</li>
         <li class="promise-item">NO ADDED MSG</li>
@@ -54,7 +57,7 @@
         <div class="page-footer-header">
           <img src="./assets/stand-to-win.svg" alt="" class="img-fluid">
         </div>
-        <div class="page-footer-details pt-3 pt-lg-0">
+        <div class="page-footer-details">
           Competition ends 10 February 2019.
         </div>
         <div class="page-footer-buttons d-flex align-items-center flex-column">
@@ -176,6 +179,8 @@
     height: 550px;
     position: relative;
     background: url('./assets/hero-left.png') left center no-repeat, url('./assets/hero-right.png') right center no-repeat, url('./assets/hero-tile.jpg') center center repeat;
+    display: flex;
+    align-items: center;
 
     @media @desktop {
       background-position: left center, right center, center center;
@@ -190,16 +195,18 @@
     }
 
     @media @smart-phone {
-
+      background: url('./assets/hero-left-m.png') left top no-repeat, url('./assets/hero-right-m.png') right center no-repeat, url('./assets/hero-tile.jpg') center center repeat;
+      background-size: contain, 25%, cover;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
   .page-header-text {
-    .cover-parent;
 
-    @media @smart-phone {
-      height: 50%;
-    }
+    text-align: center;
 
     img {
       height: 80%;
@@ -240,11 +247,12 @@
 
     @media @smart-phone {
       height: unset;
-      background-position: 0px 20px, top center;
-      background-repeat: no-repeat, repeat;
-      background-size: contain, contain;
-      padding: 38vh 5vw 7vh 5vw;
+      padding: 42vh 5vw 20vh 5vw;
       text-align: center;
+      background-image: url('./assets/footer-top-m.jpg'), url('./assets/footer-bottom-m.jpg'), url('./assets/footer-tile-m.jpg');
+      background-position: top, bottom, center;
+      background-repeat: no-repeat, no-repeat, repeat;
+      background-size: contain, contain, contain;
     }
 
     &-content {
@@ -256,6 +264,7 @@
       justify-content: space-between;
 
       @media @smart-phone {
+        height: 33vh;
         width: 100%;
       }
     }
@@ -347,7 +356,7 @@
     cursor: default;
 
     @media @tablets {
-      height: 60px;
+      height: auto;
     }
 
     @media @smart-phone {
@@ -367,7 +376,6 @@
       @media @smart-phone {
         padding: 0 0 0.5rem 2rem;
         line-height: 26px;
-        margin-left: 20vw;
       }
 
       &:before {
@@ -505,7 +513,6 @@
 
     .filter-wrapper {
       justify-content: center;
-
     }
 
     .filter-item {
@@ -515,7 +522,7 @@
       border-radius: 35px;
       color: white;
       text-transform: uppercase;
-      margin: 1rem;
+      margin: 0.5rem;
       display: flex;
       padding: 0 30px;
       align-items: center;
@@ -524,6 +531,10 @@
       font-weight: bold;
       text-align: center;
       line-height: 1.4rem;
+
+      @media @smart-phone {
+        width: 100%;
+      }
     }
 
   }

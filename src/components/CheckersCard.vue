@@ -83,6 +83,11 @@
       @media @low-res-laptop {
         font-size: 1rem;
       }
+
+      @media @smart-phone {
+        padding: 0;
+        margin: 1rem 0;
+      }
     }
 
     &-description {
