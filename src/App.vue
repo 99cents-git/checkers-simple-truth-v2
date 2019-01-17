@@ -36,19 +36,24 @@
         <div class="width-constrain">
           <div class="mb-3">
             <h1>
-              EXPLORE THE SIMPLE TRUTH RANGE
-            </h1>
+              EXPLORE THE SIMPLE TRUTH RANGE </h1>
           </div>
           <div class="info-subheading mb-4">
-            Our Simple Truth range is designed to give you a variety of healthier choices to complement your lifestyle and it includes no artificial colours, flavours or sweeteners and no added MSG. Explore our gluten free, organic and eco-friendly products – and so much more – below.
+            Our Simple Truth range is designed to give you a variety of healthier choices to complement your lifestyle
+            and it includes no artificial colours, flavours or sweeteners and no added MSG. Explore our gluten free,
+            organic and eco-friendly products – and so much more – below.
           </div>
         </div>
       </div>
     </div>
     <div class="content-filters ">
-      <div class="filter-wrapper width-constrain d-flex flex-wrap">
-        <div v-for="filter in filterCategories" :key="filter.id" class="filter-item" v-html="filter.label">
-        </div>
+      <div class="filter-wrapper width-constrain flex-wrap d-none d-sm-flex">
+        <div v-for="filter in filterCategories" :key="filter.id" class="filter-item" v-html="filter.label"></div>
+      </div>
+      <div class="filter-wrapper width-constrain flex-wrap d-block d-sm-none">
+        <div class="select-label">BROWSE BY Dietary REQUIREMENT</div>
+        <multiselect v-model="value" placeholder="Add a filter" label="name" track-by="code" :options="options" :multiple="true" :searchable="false" @input="updateFilters">
+        </multiselect>
       </div>
     </div>
     <router-view/>
@@ -61,7 +66,7 @@
           Competition ends 10 February 2019.
         </div>
         <div class="page-footer-buttons d-flex align-items-center flex-column">
-          <ActionButton buttonLabel="Share photo now" buttonType="text"  buttonLink="https://www.checkers.co.za/specials/newsletter.html"></ActionButton>
+          <ActionButton buttonLabel="Share photo now" buttonType="text" buttonLink="https://www.checkers.co.za/specials/newsletter.html"></ActionButton>
           <span class="page-footer-tcs mt-3"><a class="link-text" href="http://www.termsconditions.co.za/index.aspx" target="_blank">T&Cs apply</a></span>
         </div>
       </div>
@@ -89,22 +94,25 @@
   import CheckersHeader from '@/components/CheckersHeader.vue';
   import ActionButton from '@/components/ActionButton.vue';
   import Sidebar from '@/components/sidebar/Sidebar.vue';
-  import CheckersInfoVideo from '@/components/CheckersInfoVideo.vue';
   import CheckersFooter from '@/components/CheckersFooter.vue';
   import {EventBus} from "./components/EventBus";
   import {EVENTS} from "./components/Constants";
+  import Multiselect from 'vue-multiselect';
   import '../node_modules/normalize.css/normalize.css';
 
   @Component({
     components: {
       CheckersHeader,
-      CheckersInfoVideo,
       CheckersFooter,
       ActionButton,
-      Sidebar
+      Sidebar,
+      Multiselect
     },
   })
   export default class App extends Vue {
+
+    public value: any = [];
+    public options: any[] = this.filterCategories;
 
     public mounted(): void {
       EventBus.$on('button-clicked', (a: any) => {
@@ -125,12 +133,19 @@
     get filterCategories() {
       return this.$store.state.filterCategories
     }
+
+    public updateFilters(_thing:any):void {
+      console.log(this.value);
+    }
   }
 </script>
 <style>
   @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
   @import './css/overrides.less';
 </style>
+
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
+
 <style lang="less">
   @import './css/variables.less';
 
@@ -139,21 +154,18 @@
     @media @high-res-laptop {
       font-size: 14.5px !important;
     }
+
     @media @desktop {
       font-size: 17px;
     }
+
     @media @smart-phone {
       font-size: 13px !important;
     }
-
   }
 
   body {
     font-family: 'Roboto', sans-serif !important;
-  }
-
-  #app {
-
   }
 
   .sidebar-cover {
@@ -511,6 +523,10 @@
     background: url('assets/filter-bg.jpg') repeat;
     padding: 30px 0;
 
+    .multiselect__tag {
+      background: @dark-green;
+    }
+
     .filter-wrapper {
       justify-content: center;
     }
@@ -537,6 +553,15 @@
       }
     }
 
+    .select-label {
+      font-weight: 900 !important;
+      font-size: 1.8rem !important;
+      color: white !important;
+      line-height: 1.9rem !important;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
   }
 
   ul {

@@ -3,12 +3,16 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import VueYouTubeEmbed from 'vue-youtube-embed'
+import Multiselect from 'vue-multiselect'
+
+// register globally
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.config.productionTip = false;
 Vue.use(VueYouTubeEmbed);
+Vue.component('multiselect', Multiselect);
 
 const eventBus = new Vue();
 

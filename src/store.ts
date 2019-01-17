@@ -6,19 +6,19 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     filterCategories: [
-      {id: 1, label: 'Gluten Free'},
-      {id: 2, label: 'Vegan'},
-      {id: 3, label: 'NO ADDED SUGAR/<br>Reduced Sugar'},
-      {id: 4, label: 'raw'},
-      {id: 5, label: 'ORGANIC'},
-      {id: 6, label: 'VEGETARIAN'},
-      {id: 7, label: 'DAIRY FREE'},
-      {id: 8, label: 'HIGH PROTEIN'}
+      {code: 1, label: 'Gluten Free', name: 'gluten-free'},
+      {code: 2, label: 'Vegan', name: 'vegan'},
+      {code: 3, label: 'NO ADDED SUGAR/<br>Reduced Sugar', name: 'sugar-conscious'},
+      {code: 4, label: 'raw', name: 'raw'},
+      {code: 5, label: 'ORGANIC', name: 'organic'},
+      {code: 6, label: 'VEGETARIAN', name: 'vegetarian'},
+      {code: 7, label: 'DAIRY FREE', name: 'dairy-free'},
+      {code: 8, label: 'HIGH PROTEIN', name: 'high-protein'}
     ],
     homeCards: [
       {
         id: 1,
-        cardProportion: 88.6,
+        cardProportion: 85,
         hasImage: true,
         hasCTA: true,
         imagePath: `meals.jpg`,
@@ -27,7 +27,7 @@ export default new Vuex.Store({
       },
       {
         id: 2,
-        cardProportion: 88.6,
+        cardProportion: 85,
         hasImage: true,
         hasCTA: true,
         imagePath: `breakfast.jpg`,
@@ -36,7 +36,7 @@ export default new Vuex.Store({
       },
       {
         id: 3,
-        cardProportion: 88.6,
+        cardProportion: 85,
         hasCTA: true,
         hasImage: true,
         imagePath: `essentials.jpg`,
@@ -45,7 +45,7 @@ export default new Vuex.Store({
       },
       {
         id: 4,
-        cardProportion: 88.6,
+        cardProportion: 85,
         hasImage: true,
         hasCTA: true,
         imagePath: `snacks.jpg`,
@@ -55,7 +55,7 @@ export default new Vuex.Store({
     ,
       {
         id: 5,
-        cardProportion: 88.6,
+        cardProportion: 85,
         hasImage: true,
         hasCTA: true,
         imagePath: `sweet-snacks.jpg`,
@@ -65,7 +65,7 @@ export default new Vuex.Store({
     ,
       {
         id: 6,
-        cardProportion: 88.6,
+        cardProportion: 85,
         hasImage: true,
         hasCTA: true,
         imagePath: `drinks.jpg`,
@@ -75,7 +75,7 @@ export default new Vuex.Store({
     ,
       {
         id: 7,
-        cardProportion: 88.6,
+        cardProportion: 85,
         hasImage: true,
         hasCTA: true,
         imagePath: `condiments.jpg`,
@@ -85,7 +85,7 @@ export default new Vuex.Store({
     ,
       {
         id: 8,
-        cardProportion: 88.6,
+        cardProportion: 85,
         hasImage: true,
         hasCTA: true,
         imagePath: `cleaning.jpg`,

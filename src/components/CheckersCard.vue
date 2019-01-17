@@ -64,8 +64,8 @@
 
     &-header-text {
       margin: 0;
+      color: @dark-green !important;
     }
-
 
     &-subheader-text {
       font-size: 1.1rem;
