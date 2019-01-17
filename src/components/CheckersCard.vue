@@ -43,6 +43,7 @@
     transform: scale(1);
     transition: all 0.5s;
     cursor: pointer;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.05);
 
     &:hover {
       transform: scale(1.02);
@@ -67,9 +68,21 @@
 
 
     &-subheader-text {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       line-height: 1.4rem;
       padding: 0 20px;
+
+      @media @high-res-laptop {
+        font-size: 1.1rem;
+      }
+
+      @media @medium-res-laptop {
+        font-size: 1rem;
+      }
+
+      @media @low-res-laptop {
+        font-size: 1rem;
+      }
     }
 
     &-description {

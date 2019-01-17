@@ -42,30 +42,24 @@
         </div>
       </div>
     </div>
-    <div class="content-filters d-flex flex-wrap width-constrain">
+    <div class="content-filters ">
+      <div class="filter-wrapper width-constrain d-flex flex-wrap">
         <div v-for="filter in filterCategories" :key="filter.id" class="filter-item" v-html="filter.label">
         </div>
+      </div>
     </div>
     <router-view/>
     <div class="page-footer">
-      <div class="page-footer-content d-flex flex-column justify-content-between">
+      <div class="page-footer-content">
         <div class="page-footer-header">
-          Stand to Win 1 of 5 Meal Kit Vouchers!
+          <img src="./assets/stand-to-win.svg" alt="" class="img-fluid">
         </div>
         <div class="page-footer-details pt-3 pt-lg-0">
-          <p>Share a photo of yourself with a Meal Kit you purchased, use
-            <strong><a class="link-text" href="https://twitter.com/search?q=%23ReadyToChef&src=typd" target="_blank">#ReadyToChef</a></strong>
-            and tag Checkers SA and your foodie obsessed friend. You’ll then be entered for a chance to win 1 of 5 Meal
-            Kit vouchers worth R250 each. </p>
-          <p><strong>Entries open on
-            <br class="d-block d-lg-none"/><a class="link-text" href="https://www.facebook.com/checkerssa" target="_blank">Facebook</a>,
-            <a class="link-text" href="https://twitter.com/CheckersSA" target="_blank">Twitter</a> and
-            <a class="link-text" href="https://www.instagram.com/checkers_sa/?hl=en" target="_blank">Instagram</a>!</strong>
-          </p>
-          <p>Competition ends 10 February 2019.</p>
+          Competition ends 10 February 2019.
         </div>
-        <div class="page-footer-buttons d-flex align-items-center flex-column flex-lg-row">
-          <span class="page-footer-tcs"><a class="link-text" href="http://www.termsconditions.co.za/index.aspx" target="_blank">T&Cs apply</a></span>
+        <div class="page-footer-buttons d-flex align-items-center flex-column">
+          <ActionButton buttonLabel="Share photo now" buttonType="text"  buttonLink="https://www.checkers.co.za/specials/newsletter.html"></ActionButton>
+          <span class="page-footer-tcs mt-3"><a class="link-text" href="http://www.termsconditions.co.za/index.aspx" target="_blank">T&Cs apply</a></span>
         </div>
       </div>
     </div>
@@ -225,11 +219,24 @@
 
   .page-footer {
     height: 550px;
+    background-image: url('./assets/footer-right.jpg'), url('./assets/footer-left.jpg'), url('./assets/footer-tile.jpg');
+    background-position: top right, top left, center center;
+    background-repeat: no-repeat, no-repeat, repeat;
+    display: flex;
+    justify-content: center;
+    padding: 70px 200px 100px;
 
-    background-position: top right, top center;
-    background-repeat: no-repeat, no-repeat;
-    background-size: contain, cover;
-    padding: 7vh 0 7vh 48vw;
+    @media @high-res-laptop {
+      background-position: 150% 0%, -10% 10%, center;
+    }
+
+    @media @medium-res-laptop {
+      background-position: 220% 0%, -20% 10%, center;
+    }
+
+    @media @low-res-laptop {
+      background-position: 150% 0%, -10% 10%, center;
+    }
 
     @media @smart-phone {
       height: unset;
@@ -241,8 +248,12 @@
     }
 
     &-content {
-      width: 36vw;
+      max-width: 700px;
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
 
       @media @smart-phone {
         width: 100%;
@@ -265,6 +276,7 @@
 
     &-details {
       font-size: 1.3rem;
+      font-weight: bold;
 
       @media @smart-phone {
         font-size: 1.2rem;
@@ -487,11 +499,14 @@
   }
 
   .content-filters {
-    max-width: 1440px;
     margin: 0 auto;
     background: url('assets/filter-bg.jpg') repeat;
     padding: 30px 0;
-    justify-content: center;
+
+    .filter-wrapper {
+      justify-content: center;
+
+    }
 
     .filter-item {
       background: fade(#3A6500, 30);

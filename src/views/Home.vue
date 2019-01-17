@@ -1,6 +1,6 @@
 <template>
-  <div class="home width-constrain py-5">
-    <div class="card-grid" >
+  <div class="home py-5">
+    <div class="card-grid  width-constrain" >
       <CheckersCard v-for="card in homeCards" :key="card.id" v-bind:cardConfig="card"/>
     </div>
   </div>
@@ -33,7 +33,7 @@
   }
 
   .home {
-
+    background: url('../assets/main-bg.jpg') repeat;
   }
 
   .card-grid {

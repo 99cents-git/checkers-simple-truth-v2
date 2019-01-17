@@ -36,7 +36,7 @@
 
   .action-button {
     display: inline-block;
-    background: linear-gradient(180deg, #E5A339 0%, #E5981C 100%);
+    background: linear-gradient(180deg, #9EC44D 0%, #7AB629 100%);
     cursor: pointer;
     position: relative;
     white-space: nowrap;
@@ -68,7 +68,7 @@
     &:after {
       content: " ";
       .cover-parent;
-      background: linear-gradient(180deg, #E8940E 0%, #CD8209 100%);
+      background: linear-gradient(180deg, #aaC44D 0%, #7AB629 100%);
       transform: translateY(100%);
       pointer-events: none;
       transition: all @anim-speed;
