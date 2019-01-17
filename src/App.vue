@@ -48,7 +48,7 @@
     </div>
     <div class="content-filters ">
       <div class="filter-wrapper width-constrain flex-wrap d-none d-sm-flex">
-        <div v-for="filter in filterCategories" :key="filter.id" class="filter-item" v-html="filter.label"></div>
+        <div v-for="filter in filterCategories" :key="filter.code" class="filter-item" :class="{selected: filter.selected}" v-html="filter.label" @click="toggleItem" :data-id="filter.code"></div>
       </div>
       <div class="filter-wrapper width-constrain flex-wrap d-block d-sm-none">
         <div class="select-label">BROWSE BY Dietary REQUIREMENT</div>
@@ -136,6 +136,10 @@
 
     public updateFilters(_thing:any):void {
       console.log(this.value);
+    }
+
+    public toggleItem(_event:MouseEvent):void {
+      console.log(_event.target.data('id'));
     }
   }
 </script>
@@ -547,6 +551,10 @@
       font-weight: bold;
       text-align: center;
       line-height: 1.4rem;
+
+      &.selected {
+        background: white;
+      }
 
       @media @smart-phone {
         width: 100%;

@@ -6,14 +6,14 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     filterCategories: [
-      {code: 1, label: 'Gluten Free', name: 'gluten-free'},
-      {code: 2, label: 'Vegan', name: 'vegan'},
-      {code: 3, label: 'NO ADDED SUGAR/<br>Reduced Sugar', name: 'sugar-conscious'},
-      {code: 4, label: 'raw', name: 'raw'},
-      {code: 5, label: 'ORGANIC', name: 'organic'},
-      {code: 6, label: 'VEGETARIAN', name: 'vegetarian'},
-      {code: 7, label: 'DAIRY FREE', name: 'dairy-free'},
-      {code: 8, label: 'HIGH PROTEIN', name: 'high-protein'}
+      {code: 1, label: 'Gluten Free', name: 'gluten-free', selected: false},
+      {code: 2, label: 'Vegan', name: 'vegan', selected: false},
+      {code: 3, label: 'NO ADDED SUGAR/<br>Reduced Sugar', name: 'sugar-conscious', selected: false},
+      {code: 4, label: 'raw', name: 'raw', selected: false},
+      {code: 5, label: 'ORGANIC', name: 'organic', selected: false},
+      {code: 6, label: 'VEGETARIAN', name: 'vegetarian', selected: false},
+      {code: 7, label: 'DAIRY FREE', name: 'dairy-free', selected: false},
+      {code: 8, label: 'HIGH PROTEIN', name: 'high-protein', selected: false}
     ],
     homeCards: [
       {
