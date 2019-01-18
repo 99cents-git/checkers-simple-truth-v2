@@ -46,16 +46,6 @@
         </div>
       </div>
     </div>
-    <div class="content-filters ">
-      <div class="filter-wrapper width-constrain flex-wrap d-none d-sm-flex">
-        <div v-for="filter in filterCategories" :key="filter.code" class="filter-item" :class="{selected: filter.selected}" v-html="filter.label" @click="toggleItem" :data-id="filter.code"></div>
-      </div>
-      <div class="filter-wrapper width-constrain flex-wrap d-block d-sm-none">
-        <div class="select-label">BROWSE BY Dietary REQUIREMENT</div>
-        <multiselect v-model="value" placeholder="Add a filter" label="name" track-by="code" :options="options" :multiple="true" :searchable="false" @input="updateFilters">
-        </multiselect>
-      </div>
-    </div>
     <router-view/>
     <div class="page-footer">
       <div class="page-footer-content">
@@ -111,9 +101,6 @@
   })
   export default class App extends Vue {
 
-    public value: any = [];
-    public options: any[] = this.filterCategories;
-
     public mounted(): void {
       EventBus.$on('button-clicked', (a: any) => {
         switch (a.buttonAction) {
@@ -130,13 +117,7 @@
       document.body.classList.remove('no-scroll');
     }
 
-    get filterCategories() {
-      return this.$store.state.filterCategories
-    }
 
-    public updateFilters(_thing:any):void {
-      console.log(this.value);
-    }
 
     public toggleItem(_event:MouseEvent):void {
 
@@ -170,6 +151,11 @@
 
   body {
     font-family: 'Roboto', sans-serif !important;
+  }
+
+  .img-max-100 {
+    max-width: 100%;
+    height: auto;
   }
 
   .sidebar-cover {
