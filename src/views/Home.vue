@@ -1,6 +1,11 @@
 <template>
-  <div class="home py-5">
-    <div class="card-grid  width-constrain" >
+  <div class="home">
+    <div class="content-filters">
+      <div class="filter-wrapper width-constrain flex-wrap d-none d-sm-flex">
+        <div v-for="filter in dietFilters" :key="filter.id" class="filter-item" v-html="filter.label" @click="toggleItem" data-target="1"></div>
+      </div>
+    </div>
+    <div class="card-grid  width-constrain  py-5" >
       <CheckersCard v-for="card in homeCards" :key="card.id" v-bind:cardConfig="card"/>
     </div>
   </div>
@@ -21,6 +26,12 @@
     get homeCards() {
       return this.$store.state.homeCards
     }
+
+
+    get dietFilters() {
+      return this.$store.state.dietFilters
+    }
+
   }
 </script>
 <style scoped lang="less">

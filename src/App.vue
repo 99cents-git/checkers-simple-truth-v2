@@ -15,9 +15,10 @@
           </ul>
         </div>
       </div>
+
     </div>
     <div class="page-header">
-      <div class="page-header-text w-100 ">
+      <div class="page-header-text w-100">
         <picture>
           <source media="(max-width: 640px)" srcset="./assets/simple-truth-logo-m.svg">
           <img src="./assets/simple-truth-logo.svg">
@@ -116,8 +117,6 @@
       this.$store.commit('closeDrawer');
       document.body.classList.remove('no-scroll');
     }
-
-
 
     public toggleItem(_event:MouseEvent):void {
 
