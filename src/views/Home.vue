@@ -2,7 +2,7 @@
   <div class="home">
     <div class="content-filters">
       <div class="filter-wrapper width-constrain flex-wrap d-none d-sm-flex">
-        <div v-for="filter in dietFilters" :key="filter.id" class="filter-item" v-html="filter.label" @click="toggleItem" data-target="1"></div>
+        <div v-for="filter in dietFilters" :key="filter.id" class="filter-item" v-html="filter.label" @click="handleClick(filter.code)" data-target="1"></div>
       </div>
     </div>
     <div class="card-grid  width-constrain  py-5" >
@@ -27,9 +27,24 @@
       return this.$store.state.homeCards
     }
 
-
     get dietFilters() {
       return this.$store.state.dietFilters
+    }
+
+    toggleItem (diet_Id) {
+      this.$router.push(
+        { 
+          path: '/filtered/diet/$diet_Id'
+        })   
+    }
+
+     handleClick (diet_Id) {
+      alert(diet_Id);
+      this.$router.push(
+        { 
+          path: `/filtered/diet/${diet_Id}`
+        }) 
+      
     }
 
   }

@@ -15,6 +15,15 @@ export default new Router({
       path: '/filtered',
       name: 'products',
       component: Products
+    },{
+      path: '/filtered/diet/:diet_Id',
+      name: 'products',
+      component: Products
+    },{
+      path: '/filtered/category/:cat_Id',
+      name: 'products',
+      component: Products
     }
   ]
 })
+
