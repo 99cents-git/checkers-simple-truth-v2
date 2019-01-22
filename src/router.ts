@@ -17,11 +17,11 @@ export default new Router({
       component: Products
     },{
       path: '/filtered/diet/:diet_Id',
-      name: 'products',
+      name: 'diet',
       component: Products
     },{
       path: '/filtered/category/:cat_Id',
-      name: 'products',
+      name: 'category',
       component: Products
     }
   ]

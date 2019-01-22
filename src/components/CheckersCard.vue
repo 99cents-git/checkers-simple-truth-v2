@@ -37,7 +37,7 @@
 
 
 categoryClick (cat_Id):void {
-      alert(cat_Id);
+      console.log(cat_Id);
       this.$router.push(
         { 
           path: `/filtered/category/${cat_Id}`

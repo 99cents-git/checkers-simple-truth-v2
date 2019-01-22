@@ -10,18 +10,15 @@
           <youtube :videoId="currentVideoId" player-width="100%" :player-height="videoHeight"></youtube>
         </div>
         <div class="sidebar-image spinner" v-if="!videoVisible">
-          <div class="sidebar-price px-3 py-2 px-lg-4 py-lg-3 d-flex">
-            <div class="sidebar-price-rands pr-1" v-html="currentSidebarItem.priceRands"></div>
-            <div class="sidebar-price-cents" v-html="currentSidebarItem.priceCents"></div>
-          </div>
+          
           <div class="sidebar-flash">
             <img :src="'https://s3.amazonaws.com/checkershosting/mealkits/flash-'+currentSidebarItem.flash+'.svg'" alt="">
           </div>
-          <div class="sidebar-image-wrapper" v-bind:style="{'background-image': 'url(https://s3.amazonaws.com/checkershosting/mealkits/kits/'+currentSidebarItem.packshot+')'}"></div>
+          <div class="sidebar-image-wrapper" v-bind:style="{'background-image': 'url(./static/'+currentSidebarItem.imagePath+')'}"></div>
         </div>
         <div class="sidebar-details p-4 p-lg-5 d-flex flex-column">
-          <div class="product mb-4" v-html="currentSidebarItem.sidebarHeading"></div>
-          <div class="details mb-3" v-html="currentSidebarItem.descriptionText"></div>
+          <div class="product mb-4" v-html="currentSidebarItem.productName"></div>
+          <div class="details mb-3" v-html="currentSidebarItem.description"></div>
           <div class="sidebar-details-entry">
             <div class="header">
               INGREDIENTS INSIDE THE BOX:

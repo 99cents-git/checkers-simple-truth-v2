@@ -39,7 +39,7 @@
     }
 
      dietaryClick (diet_Id) {
-      alert(diet_Id);
+      console.log(diet_Id);
       this.$router.push(
         { 
           path: `/filtered/diet/${diet_Id}`

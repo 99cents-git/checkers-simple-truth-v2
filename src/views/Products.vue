@@ -73,7 +73,6 @@
     this.categoryValue.push({name:this.$route.params.cat_Id});
     this.updateFilters(categoryValue);
     }
-    
     }
 
     public updateFilters(_thing: any): void {

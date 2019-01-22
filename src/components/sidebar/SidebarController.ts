@@ -30,6 +30,7 @@ export default class SidebarController extends Vue {
     EventBus.$on(EVENTS.UIEVENTS.SIDEBAR_TOGGLE, (_emitterEvent: any) => {
       this.isOpen ? this.closeSidebar(_emitterEvent) : this.openSidebar(_emitterEvent)
     });
+    
   }
 
   public showVideo(): void {
@@ -39,6 +40,7 @@ export default class SidebarController extends Vue {
   private openSidebar(_event: any): void {
     this.isOpen = true;
     document.body.classList.add('no-scroll')
+    
 
   }
 
