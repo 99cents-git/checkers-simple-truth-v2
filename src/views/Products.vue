@@ -35,9 +35,13 @@
   @Component({
     components: {CheckersProduct, isotope}
   })
+  
   export default class ProductsController extends Vue {
 
+
+
     public filterValue: any = [];
+    //public filterValue: any = [{lable: '',name: ''}];
     public categoryValue: any = [];
     public cFilters: any[] = this.categoryFilters;
     public dFilters: any[] = this.dietFilters;
@@ -60,8 +64,9 @@
 
     }
 
-    public mounted(): void {
-
+    public mounted(filterValue){
+    this.filterValue.push({name:this.$route.params.diet_Id});
+    this.updateFilters(filterValue);
     }
 
     public updateFilters(_thing: any): void {
@@ -123,6 +128,9 @@
     get allProducts() {
       return this.$store.state.productCards
     }
+
+
+
   }
 </script>
 <style lang="less">
