@@ -1,4 +1,5 @@
 <template>
+
   <div @click="triggerClick" class="checkers-product" :class="productConfig.tags">
     <div class="checkers-product-spacer" v-if="productConfig.cardProportion" :style="{paddingTop: productConfig.cardProportion + '%'}"></div>
     <div class="checkers-product-content d-flex flex-column">
@@ -14,6 +15,7 @@
       </div>
     </div>
   </div>
+
 </template>
 <script lang="ts">
   /// <reference path="../interfaces.ts" />

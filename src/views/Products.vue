@@ -1,18 +1,28 @@
 <template>
   <div class="page products-page">
     <div class="content-filters ">
-      <div class="filter-wrapper width-constrain">
+
+<div class="width-constrain">
+      <div class="row">
+  <div class="col"><div class="filter-wrapper width-constrain">
         <div class="select-label">BROWSE BY Dietary REQUIREMENT</div>
         <multiselect v-model="filterValue" placeholder="Add a filter" label="name" track-by="code" :options="dFilters" :multiple="true" :searchable="false" @input="updateFilters"></multiselect>
-      </div>
-      <div class="filter-wrapper width-constrain">
+      </div></div>
+  <div class="col">  <div class="filter-wrapper width-constrain">
         <div class="select-label">BROWSE BY Category</div>
         <multiselect v-model="categoryValue" placeholder="Add a filter" label="name" track-by="code" :options="cFilters" :multiple="true" :searchable="false" @input="updateFilters"></multiselect>
-      </div>
+      </div></div>
+</div>
+</div>
+
+      
+    
     </div>
+    <div class="width-constrain">
     <isotope :options='isoOptions' :list="filteredProducts">
       <CheckersProduct v-for="card in filteredProducts" :key="card.id" v-bind:productConfig="card"/>
     </isotope>
+    </div>
     <div class="clear"></div>
   </div>
 </template>
@@ -118,6 +128,12 @@
   .products-page {
     background: url('../assets/main-bg.jpg') repeat;
   }
+
+  .width-constrain {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+}
 
   .clear {
     clear: both;
