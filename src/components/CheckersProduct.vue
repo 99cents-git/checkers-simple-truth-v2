@@ -29,9 +29,12 @@
   export default class CheckersProduct extends Vue {
     @Prop() productConfig!: any;
 
-
     triggerClick():void {
       console.log('remove routing');
+        this.$router.push(
+        { 
+          path: '/filtered'
+        })
       EventBus.$emit('button-clicked', {buttonAction: 'show-info', card: this.productConfig});
     }
   }

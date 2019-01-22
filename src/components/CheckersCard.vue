@@ -31,11 +31,6 @@
   export default class CheckersCard extends Vue {
     @Prop() cardConfig!: ProductCard;
 
-    triggerClick():void {
-      EventBus.$emit('button-clicked', {buttonAction: 'show-info', card: this.cardConfig});
-    }
-
-
 categoryClick (cat_Id):void {
       console.log(cat_Id);
       this.$router.push(
