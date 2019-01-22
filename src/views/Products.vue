@@ -64,9 +64,16 @@
 
     }
 
-    public mounted(filterValue){
+    public mounted(filterValue, categoryValue){
+    if(this.$route.params.diet_Id) {
     this.filterValue.push({name:this.$route.params.diet_Id});
     this.updateFilters(filterValue);
+    }
+    else if(this.$route.params.cat_Id){
+    this.categoryValue.push({name:this.$route.params.cat_Id});
+    this.updateFilters(categoryValue);
+    }
+    
     }
 
     public updateFilters(_thing: any): void {

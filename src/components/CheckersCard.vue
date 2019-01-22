@@ -1,5 +1,5 @@
 <template>
-  <div @click="triggerClick" class="checkers-card">
+  <div @click="categoryClick(cardConfig.category)" class="checkers-card">
     <div class="checkers-card-spacer" v-if="cardConfig.cardProportion" :style="{paddingTop: cardConfig.cardProportion + '%'}"></div>
     <div class="checkers-card-content d-flex flex-column">
       <div class="checkers-card-image" v-if="cardConfig.hasImage">
@@ -23,8 +23,10 @@
   import ActionButton from '@/components/ActionButton.vue';
   import {EventBus} from "./EventBus";
 
+  import isotope from 'vueisotope';
+
   @Component({
-    components: {ActionButton}
+    components: {ActionButton, isotope}
   })
   export default class CheckersCard extends Vue {
     @Prop() cardConfig!: ProductCard;
@@ -32,6 +34,18 @@
     triggerClick():void {
       EventBus.$emit('button-clicked', {buttonAction: 'show-info', card: this.cardConfig});
     }
+
+
+categoryClick (cat_Id):void {
+      alert(cat_Id);
+      this.$router.push(
+        { 
+          path: `/filtered/category/${cat_Id}`
+        }) 
+      
+    }
+  
+  
   }
 </script>
 <style lang="less">

@@ -2,7 +2,7 @@
   <div class="home">
     <div class="content-filters">
       <div class="filter-wrapper width-constrain flex-wrap d-none d-sm-flex">
-        <div v-for="filter in dietFilters" :key="filter.id" class="filter-item" v-html="filter.label" @click="handleClick(filter.name)" data-target="1"></div>
+        <div v-for="filter in dietFilters" :key="filter.id" class="filter-item" v-html="filter.label" @click="dietaryClick(filter.name)" data-target="1"></div>
       </div>
     </div>
     <div class="card-grid  width-constrain  py-5" >
@@ -38,7 +38,7 @@
         })   
     }
 
-     handleClick (diet_Id) {
+     dietaryClick (diet_Id) {
       alert(diet_Id);
       this.$router.push(
         { 
