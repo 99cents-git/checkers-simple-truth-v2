@@ -65,8 +65,9 @@
     }
 
     public updateFilters(_thing: any): void {
-      console.log(this.filterValue);
-      console.log(this.categoryValue);
+      console.log('The id is: ' + this.$route.params.diet_Id);
+      //console.log(this.filterValue);
+      //console.log(this.categoryValue);
       let _concatFilters: any[] = this.filterValue.concat(this.categoryValue);
       this.activeFilters = _concatFilters.map((_value:any) => {
         return _value.name;
