@@ -14,7 +14,8 @@
         </div>
         <div class="sidebar-details p-4 p-lg-5 d-flex flex-column">
           <div class="product mb-4" v-html="currentSidebarItem.productName"></div>
-          <div class="tags" v-for="tag in currentSidebarItem.tags">{{ tag }}</div>
+          
+          <div class="d-flex flex-row"><div class="p-2 bg-info" v-for="tag in currentSidebarItem.tags">{{ tag }}</div></div>
           <div class="details mb-3" v-html="currentSidebarItem.description"></div>
           <div class="sidebar-details-entry">
             <div class="header p-4 d-flex flex-column">
