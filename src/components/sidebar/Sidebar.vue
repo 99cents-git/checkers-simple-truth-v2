@@ -10,37 +10,21 @@
           <youtube :videoId="currentVideoId" player-width="100%" :player-height="videoHeight"></youtube>
         </div>
         <div class="sidebar-image spinner" v-if="!videoVisible">
-          
-          <div class="sidebar-flash">
-            <img :src="'https://s3.amazonaws.com/checkershosting/mealkits/flash-'+currentSidebarItem.flash+'.svg'" alt="">
-          </div>
           <div class="sidebar-image-wrapper" v-bind:style="{'background-image': 'url(./static/'+currentSidebarItem.imagePath+')'}"></div>
         </div>
         <div class="sidebar-details p-4 p-lg-5 d-flex flex-column">
           <div class="product mb-4" v-html="currentSidebarItem.productName"></div>
+          <div class="tags" v-for="tag in currentSidebarItem.tags">{{ tag }}</div>
           <div class="details mb-3" v-html="currentSidebarItem.description"></div>
           <div class="sidebar-details-entry">
-            <div class="header">
-              INGREDIENTS INSIDE THE BOX:
+            <div class="header p-4 d-flex flex-column">
+              NUTRITIONAL INFO
             </div>
-            <div class="contents" v-html="currentSidebarItem.includedText"></div>
+            <div class="contents" v-for="nutritionalInfo in currentSidebarItem.nutritionalInfo"><ul><li>{{ nutritionalInfo }}</li></ul></div>
           </div>
-          <div class="sidebar-details-entry">
-            <div class="header">
-              INGREDIENTS FROM YOUR PANTRY:
-            </div>
-            <div class="contents" v-html="currentSidebarItem.neededText"></div>
-          </div>
-          <div class="sidebar-details-entry">
-            <div class="header">
-              ALLERGENS:
-            </div>
-            <div class="contents" v-html="currentSidebarItem.allergenText"></div>
-          </div>
-          <div class="video-button">
-            <ActionButton buttonType="video" buttonLabel="Step-by-step video" @trigger-click="showVideo"></ActionButton>
-          </div>
-          <div class="sidebar-tcs mt-3">Recipe card ALSO Included in the box</div>
+         
+        
+          
         </div>
       </div>
     </div>
@@ -53,4 +37,6 @@
 </script>
 <style scoped lang="less">
   @import './SidebarStyles';
+
+  
 </style>
