@@ -172,7 +172,7 @@ export default new Vuex.Store({
       {code: 5, label: 'Sweet Snacks', name: 'sweet-snacks', selected: false}
     ],
     sideDrawerOpen: false,
-    sideDrawerId: 1,
+    sideDrawerId: 2,
     videoId: 'pga8mV8LJnE'
   },
   mutations: {
@@ -196,7 +196,7 @@ export default new Vuex.Store({
       return _state.sideDrawerId;
     },
     sideDrawerCard(_state) {
-      return _state.homeCards[_state.sideDrawerId - 1];
+      return _state.productCards[_state.sideDrawerId - 1];
     },
     videoId(_state) {
       return _state.videoId;
