@@ -16,7 +16,7 @@
         <div class="sidebar-details p-4 p-lg-5 d-flex flex-column">
           <div class="product mb-4" v-html="currentSidebarItem.productName"></div>
           
-          <div class="d-flex flex-row"><div class="p-2 bg-info tags tag-justice" v-for="tag in currentSidebarItem.tags"><img src="@/assets/tags-tick.svg" alt="">  {{ tag }}</div></div>
+          <div class="d-flex flex-row flex-wrap"><div class="p-2 bg-info tags tag-justice" v-for="tag in currentSidebarItem.tags"><img src="@/assets/tags-tick.svg" alt="">  {{ tag }}</div></div>
           <div class="details product-desc p-2 p-lg-4" v-html="currentSidebarItem.description"></div>
           <div class="sidebar-details-entry">
             <div class="header p-4 d-flex flex-column">
@@ -47,7 +47,7 @@
   
   background-color: #F0ECE6 !important;
     height: 3em;
-    width: 40%;
+    width: 20%;
     border-radius: 35px;
     color:#333333;
     text-transform: uppercase;

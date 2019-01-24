@@ -541,6 +541,11 @@
         background: white;
       }
 
+        &:hover {
+        background: white;
+        color:#7AB629;
+      }
+
       @media @smart-phone {
         width: 100%;
       }
