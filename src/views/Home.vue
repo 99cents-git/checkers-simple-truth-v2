@@ -1,11 +1,15 @@
 <template>
   <div class="home">
     <div class="content-filters">
-      <div class="filter-wrapper width-constrain flex-wrap d-flex">
+      <div class="filter-wrapper width-constrain d-none d-sm-flex flex-wrap">
         <div v-for="filter in dietFilters" :key="filter.id" class="filter-item" v-html="filter.label" @click="dietaryClick(filter.name)" data-target="1"></div>
       </div>
+      <div class="filter-wrapper width-constrain d-block d-sm-none">
+        <div class="select-label">BROWSE BY Dietary REQUIREMENT</div>
+        <multiselect placeholder="Select an option" label="name" track-by="id" :options="dietFilters" :multiple="false" :searchable="false" @input="selectDiet"></multiselect>
+      </div>
     </div>
-    <div class="card-grid  width-constrain  py-5" >
+    <div class="card-grid  width-constrain  py-5">
       <CheckersCard v-for="card in homeCards" :key="card.id" v-bind:cardConfig="card"/>
     </div>
   </div>
@@ -23,6 +27,8 @@
 
   export default class Home extends Vue {
 
+
+
     get homeCards() {
       return this.$store.state.homeCards
     }
@@ -31,26 +37,31 @@
       return this.$store.state.dietFilters
     }
 
-    toggleItem (diet_Id) {
+    toggleItem(diet_Id) {
       this.$router.push(
-        { 
-          path: '/filtered/diet/$diet_Id'
-        })   
+          {
+            path: '/filtered/diet/$diet_Id'
+          })
     }
 
-     dietaryClick (diet_Id) {
-      console.log(diet_Id);
+    dietaryClick(diet_Id) {
       this.$router.push(
-        { 
-          path: `/filtered/diet/${diet_Id}`
-        }) 
-      
+          {
+            path: `/filtered/diet/${diet_Id}`
+          })
+
+    }
+
+    selectDiet(_item:any):void {
+      this.$router.push(
+          {
+            path: `/filtered/diet/${_item.name}`
+          })
     }
 
   }
 </script>
 <style scoped lang="less">
-
   @import '../css/variables';
 
   .width-constrain {
