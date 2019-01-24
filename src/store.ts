@@ -106,7 +106,7 @@ export default new Vuex.Store({
       {
         id: 1,
         cardProportion: 127.5,
-        imagePath: 'peanut_butter_protien_balls.jpg',
+        imagePath: 'almonds_mint.jpg',
         flash: 'new',
         tags: ['meals', 'vegetarian', 'sweet-snacks', 'gluten-free'],
         productName: 'Toasted Berry Muesli',
@@ -116,7 +116,7 @@ export default new Vuex.Store({
       {
         id: 2,
         cardProportion: 127.5,
-        imagePath: 'peanut_butter_protien_balls.jpg',
+        imagePath: 'almonds_plain.jpg',
         flash: 'new',
         tags: ['vegan', 'vegetarian', 'dairy-free', 'snacks'],
         productName: 'BUTTERMILK RUSKS',
@@ -126,7 +126,7 @@ export default new Vuex.Store({
       {
         id: 3,
         cardProportion: 127.5,
-        imagePath: 'peanut_butter_protien_balls.jpg',
+        imagePath: 'almonds_raspberry.jpg',
         flash: 'new',
         tags: ['high-protein', 'organic', 'dairy-free', 'raw'],
         productName: 'BUTTERMILK RUSKS',
@@ -136,7 +136,7 @@ export default new Vuex.Store({
       {
         id: 4,
         cardProportion: 127.5,
-        imagePath: 'peanut_butter_protien_balls.jpg',
+        imagePath: 'almonds_slated_caramel.jpg',
         flash: 'new',
         tags: ['organic', 'sweet-snacks', 'gluten-free', 'vegan', 'meals'],
         productName: 'BUTTERMILK RUSKS',
@@ -146,7 +146,7 @@ export default new Vuex.Store({
       {
         id: 5,
         cardProportion: 127.5,
-        imagePath: 'peanut_butter_protien_balls.jpg',
+        imagePath: 'apple_cider_vinegar.jpg',
         flash: 'new',
         tags: ['organic', 'snacks', 'sugar-conscious'],
         productName: 'BUTTERMILK RUSKS',
@@ -156,7 +156,797 @@ export default new Vuex.Store({
       {
         id: 6,
         cardProportion: 127.5,
+        imagePath: 'asian_bowl.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 7,
+        cardProportion: 127.5,
+        imagePath: 'bar_coconut_lemon.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 8,
+        cardProportion: 127.5,
+        imagePath: 'bar_raw_pecan_salted_caramel.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 9,
+        cardProportion: 127.5,
+        imagePath: 'brown_rice_crackers_black_white_sesame.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 10,
+        cardProportion: 127.5,
+        imagePath: 'brown_rice_crackers_flaxseed_sesame.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 11,
+        cardProportion: 127.5,
+        imagePath: 'brown_rice_crackers_sea_salt.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 12,
+        cardProportion: 127.5,
+        imagePath: 'buttermilk_rusks.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 13,
+        cardProportion: 127.5,
+        imagePath: 'cheese_cheddar.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 14,
+        cardProportion: 127.5,
+        imagePath: 'cheese_gouda.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 15,
+        cardProportion: 127.5,
+        imagePath: 'chipotle_sauce.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 16,
+        cardProportion: 127.5,
+        imagePath: 'choc_chip_shortbread.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 17,
+        cardProportion: 127.5,
+        imagePath: 'coconut_sugar.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 18,
+        cardProportion: 127.5,
+        imagePath: 'coconut-water.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 19,
+        cardProportion: 127.5,
+        imagePath: 'cocopine.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 20,
+        cardProportion: 127.5,
+        imagePath: 'vanilla_shortbread.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'Vanilla shortbread',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 21,
+        cardProportion: 127.5,
+        imagePath: 'cookies_choc_chip.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 22,
+        cardProportion: 127.5,
+        imagePath: 'cookies_coconut.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 23,
+        cardProportion: 127.5,
+        imagePath: 'cookies_crunchies.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 24,
+        cardProportion: 127.5,
+        imagePath: 'dark_chocolate_brownie.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 25,
+        cardProportion: 127.5,
+        imagePath: 'date_balls_apple_pecan_chia.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 26,
+        cardProportion: 127.5,
+        imagePath: 'date_balls_coconut_macadamia.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 27,
+        cardProportion: 127.5,
+        imagePath: 'date_balls_cranberry_beetroot_cashew.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 28,
+        cardProportion: 127.5,
+        imagePath: 'elbow_macaroni.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 29,
+        cardProportion: 127.5,
+        imagePath: 'Flakes.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 30,
+        cardProportion: 127.5,
+        imagePath: 'fruit_chutney.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 31,
+        cardProportion: 127.5,
+        imagePath: 'fruit_juice_apple.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 32,
+        cardProportion: 127.5,
+        imagePath: 'fruit_juice_berry.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 33,
+        cardProportion: 127.5,
+        imagePath: 'fruit_juice_orange.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 34,
+        cardProportion: 127.5,
+        imagePath: 'gums_mango.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 35,
+        cardProportion: 127.5,
+        imagePath: 'jam_apricot.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 36,
+        cardProportion: 127.5,
+        imagePath: 'jam_strawberry.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 37,
+        cardProportion: 127.5,
+        imagePath: 'jam-mixed-berry.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 38,
+        cardProportion: 127.5,
+        imagePath: 'mexican_bowl.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 39,
+        cardProportion: 127.5,
+        imagePath: 'noodles_moringa.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 40,
+        cardProportion: 127.5,
+        imagePath: 'noodles_purple_sweet_potato.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 41,
+        cardProportion: 127.5,
+        imagePath: 'oats_instant.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 42,
+        cardProportion: 127.5,
+        imagePath: 'oats_steel_cut.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 43,
+        cardProportion: 127.5,
+        imagePath: 'orange_marmalade.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 44,
+        cardProportion: 127.5,
+        imagePath: 'orange-raspberry.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 45,
+        cardProportion: 127.5,
+        imagePath: 'peanut_butter_blondie.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 46,
+        cardProportion: 127.5,
+        imagePath: 'peanut_butter_crunchy.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 47,
+        cardProportion: 127.5,
         imagePath: 'peanut_butter_protien_balls.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 48,
+        cardProportion: 127.5,
+        imagePath: 'peanut_butter_smooth.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 49,
+        cardProportion: 127.5,
+        imagePath: 'pomegranate.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 50,
+        cardProportion: 127.5,
+        imagePath: 'pretzel_knots.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 51,
+        cardProportion: 127.5,
+        imagePath: 'protein_balls_cocoa_almont.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 52,
+        cardProportion: 127.5,
+        imagePath: 'protein_balls_very_bery.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 53,
+        cardProportion: 127.5,
+        imagePath: 'raw_honey.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 54,
+        cardProportion: 127.5,
+        imagePath: 'red_alaea_sea_salt.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 55,
+        cardProportion: 127.5,
+        imagePath: 'roll_apricot_butternut.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 56,
+        cardProportion: 127.5,
+        imagePath: 'roll_very_berry.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 57,
+        cardProportion: 127.5,
+        imagePath: 'rub_chipotle.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 58,
+        cardProportion: 127.5,
+        imagePath: 'rub_garlic_herb.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 59,
+        cardProportion: 127.5,
+        imagePath: 'rub_italian.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 60,
+        cardProportion: 127.5,
+        imagePath: 'rub_steak_house.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 61,
+        cardProportion: 127.5,
+        imagePath: 'rub_sweet_spicy_bbq.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 62,
+        cardProportion: 127.5,
+        imagePath: 'rusks_muesli.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 63,
+        cardProportion: 127.5,
+        imagePath: 'salt_cypriot.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 64,
+        cardProportion: 127.5,
+        imagePath: 'salt_hawaiian_black.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 65,
+        cardProportion: 127.5,
+        imagePath: 'salt_persian_blue.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 66,
+        cardProportion: 127.5,
+        imagePath: 'seed_crackers_garlic_herb.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 67,
+        cardProportion: 127.5,
+        imagePath: 'seed_crackers.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 68,
+        cardProportion: 127.5,
+        imagePath: 'ST_All-Purpose-Cleaner_01.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 69,
+        cardProportion: 127.5,
+        imagePath: 'ST_Chickpea_Bowl.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 70,
+        cardProportion: 127.5,
+        imagePath: 'ST_Laundry-Liquid_01.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 71,
+        cardProportion: 127.5,
+        imagePath: 'ST_Mediterranean_Bowl.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 72,
+        cardProportion: 127.5,
+        imagePath: 'ST_Muesli_FruitNut.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 73,
+        cardProportion: 127.5,
+        imagePath: 'ST_Muesli_Tropical.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 74,
+        cardProportion: 127.5,
+        imagePath: 'ST_Roasted_Veggie_Bowl.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 75,
+        cardProportion: 127.5,
+        imagePath: 'ST-Almond.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 76,
+        cardProportion: 127.5,
+        imagePath: 'ST-Coconut-Oil-Spray.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 77,
+        cardProportion: 127.5,
+        imagePath: 'ST-Dishwashing-Liquid.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 78,
+        cardProportion: 127.5,
+        imagePath: 'ST-FabricSoftner.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 79,
+        cardProportion: 127.5,
+        imagePath: 'ST-MultiPurpose.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 80,
+        cardProportion: 127.5,
+        imagePath: 'ST-Rub.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 81,
+        cardProportion: 127.5,
+        imagePath: 'swiss_style_muesli.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 82,
+        cardProportion: 127.5,
+        imagePath: 'toasted_berry_muesli.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 83,
+        cardProportion: 127.5,
+        imagePath: 'tomato_sauce.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 84,
+        cardProportion: 127.5,
+        imagePath: 'triple_choc_cookie.jpg',
+        flash: 'new',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        productName: 'BUTTERMILK RUSKS',
+        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 85,
+        cardProportion: 127.5,
+        imagePath: 'vanilla_shortbread.jpg',
         flash: 'new',
         tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
         productName: 'BUTTERMILK RUSKS',
