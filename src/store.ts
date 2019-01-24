@@ -106,7 +106,7 @@ export default new Vuex.Store({
       {
         id: 1,
         cardProportion: 127.5,
-        imagePath: 'toasted_berry_muesli.png',
+        imagePath: 'peanut_butter_protien_balls.jpg',
         flash: 'new',
         tags: ['meals', 'vegetarian', 'sweet-snacks', 'gluten-free'],
         productName: 'Toasted Berry Muesli',
@@ -116,7 +116,7 @@ export default new Vuex.Store({
       {
         id: 2,
         cardProportion: 127.5,
-        imagePath: 'buttermilk_rusks.png',
+        imagePath: 'peanut_butter_protien_balls.jpg',
         flash: 'new',
         tags: ['vegan', 'vegetarian', 'dairy-free', 'snacks'],
         productName: 'BUTTERMILK RUSKS',
@@ -126,7 +126,7 @@ export default new Vuex.Store({
       {
         id: 3,
         cardProportion: 127.5,
-        imagePath: 'seed_crackers.png',
+        imagePath: 'peanut_butter_protien_balls.jpg',
         flash: 'new',
         tags: ['high-protein', 'organic', 'dairy-free', 'raw'],
         productName: 'BUTTERMILK RUSKS',
@@ -136,7 +136,7 @@ export default new Vuex.Store({
       {
         id: 4,
         cardProportion: 127.5,
-        imagePath: 'peanut_butter_protien_balls.png',
+        imagePath: 'peanut_butter_protien_balls.jpg',
         flash: 'new',
         tags: ['organic', 'sweet-snacks', 'gluten-free', 'vegan', 'meals'],
         productName: 'BUTTERMILK RUSKS',
@@ -146,7 +146,7 @@ export default new Vuex.Store({
       {
         id: 5,
         cardProportion: 127.5,
-        imagePath: 'pretzel_knots.png',
+        imagePath: 'peanut_butter_protien_balls.jpg',
         flash: 'new',
         tags: ['organic', 'snacks', 'sugar-conscious'],
         productName: 'BUTTERMILK RUSKS',
@@ -156,7 +156,7 @@ export default new Vuex.Store({
       {
         id: 6,
         cardProportion: 127.5,
-        imagePath: 'rolled-oats.png',
+        imagePath: 'peanut_butter_protien_balls.jpg',
         flash: 'new',
         tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
         productName: 'BUTTERMILK RUSKS',

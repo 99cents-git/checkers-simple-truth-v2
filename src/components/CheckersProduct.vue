@@ -52,6 +52,11 @@
     box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.05);
     margin: 1%;
 
+    @media @smart-phone {
+      width: 96%;
+      margin: 2%;
+    }
+
     &:hover {
       transform: scale(1.02);
       transition: all 0.5s;
@@ -65,16 +70,10 @@
       height: 100%;
       display: flex;
       justify-content: space-between;
-
-      @media @smart-phone {
-        position: relative;
-      }
     }
 
     &-spacer {
-      @media @smart-phone {
-        display: none;
-      }
+
     }
 
     &-image {

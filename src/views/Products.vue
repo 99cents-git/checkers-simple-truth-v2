@@ -1,27 +1,27 @@
 <template>
   <div class="page products-page">
     <div class="content-filters ">
-
-<div class="width-constrain">
-      <div class="row">
-  <div class="col"><div class="filter-wrapper width-constrain">
-        <div class="select-label">BROWSE BY Dietary REQUIREMENT</div>
-        <multiselect v-model="filterValue" placeholder="Add a filter" label="name" track-by="code" :options="dFilters" :multiple="true" :searchable="false" @input="updateFilters"></multiselect>
-      </div></div>
-  <div class="col">  <div class="filter-wrapper width-constrain">
-        <div class="select-label">BROWSE BY Category</div>
-        <multiselect v-model="categoryValue" placeholder="Add a filter" label="name" track-by="code" :options="cFilters" :multiple="true" :searchable="false" @input="updateFilters"></multiselect>
-      </div></div>
-</div>
-</div>
-
-      
-    
+      <div class="width-constrain">
+        <div class="row">
+          <div class="col-12 col-sm-6">
+            <div class="filter-wrapper width-constrain">
+              <div class="select-label">BROWSE BY Dietary REQUIREMENT</div>
+              <multiselect v-model="filterValue" placeholder="Add a filter" label="name" track-by="code" :options="dFilters" :multiple="true" :searchable="false" @input="updateFilters"></multiselect>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <div class="filter-wrapper width-constrain">
+              <div class="select-label">BROWSE BY Category</div>
+              <multiselect v-model="categoryValue" placeholder="Add a filter" label="name" track-by="code" :options="cFilters" :multiple="true" :searchable="false" @input="updateFilters"></multiselect>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="width-constrain">
-    <isotope :options='isoOptions' :list="filteredProducts">
-      <CheckersProduct v-for="card in filteredProducts" :key="card.id" v-bind:productConfig="card"/>
-    </isotope>
+      <isotope :options='isoOptions' :list="filteredProducts">
+        <CheckersProduct v-for="card in filteredProducts" :key="card.id" v-bind:productConfig="card"/>
+      </isotope>
     </div>
     <div class="clear"></div>
   </div>
@@ -35,9 +35,8 @@
   @Component({
     components: {CheckersProduct, isotope}
   })
-  
-  export default class ProductsController extends Vue {
 
+  export default class ProductsController extends Vue {
 
 
     public filterValue: any = [];
@@ -64,15 +63,14 @@
 
     }
 
-    public mounted(filterValue, categoryValue){
-    if(this.$route.params.diet_Id) {
-    this.filterValue.push({name:this.$route.params.diet_Id});
-    this.updateFilters(filterValue);
-    }
-    else if(this.$route.params.cat_Id){
-    this.categoryValue.push({name:this.$route.params.cat_Id});
-    this.updateFilters(categoryValue);
-    }
+    public mounted(filterValue, categoryValue) {
+      if (this.$route.params.diet_Id) {
+        this.filterValue.push({name: this.$route.params.diet_Id});
+        this.updateFilters(filterValue);
+      } else if (this.$route.params.cat_Id) {
+        this.categoryValue.push({name: this.$route.params.cat_Id});
+        this.updateFilters(categoryValue);
+      }
     }
 
     public updateFilters(_thing: any): void {
@@ -80,7 +78,7 @@
       //console.log(this.filterValue);
       //console.log(this.categoryValue);
       let _concatFilters: any[] = this.filterValue.concat(this.categoryValue);
-      this.activeFilters = _concatFilters.map((_value:any) => {
+      this.activeFilters = _concatFilters.map((_value: any) => {
         return _value.name;
       });
       console.log(this.activeFilters);
@@ -115,8 +113,8 @@
         this.$forceUpdate();
       } else {
         this.$nextTick(() => {
-          this.filteredProducts = this.allProducts.filter((_product:any) => {
-            let _found:boolean = true;
+          this.filteredProducts = this.allProducts.filter((_product: any) => {
+            let _found: boolean = true;
             this.activeFilters.forEach(_filter => {
               if (!_product.tags.includes(_filter)) {
                 _found = _found && false
@@ -136,7 +134,6 @@
     }
 
 
-
   }
 </script>
 <style lang="less">
@@ -148,7 +145,7 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 0;
-}
+  }
 
   .clear {
     clear: both;

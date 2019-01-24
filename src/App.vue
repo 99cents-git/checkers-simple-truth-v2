@@ -15,7 +15,6 @@
           </ul>
         </div>
       </div>
-
     </div>
     <div class="page-header">
       <div class="page-header-text w-100">
@@ -363,6 +362,7 @@
     @media @smart-phone {
       height: unset;
       font-size: 1rem;
+      padding-left: 5vw;
     }
 
     &-item {
@@ -512,12 +512,17 @@
     background: url('assets/filter-bg.jpg') repeat;
     padding: 30px 0;
 
+    @media @smart-phone {
+        padding: 6vw;
+    }
+
     .multiselect__tag {
       background: @dark-green;
     }
 
     .filter-wrapper {
       justify-content: center;
+      margin-bottom: 20px;
     }
 
     .filter-item {
@@ -537,6 +542,13 @@
       text-align: center;
       line-height: 1.4rem;
 
+      @media @smart-phone {
+        font-size: 1rem;
+        line-height: 1.2rem;
+        width: 100%;
+        height: 50px;
+      }
+
       &.selected {
         background: white;
       }
@@ -544,10 +556,7 @@
         &:hover {
         background: white;
         color:#7AB629;
-      }
-
-      @media @smart-phone {
-        width: 100%;
+          cursor: pointer;
       }
     }
 

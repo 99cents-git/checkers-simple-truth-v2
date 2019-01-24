@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="content-filters">
-      <div class="filter-wrapper width-constrain flex-wrap d-none d-sm-flex">
+      <div class="filter-wrapper width-constrain flex-wrap d-flex">
         <div v-for="filter in dietFilters" :key="filter.id" class="filter-item" v-html="filter.label" @click="dietaryClick(filter.name)" data-target="1"></div>
       </div>
     </div>
@@ -72,7 +72,7 @@
 
       @media @smart-phone {
         width: 100%;
-        margin: 3% 0;
+        margin: 3%;
       }
     }
   }
