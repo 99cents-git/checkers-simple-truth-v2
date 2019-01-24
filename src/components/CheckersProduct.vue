@@ -1,7 +1,7 @@
 <template>
 
   <div @click="triggerClick" class="checkers-product" :class="productConfig.tags">
-    <div class="checkers-product-spacer" v-if="productConfig.cardProportion" :style="{paddingTop: productConfig.cardProportion + '%'}"></div>
+    <div class="checkers-product-spacer"></div>
     <div class="checkers-product-content d-flex flex-column">
       <div class="checkers-product-image" v-if="productConfig.imagePath">
         <div class="checkers-product-image-wrapper">
@@ -68,12 +68,14 @@
       left: 0;
       width: 100%;
       height: 100%;
-      display: flex;
-      justify-content: space-between;
     }
 
     &-spacer {
+      padding-top: 127.5%;
 
+      @media @smart-phone {
+        padding-top: 105%;
+      }
     }
 
     &-image {
@@ -102,9 +104,7 @@
     &-footer {
       flex: 1;
       text-align: center;
-      @media @smart-phone {
-        flex: 40;
-      }
+
     }
 
   }
