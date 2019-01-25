@@ -77,7 +77,7 @@ export default new Vuex.Store({
         imagePath: `drinks.jpg`,
         headerText: `drinks`,
         subheaderText: `Quench your thirst with great-tasting refreshments perfectly suited to your lifestyle requirements. Your choices include organic, sugar free and more.`,
-        category:'meals'
+        category:'drinks'
       }
     ,
       {
@@ -88,7 +88,7 @@ export default new Vuex.Store({
         imagePath: `condiments.jpg`,
         headerText: `condiments & oils`,
         subheaderText: `For cooking, baking and roasting – there's no better choice! Our selection includes products which are unrefined, have no added preservatives and reduced sugar.`,
-        category:'meals'
+        category:'condiments-oils'
       }
     ,
       {
@@ -109,7 +109,7 @@ export default new Vuex.Store({
         imagePath: 'almonds_mint.png',
         imagePathThumbnail: 'almonds_mint.jpg',
         flash: 'new',
-        tags: ['meals', 'vegetarian', 'sweet-snacks', 'gluten-free'],
+        tags: ['meals', 'vegetarian' ],
         productName: 'Toasted Berry Muesli',
         description: 'Lorem ipsum dolor sit amet.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
@@ -120,7 +120,7 @@ export default new Vuex.Store({
         imagePath: 'almonds_plain.jpg',
         imagePathThumbnail: 'almonds_plain.jpg',
         flash: 'new',
-        tags: ['vegan', 'vegetarian', 'dairy-free', 'snacks'],
+        tags: ['vegan', 'vegetarian'],
         productName: 'BUTTERMILK RUSKS',
         description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
@@ -142,7 +142,7 @@ export default new Vuex.Store({
         imagePath: 'almonds_slated_caramel.png',
         imagePathThumbnail: 'almonds_slated_caramel.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'gluten-free', 'vegan', 'meals'],
+        tags: ['organic', 'vegan', 'meals'],
         productName: 'BUTTERMILK RUSKS',
         description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
@@ -153,7 +153,7 @@ export default new Vuex.Store({
         imagePath: 'apple_cider_vinegar.png',
         imagePathThumbnail: 'apple_cider_vinegar.jpg',
         flash: 'new',
-        tags: ['organic', 'snacks', 'sugar-conscious'],
+        tags: ['organic', 'sugar-conscious'],
         productName: 'BUTTERMILK RUSKS',
         description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
@@ -164,7 +164,7 @@ export default new Vuex.Store({
         imagePath: 'asian_bowl.png',
         imagePathThumbnail: 'asian_bowl.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        tags: ['organic', 'sugar-conscious', 'high-protein'],
         productName: 'BUTTERMILK RUSKS',
         description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
@@ -197,9 +197,9 @@ export default new Vuex.Store({
         imagePath: 'brown_rice_crackers_black_white_sesame.png',
         imagePathThumbnail: 'brown_rice_crackers_black_white_sesame.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['snacks'],
+        productName: 'Simple Truth Brown Rice Crackers with Black & White Sesame Seeds',
+        description: 'New Simple Truth Black Sesame Rice Crackers are gluten free, whole grain and do not contain any trans fats.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -208,9 +208,9 @@ export default new Vuex.Store({
         imagePath: 'brown_rice_crackers_flaxseed_sesame.png',
         imagePathThumbnail: 'brown_rice_crackers_flaxseed_sesame.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['snacks'],
+        productName: 'Simple Truth Brown Rice Crackers with Flaxseed & Black Sesame Seeds',
+        description: 'Try the new Simple Truth Brown Rice Crackers with Flaxseed & Black Sesame Seeds. They are gluten free, whole grain and trans fat free.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -219,9 +219,9 @@ export default new Vuex.Store({
         imagePath: 'brown_rice_crackers_sea_salt.png',
         imagePathThumbnail: 'brown_rice_crackers_sea_salt.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['snacks'],
+        productName: 'Simple Truth Brown Rice Crackers with Sea Salt',
+        description: 'For a tasty snack try the new Simple Truth Brown Rice Crackers with Sea Salt which are gluten free, whole grain and trans fat free.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -242,7 +242,7 @@ export default new Vuex.Store({
         imagePathThumbnail: 'cheese_cheddar.jpg',
         flash: 'new',
         tags: ['fresh-produce'],
-        productName: 'LACTOSE FREE CHEDDAR CHEESE',
+        productName: 'Simple Truth Cheddar Cheese',
         description: 'Satisfy your craving with the new Simple Truth Lactose Free Cheddar Cheese.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
@@ -253,7 +253,7 @@ export default new Vuex.Store({
         imagePathThumbnail: 'cheese_gouda.jpg',
         flash: 'new',
         tags: ['fresh-produce'],
-        productName: 'LACTOSE FREE GOUDA CHEESE',
+        productName: 'Simple Truth Gouda Cheese',
         description: 'Try our new Simple Truth Lactose Free Gouda Cheese.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
@@ -263,9 +263,9 @@ export default new Vuex.Store({
         imagePath: 'chipotle_sauce.png',
         imagePathThumbnail: 'chipotle_sauce.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['condiments-oils'],
+        productName: 'Simple Truth Chipotle Sauce',
+        description: ' Add great flavour to your meals with the new Simple Truth Chipotle Sauce – made with reduced sugar.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -274,9 +274,9 @@ export default new Vuex.Store({
         imagePath: 'choc_chip_shortbread.png',
         imagePathThumbnail: 'choc_chip_shortbread.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['sweet-snacks'],
+        productName: 'Simple Truth Choc Chip Shortbread',
+        description: 'Our new Simple Truth Choc Chip Shortbread is made by hand. It is gluten free and has 40% reduced sugar.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -285,8 +285,8 @@ export default new Vuex.Store({
         imagePath: 'coconut_sugar.png',
         imagePathThumbnail: 'coconut_sugar.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'COCONUT OIL SPRAY',
+        tags: ['condiments-oils'],
+        productName: 'Simple Truth Refined Coconut Oil Spray',
         description: 'The new Simple Truth Refined Coconut Oil Spray is vegan and is ideal for baking, frying and roasting. ',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
@@ -296,9 +296,9 @@ export default new Vuex.Store({
         imagePath: 'coconut-water.png',
         imagePathThumbnail: 'coconut-water.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['drinks'],
+        productName: 'SIMPLE TRUTH COCONUT WATER',
+        description: 'Simple Truth Coconut Water is great tasting, organic and is sustainably farmed.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -318,9 +318,9 @@ export default new Vuex.Store({
         imagePath: 'vanilla_shortbread.png',
         imagePathThumbnail: 'vanilla_shortbread.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'Vanilla shortbread',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['sweet-snacks'],
+        productName: 'Simple Truth Vanilla Shortbread',
+        description: 'BThe new Simple Truth Vanilla Shortbread is gluten free, has reduced sugar and is made by hand.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -362,9 +362,9 @@ export default new Vuex.Store({
         imagePath: 'dark_chocolate_brownie.png',
         imagePathThumbnail: 'dark_chocolate_brownie.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['sweet-snacks'],
+        productName: 'Simple Truth Dark Chocolate Fudge Brownie',
+        description: 'For an indulgent gluten free treat, try our new Simple Truth Dark Chocolate Fudge Brownie which has 29% reduced sugar.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -407,7 +407,7 @@ export default new Vuex.Store({
         imagePathThumbnail: 'elbow_macaroni.jpg',
         flash: 'new',
         tags: ['pantry','gluten-free'],
-        productName: 'GLUTEN FREE ELBOW MACARONI',
+        productName: 'New Simple Truth Elbow Macaroni',
         description: 'The new Simple Truth Elbow Macaroni is gluten free and suitable for vegans.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
@@ -428,9 +428,9 @@ export default new Vuex.Store({
         imagePath: 'fruit_chutney.png',
         imagePathThumbnail: 'fruit_chutney.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['condiments-oils'],
+        productName: 'Simple Truth Fruit Chutney',
+        description: 'Get in-store to try the new Simple Truth Fruit Chutney which contains less sugar.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -439,9 +439,9 @@ export default new Vuex.Store({
         imagePath: 'fruit_juice_apple.png',
         imagePathThumbnail: 'fruit_juice_apple.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['drinks'],
+        productName: 'SIMPLE TRUTH 100% APPLE JUICE',
+        description: 'Our new Simple Truth 100% Apple Juice is now in-store. It is pressed and squeezed and not made from concentrate.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -450,9 +450,9 @@ export default new Vuex.Store({
         imagePath: 'fruit_juice_berry.png',
         imagePathThumbnail: 'fruit_juice_berry.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['drinks'],
+        productName: 'SIMPLE TRUTH BERRY 100% FRUIT JUICE BLEND',
+        description: 'New Simple Truth Berry 100% Fruit Juice Blend is now in-store and is pressed, squeezed and not made from concentrate.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -461,9 +461,9 @@ export default new Vuex.Store({
         imagePath: 'fruit_juice_orange.png',
         imagePathThumbnail: 'fruit_juice_orange.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['drinks'],
+        productName: 'SIMPLE TRUTH 100% ORANGE JUICE',
+        description: 'The New Simple Truth 100% Orange Juice is not made from concentrate and is pressed and squeezed.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -484,7 +484,7 @@ export default new Vuex.Store({
         imagePathThumbnail: 'jam_apricot.jpg',
         flash: 'new',
         tags: ['pantry'],
-        productName: 'APRICOT JAM',
+        productName: 'Simple Truth Apricot Extra Fruit Jam',
         description: 'Enjoy the new Simple Truth Apricot Extra Fruit Jam which contains no preservatives and contains less sugar.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
@@ -495,7 +495,7 @@ export default new Vuex.Store({
         imagePathThumbnail: 'jam_strawberry.jpg',
         flash: 'new',
         tags: ['pantry'],
-        productName: 'STRAWBERRY JAM',
+        productName: 'Simple Truth Strawberry Extra Fruit Jam',
         description: 'The new Simple Truth Strawberry Extra Fruit Jam is made with less sugar and contains no preservatives.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
@@ -506,7 +506,7 @@ export default new Vuex.Store({
         imagePathThumbnail: 'jam-mixed-berry.jpg',
         flash: 'new',
         tags: ['pantry'],
-        productName: 'BERRY JAM',
+        productName: 'Simple Truth Mixed Berry Extra Fruit Jam ',
         description: 'Indulge in the new Simple Truth Mixed Berry Extra Fruit Jam which is made with less sugar and no preservatives.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
@@ -572,7 +572,7 @@ export default new Vuex.Store({
         imagePathThumbnail: 'orange_marmalade.jpg',
         flash: 'new',
         tags: ['pantry'],
-        productName: 'ORANGE MARMALADE',
+        productName: 'Simple Truth Orange Marmalade',
         description: 'The new Simple Truth Orange Marmalade has reduced sugar and is not made with any preservatives.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
@@ -582,9 +582,9 @@ export default new Vuex.Store({
         imagePath: 'orange-raspberry.png',
         imagePathThumbnail: 'orange-raspberry.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['drinks'],
+        productName: 'Simple Truth Sparkling Orange & Raspberry Flavoured Drink',
+        description: 'For a refreshing drink choose the new Simple Truth Sparkling Orange & Raspberry Flavoured Drink which is sugar free and made with natural spring water.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -593,9 +593,9 @@ export default new Vuex.Store({
         imagePath: 'peanut_butter_blondie.png',
         imagePathThumbnail: 'peanut_butter_blondie.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['sweet-snacks'],
+        productName: 'Simple Truth Peanut Butter Blondie',
+        description: 'The new Simple Truth Peanut Butter Blondie is the ultimate treat. It is gluten free and has 41% reduced sugar.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -637,9 +637,9 @@ export default new Vuex.Store({
         imagePath: 'pomegranate.png',
         imagePathThumbnail: 'pomegranate.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['drinks'],
+        productName: 'Simple Truth Sparkling Pomegranate & Hibiscus Flavoured Drink',
+        description: 'New Simple Truth Sparkling Pomegranate & Hibiscus Flavoured Drink is sugar free and made with natural spring water.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -934,9 +934,9 @@ export default new Vuex.Store({
         imagePath: 'ST-Coconut-Oil-Spray.png',
         imagePathThumbnail: 'ST-Coconut-Oil-Spray.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein','condiments-oils'],
+        productName: 'COCONUT OIL SPRAY',
+        description: 'The new Simple Truth Refined Coconut Oil Spray is vegan and is ideal for baking, frying and roasting.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -1011,9 +1011,9 @@ export default new Vuex.Store({
         imagePath: 'tomato_sauce.png',
         imagePathThumbnail: 'tomato_sauce.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['condiments-oils'],
+        productName: 'Simple Truth Tomato Sauce',
+        description: 'Stock up on the new Simple Truth Tomato Sauce which is made with reduced sugar.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -1022,9 +1022,9 @@ export default new Vuex.Store({
         imagePath: 'triple_choc_cookie.png',
         imagePathThumbnail: 'triple_choc_cookie.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
+        tags: ['sweet-snacks'],
+        productName: 'Simple Truth Triple Chocolate Cookie',
+        description: 'This Simple Truth Triple Chocolate Cookie is new to the range and is gluten free and is made with reduced sugar.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
       {
@@ -1041,11 +1041,11 @@ export default new Vuex.Store({
       {
         id: 86,
         cardProportion: 127.5,
-        imagePath: 'elbow_macaroni.png',
-        imagePathThumbnail: 'elbow_macaroni.jpg',
+        imagePath: 'GLUTEN-FREE-SPAGHETTI.png',
+        imagePathThumbnail: 'GLUTEN-FREE-SPAGHETTI.jpg',
         flash: 'new',
         tags: ['pantry','gluten-free'],
-        productName: 'GLUTEN FREE SPAGHETTI',
+        productName: 'New Simple Truth Spaghetti',
         description: 'Simple Truth Spaghetti is now available in-store and is suitable for vegans too.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       }
@@ -1053,11 +1053,13 @@ export default new Vuex.Store({
     tags: [
       {code: 1, label: 'Meal Solutions', name: 'meals', selected: false},
       {code: 2, label: 'Breakfast Solutions', name: 'breakfast', selected: false},
-      {code: 3, label: 'Pantry Essentials', name: 'essentials', selected: false},
+      {code: 3, label: 'Pantry Essentials', name: 'pantry', selected: false},
       {code: 4, label: 'Snacks', name: 'snacks', selected: false},
       {code: 5, label: 'Sweet Snacks', name: 'sweet-snacks', selected: false},
-      {code: 7, label: 'Pantry', name: 'pantry', selected: false},
-      {code: 6, label: 'Fresh Produce', name: 'fresh-produce', selected: false}
+      {code: 6, label: 'Fresh Produce', name: 'fresh-produce', selected: false},
+      {code: 7, label: 'condiments & oils', name: 'condiments-oils', selected: false},
+      {code: 8, label: 'drinks', name: 'drinks', selected: false},
+      
     ],
     sideDrawerOpen: false,
     sideDrawerId: 2,
