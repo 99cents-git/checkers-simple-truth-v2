@@ -164,10 +164,10 @@ export default new Vuex.Store({
         imagePath: 'asian_bowl.png',
         imagePathThumbnail: 'asian_bowl.jpg',
         flash: 'new',
-        tags: ['organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['vegan'],
+        productName: 'Asian bowl',
+        description: 'For a burst of Asian-inspired flavour, choose this vegan Simple Truth Asian Bowl. It has no added MSG and is high in fibre.',
+        nutritionalInfo: ['Source of fibre', 'No added preservatives']
       },
       {
         id: 7,
