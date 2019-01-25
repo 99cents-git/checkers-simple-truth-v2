@@ -18,10 +18,8 @@
         </div>
       </div>
     </div>
-    <div class="width-constrain">
-      <isotope :options='isoOptions' :list="filteredProducts">
-        <CheckersProduct v-for="card in filteredProducts" :key="card.id" v-bind:productConfig="card"/>
-      </isotope>
+    <div class="width-constrain checkers-grid">
+      <CheckersProduct v-for="card in filteredProducts" :key="card.id" v-bind:productConfig="card"/>
     </div>
     <div class="clear"></div>
   </div>
@@ -46,6 +44,7 @@
     public dFilters: any[] = this.dietFilters;
     public activeFilters: string[] = [];
     public filteredProducts: any[] = this.allProducts;
+    public isotopeInstance:any = isotope;
 
     constructor() {
       super();
@@ -64,6 +63,7 @@
     }
 
     public mounted(filterValue, categoryValue) {
+      console.log(this.isotopeInstance);
       if (this.$route.params.diet_Id) {
         this.filterValue.push({name: this.$route.params.diet_Id});
         this.updateFilters(filterValue);
@@ -74,28 +74,11 @@
     }
 
     public updateFilters(_thing: any): void {
-      console.log('The id is: ' + this.$route.params.diet_Id);
-      //console.log(this.filterValue);
-      //console.log(this.categoryValue);
       let _concatFilters: any[] = this.filterValue.concat(this.categoryValue);
       this.activeFilters = _concatFilters.map((_value: any) => {
         return _value.name;
       });
-      console.log(this.activeFilters);
       this.filterProducts();
-    }
-
-    get isoOptions() {
-      return {
-        getFilterData: {
-          isEven: function (itemElem: any): boolean {
-            return itemElem.id % 2 === 0;
-          },
-          isOdd: function (itemElem: any): boolean {
-            return itemElem.id % 2 !== 0;
-          }
-        }
-      }
     }
 
     get dietFilters() {
@@ -106,11 +89,12 @@
       return this.$store.state.tags
     }
 
-    filterProducts(): void {
+    public filterProducts() {
       if (!this.activeFilters || this.activeFilters.length === 0) {
-        this.filteredProducts = this.$store.state.productCards;
-        console.log(this.filteredProducts);
-        this.$forceUpdate();
+        this.$nextTick(() => {
+          this.filteredProducts = this.$store.state.productCards;
+        });
+        //this.isotopeInstance.methods.arrange();
       } else {
         this.$nextTick(() => {
           this.filteredProducts = this.allProducts.filter((_product: any) => {
@@ -124,7 +108,6 @@
             });
             return _found;
           });
-          console.log(this.filteredProducts);
         });
       }
     }
@@ -145,6 +128,11 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 0;
+  }
+
+  .checkers-grid {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .clear {

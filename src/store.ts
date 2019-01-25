@@ -164,7 +164,7 @@ export default new Vuex.Store({
         imagePath: 'asian_bowl.png',
         imagePathThumbnail: 'asian_bowl.jpg',
         flash: 'new',
-        tags: ['vegan'],
+        tags: ['vegan', 'meals'],
         productName: 'Asian bowl',
         description: 'For a burst of Asian-inspired flavour, choose this vegan Simple Truth Asian Bowl. It has no added MSG and is high in fibre.',
         nutritionalInfo: ['Source of fibre', 'No added preservatives']
@@ -516,10 +516,10 @@ export default new Vuex.Store({
         imagePath: 'mexican_bowl.png',
         imagePathThumbnail: 'mexican_bowl.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['vegetarian', 'meals'],
+        productName: 'Mexican Bowl',
+        description: 'Planning your next meal? The Simple Truth Mexican Bowl is a fresh and flavourful vegetarian dish. It’s not only delicious but a good source of fibre too.',
+        nutritionalInfo: ['Source of fibre', 'No added preservatives']
       },
       {
         id: 39,
@@ -549,10 +549,10 @@ export default new Vuex.Store({
         imagePath: 'oats_instant.png',
         imagePathThumbnail: 'oats_instant.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['breakfast','gluten-free','vegan'],
+        productName: 'Wholegrain Instant Oats',
+        description: 'For an easy and satisfying breakfast – Simple Truth Wholegrain Instant Oats are a great choice! Their delicious taste can be enjoyed by anyone, as they are vegan, gluten free and contain no preservatives.',
+        nutritionalInfo: ['Naturally high in fibre','Naturally sodium free','Preservative free']
       },
       {
         id: 42,
@@ -560,10 +560,10 @@ export default new Vuex.Store({
         imagePath: 'oats_steel_cut.png',
         imagePathThumbnail: 'oats_steel_cut.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['breakfast','gluten-free','vegan'],
+        productName: 'Wholegrain Steel Cut Oats',
+        description: 'Make breakfast the best meal of the day with Simple Truth Steal Cut Oats which are vegan, do not contain any preservatives and are gluten free.',
+        nutritionalInfo: ['Gluten free', 'Preservative free']
       },
       {
         id: 43,
@@ -857,8 +857,8 @@ export default new Vuex.Store({
         imagePath: 'ST_Chickpea_Bowl.png',
         imagePathThumbnail: 'ST_Chickpea_Bowl.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
+        tags: ['vegan','meals'],
+        productName: 'Chickpea & Quinoa Bowl',
         description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
       },
@@ -879,10 +879,10 @@ export default new Vuex.Store({
         imagePath: 'ST_Mediterranean_Bowl.png',
         imagePathThumbnail: 'ST_Mediterranean_Bowl.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['vegan', 'meals'],
+        productName: 'Mediterranean Bowl',
+        description: 'If you’re looking for a taste of Mediterranean cuisine with added convenience, try our vegan Simple Truth Mediterranean Bowl.',
+        nutritionalInfo: ['Source of fibre', 'No added preservatives']
       },
       {
         id: 72,
@@ -912,10 +912,10 @@ export default new Vuex.Store({
         imagePath: 'ST_Roasted_Veggie_Bowl.png',
         imagePathThumbnail: 'ST_Roasted_Veggie_Bowl.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['vegan', 'meals'],
+        productName: 'Roasted Veggie Bowl',
+        description: 'Not many things compare to the sheer comfort of roasted vegetables, and our Simple Truth Roasted Veggie Bowl is packed with flavour and has no added MSG. ',
+        nutritionalInfo: ['Source of fibre', 'No added preservatives']
       },
       {
         id: 75,
@@ -1048,6 +1048,17 @@ export default new Vuex.Store({
         productName: 'New Simple Truth Spaghetti',
         description: 'Simple Truth Spaghetti is now available in-store and is suitable for vegans too.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+      },
+      {
+        id: 87,
+        cardProportion: 127.5,
+        imagePath: '',
+        imagePathThumbnail: '',
+        flash: 'new',
+        tags: ['breakfast','gluten-free', 'vegan'],
+        productName: 'Wholegrain Rolled Oats',
+        description: 'Choose Simple Truth Rolled Oats for a nutritious and satisfying breakfast. These oats do not contain any preservatives, are vegan and gluten free.',
+        nutritionalInfo: ['Naturally high in fibre','Naturally sodium free','Preservative free']
       }
     ],
     tags: [
