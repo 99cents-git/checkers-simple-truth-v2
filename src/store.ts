@@ -1037,9 +1037,9 @@ export default new Vuex.Store({
         productName: 'BUTTERMILK RUSKS',
         description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
-      },,
+      },
       {
-        id: 28,
+        id: 86,
         cardProportion: 127.5,
         imagePath: 'elbow_macaroni.png',
         imagePathThumbnail: 'elbow_macaroni.jpg',
