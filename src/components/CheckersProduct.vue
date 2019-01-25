@@ -5,7 +5,7 @@
     <div class="checkers-product-content d-flex flex-column">
       <div class="checkers-product-image" v-if="productConfig.imagePath">
         <div class="checkers-product-image-wrapper">
-          <img :src="'./static/'+productConfig.imagePath" class="img-max-100" alt="">
+          <img :src="'./static/'+productConfig.imagePathThumbnail" class="img-max-100" alt="">
         </div>
       </div>
       <div class="checkers-product-footer">
