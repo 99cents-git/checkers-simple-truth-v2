@@ -23,24 +23,19 @@
   import ActionButton from '@/components/ActionButton.vue';
   import {EventBus} from "./EventBus";
 
-  import isotope from 'vueisotope';
-
   @Component({
-    components: {ActionButton, isotope}
+    components: {ActionButton}
   })
   export default class CheckersCard extends Vue {
     @Prop() cardConfig!: ProductCard;
 
-categoryClick (cat_Id):void {
+    categoryClick (cat_Id):void {
       console.log(cat_Id);
       this.$router.push(
         { 
           path: `/filtered/category/${cat_Id}`
-        }) 
-      
+        })
     }
-  
-  
   }
 </script>
 <style lang="less">

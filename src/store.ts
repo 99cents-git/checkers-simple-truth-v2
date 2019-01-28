@@ -8,7 +8,7 @@ export default new Vuex.Store({
     dietFilters: [
       {code: 1, label: 'Gluten-free', name: 'gluten-free', selected: false},
       {code: 2, label: 'Vegan', name: 'vegan', selected: false},
-      {code: 3, label: 'No added sugar/<br>Reduced Sugar', name: 'sugar-conscious', selected: false},
+      {code: 3, label: 'Sugar-conscious', name: 'sugar-conscious', selected: false},
       {code: 4, label: 'Raw', name: 'raw', selected: false},
       {code: 5, label: 'Organic', name: 'organic', selected: false},
       {code: 6, label: 'Vegetarian', name: 'vegetarian', selected: false},
@@ -16,6 +16,20 @@ export default new Vuex.Store({
       {code: 8, label: 'High Protein', name: 'high-protein', selected: false},
       {code: 9, label: 'Preservative-free', name: 'preservative-free', selected: false},
       {code: 10, label: 'GMO-free', name: 'gmo-free', selected: false},
+    ],
+    tags: [
+      {code: 1, label: 'Meal Solutions', name: 'meals', selected: false},
+      {code: 2, label: 'Breakfast Solutions', name: 'breakfast', selected: false},
+      {code: 3, label: 'Pantry Essentials', name: 'essentials', selected: false},
+      {code: 4, label: 'Snacks', name: 'snacks', selected: false},
+      {code: 5, label: 'Sweet Snacks', name: 'sweet-snacks', selected: false},
+      {code: 6, label: 'Fresh Produce', name: 'fresh-produce', selected: false},
+      {code: 7, label: 'Condiments & oils', name: 'condiments-oils', selected: false},
+      {code: 8, label: 'Drinks', name: 'drinks', selected: false},
+      {code: 9, label: 'Reduced sugar', name: 'sugar-conscious', selected: false},
+      {code: 10, label: 'Raw', name: 'raw', selected: false},
+      {code: 11, label: 'Eco friendly', name: 'eco-friendly', selected: false},
+      {code: 11, label: 'Sugar Free', name: 'sugar-free', selected: false}
     ],
     homeCards: [
       {
@@ -26,7 +40,7 @@ export default new Vuex.Store({
         imagePath: `meals.jpg`,
         headerText: `meal solutions`,
         subheaderText: `Our selection of convenient vegan and vegetarian meals is packed with flavour and goodness. Browse our selection to enjoy a fuss-free meal perfect for lunch or dinner.`,
-        category:'meals'
+        category: 'meals'
       },
       {
         id: 2,
@@ -36,7 +50,7 @@ export default new Vuex.Store({
         imagePath: `breakfast.jpg`,
         headerText: `BREAKFAST SOLUTIONS`,
         subheaderText: `Kick-start your day with a nutritious and tasty breakfast, with none of the guilt. Discover our healthier options to satisfy your palate and lifestyle needs.`,
-        category:'breakfast'
+        category: 'breakfast'
       },
       {
         id: 3,
@@ -46,7 +60,7 @@ export default new Vuex.Store({
         imagePath: `essentials.jpg`,
         headerText: `pantry essentials`,
         subheaderText: `Keep your pantry stocked with the best assortment of raw, organic and gluten-free products at supermarket prices. Our selection includes pasta, raw honey and more.`,
-        category:'essentials'
+        category: 'essentials'
       },
       {
         id: 4,
@@ -56,7 +70,7 @@ export default new Vuex.Store({
         imagePath: `snacks.jpg`,
         headerText: `snacks`,
         subheaderText: `Healthy snacking is easier when you have tasty treats like these. Browse our variety of snacks that are simple, delicious and will easily complement your diet and lifestyle.`,
-        category:'snacks'
+        category: 'snacks'
       },
       {
         id: 5,
@@ -66,7 +80,7 @@ export default new Vuex.Store({
         imagePath: `sweet-snacks.jpg`,
         headerText: `SWEET SNACKS & DESSERTS`,
         subheaderText: `Treat your taste buds without compromising on nutrition with delicious snacks and desserts. Choose from reduced sugar, gluten free, vegan options and more.`,
-        category:'sweet-snacks'
+        category: 'sweet-snacks'
 
       },
       {
@@ -77,7 +91,7 @@ export default new Vuex.Store({
         imagePath: `drinks.jpg`,
         headerText: `drinks`,
         subheaderText: `Quench your thirst with great-tasting refreshments perfectly suited to your lifestyle requirements. Your choices include organic, sugar free and more.`,
-        category:'drinks'
+        category: 'drinks'
       },
       {
         id: 7,
@@ -87,7 +101,7 @@ export default new Vuex.Store({
         imagePath: `condiments.jpg`,
         headerText: `condiments & oils`,
         subheaderText: `For cooking, baking and roasting – there's no better choice! Our selection includes products which are unrefined, have no added preservatives and reduced sugar.`,
-        category:'condiments-oils'
+        category: 'condiments-oils'
       },
       {
         id: 8,
@@ -97,7 +111,7 @@ export default new Vuex.Store({
         imagePath: `cleaning.jpg`,
         headerText: `ECO-FRIENDLY CLEANING PRODUCTS`,
         subheaderText: `Our range of affordable cleaning products is eco-friendly, cruelty-free and made with biodegradable materials.`,
-        category:'eco-friendly'
+        category: 'eco-friendly'
       }
     ],
     productCards: [
@@ -107,15 +121,15 @@ export default new Vuex.Store({
         imagePath: 'almonds_mint.png',
         imagePathThumbnail: 'almonds_mint.jpg',
         flash: 'new',
-        tags: ['vegan', 'vegetarian','reduced-sugar' ],
+        tags: ['vegan', 'vegetarian', 'sugar-conscious'],
         productName: 'Skinny Dipped Roasted Almonds (Mint)',
         description: 'Simple Truth Skinny Dipped Roasted Almonds with mint-flavoured Belgian dark chocolate are guilt-free treats that are made with reduced sugar.',
         nutritionalInfo: ['Reduced sugar',
-        'No added preservatives',
-        'Belgian chocolate',
-        'High in fibre',
-        'No artificial colours or flavours'
-      ]
+          'No added preservatives',
+          'Belgian chocolate',
+          'High in fibre',
+          'No artificial colours or flavours'
+        ]
       },
       {
         id: 2,
@@ -123,15 +137,15 @@ export default new Vuex.Store({
         imagePath: 'almonds_plain.png',
         imagePathThumbnail: 'almonds_plain.jpg',
         flash: 'new',
-        tags: ['vegan', 'vegetarian','reduced-sugar'],
+        tags: ['vegan', 'vegetarian', 'sugar-conscious'],
         productName: 'Skinny Dipped Roasted Almonds (Dark Chocolate)',
         description: 'Simple Truth Skinny Dipped Roasted Almonds with dark Belgian chocolate are guilt-free treats that are made with reduced sugar.',
         nutritionalInfo: ['Reduced sugar',
-        'No added preservatives',
-        'Belgian chocolate',
-        'High in fibre',
-        'No artificial colours or flavours'
-      ]
+          'No added preservatives',
+          'Belgian chocolate',
+          'High in fibre',
+          'No artificial colours or flavours'
+        ]
       },
       {
         id: 3,
@@ -139,15 +153,15 @@ export default new Vuex.Store({
         imagePath: 'almonds_raspberry.png',
         imagePathThumbnail: 'almonds_raspberry.jpg',
         flash: 'new',
-        tags: ['vegan', 'vegetarian','reduced-sugar'],
+        tags: ['vegan', 'vegetarian', 'sugar-conscious'],
         productName: 'Skinny Dipped Roasted Almonds (Raspberry)',
         description: 'Simple Truth Skinny Dipped Roasted Almonds are delicious, guilt-free and made with raspberry-flavoured Belgian dark chocolate.',
         nutritionalInfo: ['Reduced sugar',
-        'No added preservatives',
-        'Belgian chocolate',
-        'High in fibre',
-        'No artificial colours or flavours'
-      ]
+          'No added preservatives',
+          'Belgian chocolate',
+          'High in fibre',
+          'No artificial colours or flavours'
+        ]
       },
       {
         id: 4,
@@ -155,15 +169,15 @@ export default new Vuex.Store({
         imagePath: 'almonds_slated_caramel.png',
         imagePathThumbnail: 'almonds_slated_caramel.jpg',
         flash: 'new',
-        tags: ['vegan', 'vegetarian','reduced-sugar'],
+        tags: ['vegan', 'vegetarian', 'sugar-conscious'],
         productName: 'Skinny Dipped Roasted Almonds (Salted Caramel) ',
         description: 'Simple Truth Skinny Dipped Roasted Almonds with salted caramel-flavoured dark Belgian chocolate are guilt-free treats that are made with reduced sugar.',
         nutritionalInfo: ['Reduced sugar',
-        'No added preservatives',
-        'Belgian chocolate',
-        'High in fibre',
-        'No artificial colours or flavours'
-      ]
+          'No added preservatives',
+          'Belgian chocolate',
+          'High in fibre',
+          'No artificial colours or flavours'
+        ]
       },
       {
         id: 5,
@@ -175,11 +189,11 @@ export default new Vuex.Store({
         productName: 'Raw & Unfiltered Apple Cider Vinegar',
         description: 'Simple Truth Raw & Unfiltered Apple Cider Vinegar is a must-have in every home. This versatile product is organic, raw and contains nothing but apples.',
         nutritionalInfo: ['3100% natural',
-        'Nothing but apples',
-        'Unpasteurised',
-        'Organic',
-        'Raw',
-        'Unfiltered'
+          'Nothing but apples',
+          'Unpasteurised',
+          'Organic',
+          'Raw',
+          'Unfiltered'
         ]
       },
       {
@@ -199,14 +213,14 @@ export default new Vuex.Store({
         imagePath: 'bar_coconut_lemon.png',
         imagePathThumbnail: 'bar_coconut_lemon.jpg',
         flash: 'new',
-        tags: ['vegan'],
+        tags: ['vegan', 'sweet-snacks', 'sugar-conscious'],
         productName: 'Coconut & Lemon Bar ',
         description: 'The Simple Truth Coconut & Lemon Bar is vegan, made with dates and contains no added sugar. Find this great snack in-store now.',
         nutritionalInfo: ['No added preservatives',
-        'No added sugar',
-        'With dates', 
-        'High in fibre',
-        'No artificial colours or flavours']
+          'No added sugar',
+          'With dates',
+          'High in fibre',
+          'No artificial colours or flavours']
       },
       {
         id: 8,
@@ -214,15 +228,15 @@ export default new Vuex.Store({
         imagePath: 'bar_raw_pecan_salted_caramel.png',
         imagePathThumbnail: 'bar_raw_pecan_salted_caramel.jpg',
         flash: 'new',
-        tags: ['high-protein'],
+        tags: ['raw', 'sweet-snacks', 'preservative-free', 'sugar-conscious'],
         productName: 'Raw Pecan & Salted Caramel Flavoured Bar ',
         description: 'The Simple Truth Raw Pecan & Salted Caramel Flavoured Bar is vegan, made with dates and contains no added sugar. Find this great snack in-store now.',
         nutritionalInfo: ['Raw',
-        'No added preservatives',
-        'No added sugar',
-        'With dates',
-        'Source of fibre',
-        'No artificial colours or flavours']
+          'No added preservatives',
+          'No added sugar',
+          'With dates',
+          'Source of fibre',
+          'No artificial colours or flavours']
       },
       {
         id: 9,
@@ -230,15 +244,15 @@ export default new Vuex.Store({
         imagePath: 'brown_rice_crackers_black_white_sesame.png',
         imagePathThumbnail: 'brown_rice_crackers_black_white_sesame.jpg',
         flash: 'new',
-        tags: ['gluten-free'],
-        productName: 'Simple Truth Brown Rice Crackers with Black & White Sesame Seeds',
+        tags: ['gluten-free', 'snacks', 'preservative-free', 'gmo-free'],
+        productName: 'Brown Rice Crackers with Black & White Sesame Seeds',
         description: 'For a delicious high-fibre snack, try Simple Truth Brown Rice Crackers with Black and White Sesame Seeds. These crackers are baked, not fried, and available in-store now.',
         nutritionalInfo: ['Wholegrain',
-        'Trans fat free',
-        'Baked not fried', 
-        'High in fibre', 
-        'No added preservatives',
-        'GMO free']
+          'Trans fat free',
+          'Baked not fried',
+          'High in fibre',
+          'No added preservatives',
+          'GMO free']
       },
       {
         id: 10,
@@ -246,15 +260,15 @@ export default new Vuex.Store({
         imagePath: 'brown_rice_crackers_flaxseed_sesame.png',
         imagePathThumbnail: 'brown_rice_crackers_flaxseed_sesame.jpg',
         flash: 'new',
-        tags: ['gluten-free'],
+        tags: ['gluten-free', 'snacks', 'preservative-free', 'gmo-free'],
         productName: 'Simple Truth Brown Rice Crackers with Flaxseed & Black Sesame Seeds',
         description: 'For a delicious high-fibre snack, try Simple Truth Brown Rice Crackers with Flaxseed and Black Sesame Seeds. These crackers are baked, not fried, and available in-store now.',
         nutritionalInfo: ['Wholegrain',
-        'Trans fat free',
-        'Baked not fried', 
-        'High in fibre', 
-        'No added preservatives',
-        'GMO free']
+          'Trans fat free',
+          'Baked not fried',
+          'High in fibre',
+          'No added preservatives',
+          'GMO free']
       },
       {
         id: 11,
@@ -262,15 +276,15 @@ export default new Vuex.Store({
         imagePath: 'brown_rice_crackers_sea_salt.png',
         imagePathThumbnail: 'brown_rice_crackers_sea_salt.jpg',
         flash: 'new',
-        tags: ['gluten-free'],
-        productName: 'Simple Truth Brown Rice Crackers with Sea Salt',
+        tags: ['gluten-free', 'preservative-free', 'gmo-free', 'snacks'],
+        productName: 'Brown Rice Crackers with Sea Salt',
         description: 'For a delicious high-fibre snack, try Simple Truth Brown Rice Crackers with Sea Salt. These crackers are baked, not fried, and available in-store now.',
         nutritionalInfo: ['Wholegrain',
-        'Trans fat free',
-        'Baked not fried',
-        'High in fibre ',
-        'No added preservatives',
-        'GMO free']
+          'Trans fat free',
+          'Baked not fried',
+          'High in fibre ',
+          'No added preservatives',
+          'GMO free']
       },
       {
         id: 12,
@@ -278,7 +292,7 @@ export default new Vuex.Store({
         imagePath: 'buttermilk_rusks.png',
         imagePathThumbnail: 'buttermilk_rusks.jpg',
         flash: 'new',
-        tags: ['gluten-free', 'reduced-sugar','breakfast'],
+        tags: ['gluten-free', 'sugar-conscious', 'breakfast'],
         productName: 'BUTTERMILK RUSKS',
         description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
         nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
@@ -289,14 +303,14 @@ export default new Vuex.Store({
         imagePath: 'cheese_cheddar.png',
         imagePathThumbnail: 'cheese_cheddar.jpg',
         flash: 'new',
-        tags: ['fresh-produce'],
-        productName: 'Simple Truth Cheddar Cheese',
-        description: 'Our Simple Truth Lactose Free Cheddar has no artificial colours or flavours and is a good source of calcium. Enjoy it as is or elevate your next home-cooked dish with its delicious flavour.',
+        tags: ['fresh-produce', 'vegetarian'],
+        productName: 'Lactose Free Cheddar',
+        description: 'Simple Truth Lactose Free Cheddar is a source of calcium with no added flavours and is lacto-vegetarian too.',
         nutritionalInfo: ['Lacto-vegetarian',
           'Source of calcium',
           'No artificial colours',
           'No added flavours'
-          ]
+        ]
       },
       {
         id: 14,
@@ -304,14 +318,14 @@ export default new Vuex.Store({
         imagePath: 'cheese_gouda.png',
         imagePathThumbnail: 'cheese_gouda.jpg',
         flash: 'new',
-        tags: ['fresh-produce'],
+        tags: ['fresh-produce', 'vegetarian'],
         productName: 'Simple Truth Gouda Cheese',
-        description: 'Our Simple Truth Lactose Free Gouda cheese makes it possible for you to enjoy the best. It has no artificial flavours and is a good source of calcium.',
+        description: 'Simple Truth Lactose Free Gouda is a source of calcium with no added flavours and is lacto-vegetarian too.',
         nutritionalInfo: ['Lacto-vegetarian',
           'Source of calcium',
           'No artificial colours',
           'No added flavours'
-          ]
+        ]
       },
       {
         id: 15,
@@ -319,10 +333,14 @@ export default new Vuex.Store({
         imagePath: 'chipotle_sauce.png',
         imagePathThumbnail: 'chipotle_sauce.jpg',
         flash: 'new',
-        tags: ['condiments-oils'],
-        productName: 'Simple Truth Chipotle Sauce',
-        description: ' Add great flavour to your meals with the new Simple Truth Chipotle Sauce – made with reduced sugar.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['condiments-oils', 'vegan', 'sugar-conscious'],
+        productName: 'Chipotle Sauce',
+        description: 'Give your meals a hint of spice and deep flavour with Simple Truth Chipotle Sauce. This sauce is vegan, contains no added sugar or preservatives.',
+        nutritionalInfo: [
+          'No added MSG',
+          'No artificial colours or flavours',
+          'No added preservatives'
+        ]
       },
       {
         id: 16,
@@ -330,13 +348,13 @@ export default new Vuex.Store({
         imagePath: 'choc_chip_shortbread.png',
         imagePathThumbnail: 'choc_chip_shortbread.jpg',
         flash: 'new',
-        tags: ['gluten-free'],
-        productName: 'Simple Truth Choc Chip Shortbread',
+        tags: ['gluten-free', 'sweet-snacks', 'preservative-free'],
+        productName: 'Choc Chip Shortbread',
         description: 'Simple Truth Choc Chip Shortbread is gluten free and made by hand. It has no added preservatives and reduced sugar.',
         nutritionalInfo: ['Reduced sugar',
-        'No artificial colours or flavours', 
-        'No added preservatives',
-        'Lacto-vegetarian']
+          'No artificial colours or flavours',
+          'No added preservatives',
+          'Lacto-vegetarian']
       },
       {
         id: 17,
@@ -344,10 +362,13 @@ export default new Vuex.Store({
         imagePath: 'coconut_sugar.png',
         imagePathThumbnail: 'coconut_sugar.jpg',
         flash: 'new',
-        tags: ['condiments-oils'],
-        productName: 'Simple Truth Refined Coconut Oil Spray',
+        tags: ['condiments-oils', 'vegan'],
+        productName: 'Coconut Oil Spray ',
         description: 'The new Simple Truth Refined Coconut Oil Spray is vegan and is ideal for baking, frying and roasting. ',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        nutritionalInfo: ['Made with only coconut oil',
+          'Vegan',
+          'Deodorised'
+        ]
       },
       {
         id: 18,
@@ -355,10 +376,12 @@ export default new Vuex.Store({
         imagePath: 'coconut-water.png',
         imagePathThumbnail: 'coconut-water.jpg',
         flash: 'new',
-        tags: ['drinks'],
-        productName: 'SIMPLE TRUTH COCONUT WATER',
-        description: 'Simple Truth Coconut Water is great tasting, organic and is sustainably farmed.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['drinks', 'organic'],
+        productName: 'Coconut Water',
+        description: 'Simple Truth Coconut Water is made from organic young green coconuts and is sustainably farmed.',
+        nutritionalInfo: ['100% pure',
+          'Sustainably farmed'
+        ]
       },
       {
         id: 19,
@@ -366,13 +389,13 @@ export default new Vuex.Store({
         imagePath: 'vanilla_shortbread.png',
         imagePathThumbnail: 'vanilla_shortbread.jpg',
         flash: 'new',
-        tags: ['sweet-snacks','gluten-free'],
-        productName: 'Simple Truth Vanilla Shortbread',
+        tags: ['sweet-snacks', 'gluten-free', 'vegetarian'],
+        productName: 'Vanilla Shortbread',
         description: 'Simple Truth Vanilla Shortbread is gluten free and made by hand. It has no added preservatives and reduced sugar.',
         nutritionalInfo: ['Reduced sugar',
-        'No artificial colours or flavours',
-        'No added preservatives',
-        'Lacto-vegetarian']
+          'No artificial colours or flavours',
+          'No added preservatives',
+          'Lacto-vegetarian']
       },
       {
         id: 20,
@@ -380,14 +403,15 @@ export default new Vuex.Store({
         imagePath: 'cookies_choc_chip.png',
         imagePathThumbnail: 'cookies_choc_chip.jpg',
         flash: 'new',
-        tags: ['snacks', 'sweet-snacks','gluten-free','reduced-sugar'],
+        tags: ['sweet-snacks', 'gluten-free', 'sugar-conscious', 'vegetarian'],
         productName: 'Double Choc Chip Cookies ',
-        description: 'A Simple Truth Triple Chocolate Cookie is the perfect treat! It is gluten free and is made with less sugar.',
+        description: 'Simple Truth Double Choc Chip Cookies are made with butter and coconut oil. These cookies have reduced sugar, no added salt and are a source of fibre.',
         nutritionalInfo: ['Reduced sugar',
           'Source of fibre',
+          'No added salt',
           'No artificial colours or flavours',
-          'Wheat free', 
-          'Lacto-ovo vegetarian' 
+          'Wheat free',
+          'Lacto-ovo vegetarian'
         ]
       },
       {
@@ -396,14 +420,14 @@ export default new Vuex.Store({
         imagePath: 'cookies_coconut.png',
         imagePathThumbnail: 'cookies_coconut.jpg',
         flash: 'new',
-        tags: ['reduced-sugar'],
+        tags: ['sugar-conscious', 'sweet-snacks'],
         productName: 'Coconut Cookies',
         description: 'Simple Truth Coconut Cookies are made with butter and coconut oil. This treat has reduced sugar, no added salt and is high in fibre.',
         nutritionalInfo: ['Reduced sugar',
-        'High in fibre',
-        'No added salt',
-        'Made with butter & coconut oil', 
-        'No artificial colours or flavours']
+          'High in fibre',
+          'No added salt',
+          'Made with butter & coconut oil',
+          'No artificial colours or flavours']
       },
       {
         id: 22,
@@ -411,15 +435,15 @@ export default new Vuex.Store({
         imagePath: 'cookies_crunchies.png',
         imagePathThumbnail: 'cookies_crunchies.jpg',
         flash: 'new',
-        tags: ['reduced-sugar'],
+        tags: ['sugar-conscious', 'sweet-snacks'],
         productName: 'Oat Crunchies',
         description: 'Simple Truth Oat Crunchies are made with butter and coconut oil. This snack has reduced sugar, no added salt and is high in fibre.',
         nutritionalInfo: ['Reduced sugar',
-        'High in fibre',
-        'No added salt', 
-        'Made with butter & coconut oil', 
-        'No artificial colours or flavours'
-      ]
+          'High in fibre',
+          'No added salt',
+          'Made with butter & coconut oil',
+          'No artificial colours or flavours'
+        ]
       },
       {
         id: 23,
@@ -427,15 +451,15 @@ export default new Vuex.Store({
         imagePath: 'dark_chocolate_brownie.png',
         imagePathThumbnail: 'dark_chocolate_brownie.jpg',
         flash: 'new',
-        tags: ['sweet-snacks'],
-        productName: 'Simple Truth Dark Chocolate Fudge Brownie',
-        description: 'For an indulgent gluten free treat, try our new Simple Truth Dark Chocolate Fudge Brownie which has 29% reduced sugar.',
+        tags: ['sweet-snacks', 'gluten-free', 'sugar-conscious', 'vegetarian'],
+        productName: 'Dark Chocolate Fudge Brownie',
+        description: 'The Simple Truth Dark Chocolate Fudge Brownie is the perfect gluten free treat and has reduced sugar.',
         nutritionalInfo: ['Reduced sugar',
-        'Source of fibre', 
-        'No artificial colours or flavours',
-        'Wheat free', 
-        'Ovo-vegetarian' 
-]
+          'Source of fibre',
+          'No artificial colours or flavours',
+          'Wheat free',
+          'Ovo-vegetarian'
+        ]
       },
       {
         id: 24,
@@ -443,14 +467,14 @@ export default new Vuex.Store({
         imagePath: 'date_balls_apple_pecan_chia.png',
         imagePathThumbnail: 'date_balls_apple_pecan_chia.jpg',
         flash: 'new',
-        tags: ['vegan','raw'],
+        tags: ['vegan', 'raw', 'sugar-conscious'],
         productName: 'Apple, Pecan & Chia Date Balls',
         description: 'Simple Truth Apple, Pecan & Chia Date Balls are tasty, vegan and made with no added sugar.',
         nutritionalInfo: ['Raw',
-        'No added preservatives',
-        'No added sugar',
-        'High in fibre',
-        'No artificial colours or flavours']
+          'No added preservatives',
+          'No added sugar',
+          'High in fibre',
+          'No artificial colours or flavours']
       },
       {
         id: 25,
@@ -458,14 +482,14 @@ export default new Vuex.Store({
         imagePath: 'date_balls_coconut_macadamia.png',
         imagePathThumbnail: 'date_balls_coconut_macadamia.jpg',
         flash: 'new',
-        tags: ['vegan'],
+        tags: ['vegan', 'sweet-snacks', 'sugar-conscious'],
         productName: 'Coconut & Macadamia Date Balls',
         description: 'Simple Truth Coconut & Macadamia Date Balls are tasty, vegan and made with no added sugar.',
         nutritionalInfo: ['Raw',
-        'No added preservatives',
-        'No added sugar',
-        'High in fibre',
-        'No artificial colours or flavours']
+          'No added preservatives',
+          'No added sugar',
+          'High in fibre',
+          'No artificial colours or flavours']
       },
       {
         id: 26,
@@ -473,14 +497,14 @@ export default new Vuex.Store({
         imagePath: 'date_balls_cranberry_beetroot_cashew.png',
         imagePathThumbnail: 'date_balls_cranberry_beetroot_cashew.jpg',
         flash: 'new',
-        tags: ['vegan'],
+        tags: ['vegan', 'raw', 'sweet-snacks'],
         productName: 'Cranberry, Beetroot & Cashew Date Balls',
         description: 'Simple Truth Cranberry, Beetroot & Cashew Date Balls are tasty, vegan and made with no added preservatives.',
         nutritionalInfo: ['Raw',
-        'No added preservatives',
-        'No added sugar',
-        'High in fibre',
-        'No artificial colours or flavours']
+          'No added preservatives',
+          'Source of fibre',
+          'No artificial colours or flavours'
+        ]
       },
       {
         id: 27,
@@ -488,10 +512,10 @@ export default new Vuex.Store({
         imagePath: 'elbow_macaroni.png',
         imagePathThumbnail: 'elbow_macaroni.jpg',
         flash: 'new',
-        tags: ['pantry','gluten-free'],
+        tags: ['essentials', 'gluten-free', 'vegan', 'gmo-free'],
         productName: 'New Simple Truth Elbow Macaroni',
         description: 'Make your next meal a feast with the help of our vegan Simple Truth Elbow Macaroni. This gluten free pasta is preservative and GMO free.',
-        nutritionalInfo: ['GMO free','No added preservatives']
+        nutritionalInfo: ['GMO free', 'No added preservatives']
       },
       {
         id: 28,
@@ -499,10 +523,10 @@ export default new Vuex.Store({
         imagePath: 'Flakes.png',
         imagePathThumbnail: 'Flakes.jpg',
         flash: 'new',
-        tags: ['vegan', 'reduced-sugar'],
+        tags: ['vegan', 'sugar-conscious', 'breakfast'],
         productName: 'Crushed Wholewheat Flakes ',
         description: 'What if we told you that you could enjoy wholewheat flakes without any compromise necessary? With the Simple Truth Crushed Wholewheat Flakes you can, thanks to them consisting of 30% less sugar, being high in B vitamins and vegan.',
-        nutritionalInfo: ['Vegan','30% reduced sugar','High in fibre','High in vitamin B1, B2 & B3','Source of iron','No added preservatives']
+        nutritionalInfo: ['Vegan', '30% reduced sugar', 'High in fibre', 'High in vitamin B1, B2 & B3', 'Source of iron', 'No added preservatives']
       },
       {
         id: 29,
@@ -510,10 +534,14 @@ export default new Vuex.Store({
         imagePath: 'fruit_chutney.png',
         imagePathThumbnail: 'fruit_chutney.jpg',
         flash: 'new',
-        tags: ['condiments-oils'],
-        productName: 'Simple Truth Fruit Chutney',
-        description: 'Get in-store to try the new Simple Truth Fruit Chutney which contains less sugar.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['condiments-oils', 'vegan', 'sugar-conscious'],
+        productName: 'Fruit Chutney',
+        description: 'Simple Truth Fruit Chutney is vegan and is sweetened naturally with pears and dates. Find it in-store now.',
+        nutritionalInfo: ['Reduced sugar',
+          'No added MSG',
+          'Sweetened naturally',
+          'No artificial colours or flavours'
+        ]
       },
       {
         id: 30,
@@ -522,13 +550,13 @@ export default new Vuex.Store({
         imagePathThumbnail: 'fruit_juice_apple.jpg',
         flash: 'new',
         tags: ['drinks'],
-        productName: 'SIMPLE TRUTH 100% APPLE JUICE',
-        description: 'Our new Simple Truth 100% Apple Juice is now in-store. It is pressed and squeezed and not made from concentrate.',
+        productName: '100% APPLE JUICE',
+        description: 'Simple Truth 100% Apple Juice is pressed and squeezed. This locally made juice is high in vitamin C and not made from concentrate.',
         nutritionalInfo: ['High in vitamin C',
-        'Naturally colourant free',
-        'No artificial flavours',
-        'Locally made',
-        'Not from concentrate'
+          'Naturally colourant free',
+          'No artificial flavours',
+          'Locally made',
+          'Not from concentrate'
         ]
       },
       {
@@ -538,13 +566,13 @@ export default new Vuex.Store({
         imagePathThumbnail: 'fruit_juice_berry.jpg',
         flash: 'new',
         tags: ['drinks'],
-        productName: 'SIMPLE TRUTH BERRY 100% FRUIT JUICE BLEND',
-        description: 'New Simple Truth Berry 100% Fruit Juice Blend is now in-store and is pressed, squeezed and not made from concentrate.',
+        productName: '100% Fruit Juice Blend',
+        description: 'Simple Truth Berry 100% Fruit Juice Blend is pressed and squeezed. This juice is produced locally and not made from concentrate.',
         nutritionalInfo: ['High in vitamin C',
-        'Naturally colourant free',
-        'No artificial flavours',
-        'Locally made',
-        'Not from concentrate'
+          'Naturally colourant free',
+          'No artificial flavours',
+          'Locally made',
+          'Not from concentrate'
         ]
       },
       {
@@ -554,13 +582,13 @@ export default new Vuex.Store({
         imagePathThumbnail: 'fruit_juice_orange.jpg',
         flash: 'new',
         tags: ['drinks'],
-        productName: 'SIMPLE TRUTH 100% ORANGE JUICE',
-        description: 'The New Simple Truth 100% Orange Juice is not made from concentrate and is pressed and squeezed.',
+        productName: '100% Orange Juice',
+        description: 'Simple Truth 100% Orange Juice is pressed and squeezed. This locally made juice is high in vitamin C and not made from concentrate.',
         nutritionalInfo: ['High in vitamin C',
-        'Naturally colourant free',
-        'No artificial flavours',
-        'Locally made',
-        'Not from concentrate'
+          'Naturally colourant free',
+          'No artificial flavours',
+          'Locally made',
+          'Not from concentrate'
         ]
       },
       {
@@ -569,14 +597,14 @@ export default new Vuex.Store({
         imagePath: 'gums_mango.png',
         imagePathThumbnail: 'gums_mango.jpg',
         flash: 'new',
-        tags: ['sugar-free'],
+        tags: ['sugar-conscious', 'sweet-snacks', 'preservative-free'],
         productName: 'Mango Fruit Gums',
         description: 'Simple Truth Mango Fruit Gums are made with mostly real fruit and contain no added sugar. These gums are very high in vitamin C and are a source of fibre.',
         nutritionalInfo: ['Made with 99% real fruit',
-        'Preservative free',
-        'No added sugar',
-        'Source of fibre',
-        'Very high in vitamin C']
+          'Preservative free',
+          'No added sugar',
+          'Source of fibre',
+          'Very high in vitamin C']
       },
       {
         id: 34,
@@ -584,8 +612,8 @@ export default new Vuex.Store({
         imagePath: 'jam_apricot.png',
         imagePathThumbnail: 'jam_apricot.jpg',
         flash: 'new',
-        tags: ['pantry','reduced-sugar'],
-        productName: 'Simple Truth Apricot Extra Fruit Jam',
+        tags: ['essentials', 'sugar-conscious', 'preservative-free'],
+        productName: 'Apricot Extra Fruit Jam',
         description: 'Enjoy a sweet treat without the guilt when you try the Simple Truth Apricot Extra Fruit Jam. It’s made with less sugar and contains no preservatives.',
         nutritionalInfo: ['Reduced sugar', 'Preservative free']
       },
@@ -595,8 +623,8 @@ export default new Vuex.Store({
         imagePath: 'jam_strawberry.png',
         imagePathThumbnail: 'jam_strawberry.jpg',
         flash: 'new',
-        tags: ['pantry','reduced-sugar'],
-        productName: 'Simple Truth Strawberry Extra Fruit Jam',
+        tags: ['essentials', 'sugar-conscious', 'preservative-free'],
+        productName: 'Strawberry Extra Fruit Jam',
         description: 'Indulge in a classic without the added sugar! The Simple Truth Strawberry Extra Fruit Jam is free from preservatives and has less sugar.',
         nutritionalInfo: ['Reduced sugar', 'Preservative free']
       },
@@ -606,7 +634,7 @@ export default new Vuex.Store({
         imagePath: 'jam-mixed-berry.png',
         imagePathThumbnail: 'jam-mixed-berry.jpg',
         flash: 'new',
-        tags: ['pantry','reduced-sugar'],
+        tags: ['essentials', 'sugar-conscious', 'preservative-free'],
         productName: 'Simple Truth Mixed Berry Extra Fruit Jam ',
         description: 'Our Simple Truth Mixed Berry Extra Fruit Jam is free from preservatives and has less sugar, making it the ideal choice for healthier eating habits.',
         nutritionalInfo: ['Reduced sugar', 'Preservative free']
@@ -650,8 +678,8 @@ export default new Vuex.Store({
         imagePath: 'orange_marmalade.png',
         imagePathThumbnail: 'orange_marmalade.jpg',
         flash: 'new',
-        tags: ['pantry','reduced-sugar'],
-        productName: 'Simple Truth Orange Marmalade',
+        tags: ['essentials', 'sugar-conscious', 'preservative-free'],
+        productName: 'Orange Marmalade',
         description: 'Enjoy a taste of nostalgia with reduced sugar, thanks to the Simple Truth Orange Marmalade. It’s delicious and contains no preservatives.',
         nutritionalInfo: ['Reduced sugar', 'Preservative free']
       },
@@ -661,12 +689,12 @@ export default new Vuex.Store({
         imagePath: 'orange-raspberry.png',
         imagePathThumbnail: 'orange-raspberry.jpg',
         flash: 'new',
-        tags: ['drinks','sugar-free'],
-        productName: 'Simple Truth Sparkling Orange & Raspberry Flavoured Drink',
-        description: 'For a refreshing drink choose the new Simple Truth Sparkling Orange & Raspberry Flavoured Drink which is sugar free and made with natural spring water.',
+        tags: ['drinks', 'sugar-free', 'preservative-free'],
+        productName: 'Sparkling Orange & Raspberry Flavoured Drink',
+        description: 'Simple Truth Sparkling Orange & Raspberry Flavoured Drink is sugar free and made with natural spring water.',
         nutritionalInfo: ['Made with natural spring water',
-        'Preservative free',
-        'No artificial colours or flavours']
+          'Preservative free',
+          'No artificial colours or flavours']
       },
       {
         id: 42,
@@ -675,13 +703,13 @@ export default new Vuex.Store({
         imagePathThumbnail: 'peanut_butter_blondie.jpg',
         flash: 'new',
         tags: ['sweet-snacks'],
-        productName: 'Simple Truth Peanut Butter Blondie',
+        productName: 'Peanut Butter Blondie',
         description: 'A Simple Truth Peanut Butter Blondie is the ultimate treat! It is gluten free and is made with less sugar.',
         nutritionalInfo: ['Reduced sugar',
-        'Source of fibre',
-        'No artificial colours or flavours', 
-        'Wheat free',
-        'Lacto-ovo vegetarian']
+          'Source of fibre',
+          'No artificial colours or flavours',
+          'Wheat free',
+          'Lacto-ovo vegetarian']
       },
       {
         id: 43,
@@ -693,8 +721,8 @@ export default new Vuex.Store({
         productName: 'Crunchy Peanut Butter',
         description: 'Find the Simple Truth Crunchy Peanut Butter in-store now for the perfect guilt-free treat. It contains no added sugar or salt.',
         nutritionalInfo: ['Nothing but peanuts',
-        'Preservative free',
-        'No added sugar or salt']
+          'Preservative free',
+          'No added sugar or salt']
       },
       {
         id: 44,
@@ -702,14 +730,14 @@ export default new Vuex.Store({
         imagePath: 'peanut_butter_protien_balls.png',
         imagePathThumbnail: 'peanut_butter_protien_balls.jpg',
         flash: 'new',
-        tags: ['high-protein'],
+        tags: ['high-protein', 'sweet-snacks', 'vegetarian', 'sugar-conscious'],
         productName: 'Peanut Butter Protein Balls ',
         description: 'Simple Truth Peanut Butter Protein Balls are high in protein, a source of fibre and taste delicious too! These protein balls have no added sugar and are available in-store.',
         nutritionalInfo: ['No added preservatives',
-        'No added sugar',
-        'High in protein',
-        'Lacto-vegetarian',
-        'Source of fibre']
+          'No added sugar',
+          'High in protein',
+          'Lacto-vegetarian',
+          'Source of fibre']
       },
       {
         id: 45,
@@ -721,8 +749,8 @@ export default new Vuex.Store({
         productName: 'Smooth Peanut Butter',
         description: 'The Simple Truth Smooth Peanut Butter contains no added sugar or salt which means that every spoonful is guilt-free indulgence.',
         nutritionalInfo: ['Nothing but peanuts',
-        'Preservative free',
-        'No added sugar or salt']
+          'Preservative free',
+          'No added sugar or salt']
       },
       {
         id: 46,
@@ -730,12 +758,12 @@ export default new Vuex.Store({
         imagePath: 'pomegranate.png',
         imagePathThumbnail: 'pomegranate.jpg',
         flash: 'new',
-        tags: ['drinks','sugar-free'],
-        productName: 'Simple Truth Sparkling Pomegranate & Hibiscus Flavoured Drink',
+        tags: ['drinks', 'sugar-free', 'preservative-free'],
+        productName: 'Sparkling Pomegranate & Hibiscus Flavoured Drink',
         description: 'Simple Truth Sparkling Pomegranate & Hibiscus Flavoured Drink is made with natural spring water and is sugar free.',
         nutritionalInfo: ['Made with natural spring water',
-        'Preservative free',
-        'No artificial colours or flavours']
+          'Preservative free',
+          'No artificial colours or flavours']
       },
       {
         id: 47,
@@ -743,14 +771,14 @@ export default new Vuex.Store({
         imagePath: 'pretzel_knots.png',
         imagePathThumbnail: 'pretzel_knots.jpg',
         flash: 'new',
-        tags: ['gluten-free','vegan'],
+        tags: ['gluten-free', 'vegan', 'snacks', 'preservative-free'],
         productName: 'Lightly Salted Pretzel Knots ',
         description: 'Make snacking even tastier with Simple Truth Lightly Salted Pretzel Knots. These pretzels are gluten free, vegan and baked, not fried.',
         nutritionalInfo: ['Gluten free',
-        'Vegan',
-        'Baked not fried',
-        'No added preservatives',
-        'Source of fibre']
+          'Vegan',
+          'Baked not fried',
+          'No added preservatives',
+          'Source of fibre']
       },
       {
         id: 48,
@@ -758,14 +786,15 @@ export default new Vuex.Store({
         imagePath: 'protein_balls_cocoa_almont.png',
         imagePathThumbnail: 'protein_balls_cocoa_almont.jpg',
         flash: 'new',
-        tags: ['high-protein'],
+        tags: ['high-protein', 'sweet-snacks', 'sugar-conscious', 'vegetarian'],
         productName: 'Cocoa & Almond Protein Balls',
         description: 'Simple Truth Cocoa & Almond Protein Balls are high in protein, a source of fibre and taste delicious too! These protein balls have no added sugar and are available in-store now.',
         nutritionalInfo: ['No added preservatives',
-        'High in protein',
-        'Lacto-vegetarian',
-        'Source of fibre',
-        'No artificial colours or flavours']
+          'No added sugar',
+          'High in protein',
+          'Lacto-vegetarian',
+          'Source of fibre',
+          'No artificial colours or flavours']
       },
       {
         id: 49,
@@ -773,14 +802,14 @@ export default new Vuex.Store({
         imagePath: 'protein_balls_very_bery.png',
         imagePathThumbnail: 'protein_balls_very_bery.jpg',
         flash: 'new',
-        tags: ['high-protein'],
+        tags: ['high-protein', 'sweet-snacks', 'vegetarian'],
         productName: 'Very Berry Protein Balls',
         description: 'Simple Truth Very Berry Protein Balls are high in protein, a source of fibre and taste delicious too! These protein balls have no added preservatives and are available in-store now.',
         nutritionalInfo: ['No added preservatives',
-        'High in protein',
-        'Lacto-vegetarian',
-        'Source of fibre',
-        'No artificial colours or flavours']
+          'High in protein',
+          'Lacto-vegetarian',
+          'Source of fibre',
+          'No artificial colours or flavours']
       },
       {
         id: 50,
@@ -802,7 +831,7 @@ export default new Vuex.Store({
         tags: ['organic'],
         productName: 'Red Alaea Sea Salt',
         description: 'Simple Truth Red Alaea Sea Salt is 100% natural and is made with unrefined sea salt and purified red Hawaiian clay.',
-        nutritionalInfo: ['100% pure','Unrefined salt']
+        nutritionalInfo: ['100% pure', 'Unrefined salt']
       },
       {
         id: 52,
@@ -810,15 +839,15 @@ export default new Vuex.Store({
         imagePath: 'roll_apricot_butternut.png',
         imagePathThumbnail: 'roll_apricot_butternut.jpg',
         flash: 'new',
-        tags: ['sugar-free'],
+        tags: ['sugar-conscious', 'preservative-free', 'sweet-snacks'],
         productName: 'Apricot & Butternut Roll',
         description: 'The Simple Truth Apricot & Butternut Roll is made with only fruit and vegetables. This nutritious and tasty snack is very high in vitamin C and contains no added sugar.',
         nutritionalInfo: ['Sulphur free',
-        '100% fruit & veg',
-        'Very high in vitamin C',
-        'No added sugar',
-        'Preservative free',
-        'No artificial colours or flavours']
+          '100% fruit & veg',
+          'Very high in vitamin C',
+          'No added sugar',
+          'Preservative free',
+          'No artificial colours or flavours']
       },
       {
         id: 53,
@@ -826,15 +855,15 @@ export default new Vuex.Store({
         imagePath: 'roll_very_berry.png',
         imagePathThumbnail: 'roll_very_berry.jpg',
         flash: 'new',
-        tags: ['sugar-free'],
+        tags: ['sugar-conscious', 'preservative-free', 'sweet-snacks'],
         productName: 'Very Berry Roll',
         description: 'The Simple Truth Very Berry Roll is made with only fruit and is very high in vitamin C. This delicious snack contains no added sugar and is high in fibre.',
         nutritionalInfo: ['Sulphur free',
-        '100% fruit & veg',
-        'Very high in vitamin C',
-        'No added sugar',
-        'Preservative free',
-        'No artificial colours or flavours']
+          '100% fruit',
+          'Very high in vitamin C',
+          'No added sugar',
+          'Preservative free',
+          'No artificial colours or flavours']
       },
       {
         id: 54,
@@ -842,13 +871,13 @@ export default new Vuex.Store({
         imagePath: 'rub_chipotle.png',
         imagePathThumbnail: 'rub_chipotle.jpg',
         flash: 'new',
-        tags: ['organic'],
+        tags: ['preservative-free', 'condiments-oils'],
         productName: 'Chipotle Rub',
         description: 'The Simple Truth Chipotle Rub is fantastic for a wide selection of dishes thanks to its unique flavour. Find this rub in-store now! ',
         nutritionalInfo: ['Non-irradiated',
-        'No added MSG',
-        'No added preservatives',
-        'Made with sea salt']
+          'No added MSG',
+          'No added preservatives',
+          'Made with sea salt']
       },
       {
         id: 55,
@@ -856,13 +885,13 @@ export default new Vuex.Store({
         imagePath: 'rub_garlic_herb.png',
         imagePathThumbnail: 'rub_garlic_herb.jpg',
         flash: 'new',
-        tags: ['gluten-free'],
-        productName: 'Garlic & Herb Seed Crackers',
-        description: 'Simple Truth Garlic & Herb Seed Crackers are vegan and high in fibre.',
-        nutritionalInfo: ['Gluten free',
-        'Vegan',
-        'No added preservatives',
-        'High in fibre']
+        tags: ['preservative-free', 'condiments-oils'],
+        productName: 'Greek Garlic & Herb Rub',
+        description: 'You can’t go wrong with our Simple Truth Greek Garlic & Herb Rub. Consider it your secret weapon in the kitchen – and it contains no added MSG or added preservatives.',
+        nutritionalInfo: ['Non-irradiated',
+          'No added MSG',
+          'No added preservatives',
+          'Made with sea salt']
       },
       {
         id: 56,
@@ -870,13 +899,13 @@ export default new Vuex.Store({
         imagePath: 'rub_italian.png',
         imagePathThumbnail: 'rub_italian.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        tags: ['condiments-oils', 'preservative-free'],
         productName: 'Italian Rub',
         description: 'Transport your senses and cooking to Italy with the Simple Truth Italian Rub. It is made with no added MSG or preservatives.',
         nutritionalInfo: ['Non-irradiated',
-        'No added MSG',
-        'No added preservatives',
-        'Made with sea salt']
+          'No added MSG',
+          'No added preservatives',
+          'Made with sea salt']
       },
       {
         id: 57,
@@ -884,13 +913,13 @@ export default new Vuex.Store({
         imagePath: 'rub_steak_house.png',
         imagePathThumbnail: 'rub_steak_house.jpg',
         flash: 'new',
-        tags: ['organic'],
+        tags: ['condiments-oils', 'preservative-free'],
         productName: 'Steakhouse Rub',
         description: 'Cook steak like never before when you make use of the Simple Truth Steakhouse Rub. It is made with sea salt and contains no preservatives.',
         nutritionalInfo: ['Non-irradiated',
-        'No added MSG',
-        'No added preservatives',
-        'Made with sea salt']
+          'No added MSG',
+          'No added preservatives',
+          'Made with sea salt']
       },
       {
         id: 58,
@@ -898,36 +927,35 @@ export default new Vuex.Store({
         imagePath: 'rub_sweet_spicy_bbq.png',
         imagePathThumbnail: 'rub_sweet_spicy_bbq.jpg',
         flash: 'new',
-        tags: ['gluten-free','vegan'],
-        productName: 'Spicy BBQ Seed Crackers',
-        description: 'Simple Truth Spicy BBQ Seed Crackers are vegan and high in fibre.',
-        nutritionalInfo: ['Gluten free',
-        'Vegan',
-        'No added preservatives',
-        'High in fibre'
-      ]
+        tags: ['condiments-oils', 'preservative-free'],
+        productName: 'Sweet & Spicy BBQ Rub',
+        description: 'The Simple Truth Sweet & Spicy BBQ Rub is a crowd-pleaser! Perfect for adding flavour to your braai meats or roasted chicken dishes.',
+        nutritionalInfo: ['Non-irradiated',
+          'No added MSG',
+          'No added preservatives',
+          'Made with sea salt']
       },
       {
         id: 59,
         cardProportion: 127.5,
-        imagePath: 'rusks_muesli.png',
-        imagePathThumbnail: 'rusks_muesli.jpg',
+        imagePath: 'salt_cypriot.png',
+        imagePathThumbnail: 'salt_cypriot.jpg',
         flash: 'new',
-        tags: ['organic'],
+        tags: ['organic', 'condiments-oils'],
         productName: 'Cypriot Salt',
-        description: 'Simple Truth Cypriot Salt is unrefined and hand harvested. ',
+        description: 'Simple Truth Cypriot Salt is unrefined and hand harvested.',
         nutritionalInfo: ['100% pure',
-        'Unrefined salt','Hand harvested']
-      },{
+          'Unrefined salt', 'Hand harvested']
+      }, {
         id: 60,
         cardProportion: 127.5,
         imagePath: 'salt_hawaiian_black.png',
         imagePathThumbnail: 'salt_hawaiian_black.jpg',
         flash: 'new',
-        tags: ['organic'],
-        productName: 'Persian Blue Salt',
-        description: 'Simple Truth Persian Blue Salt is unrefined and now available in-store.',
-        nutritionalInfo: ['100% pure','Unrefined salt']
+        tags: ['organic', 'condiments-oils'],
+        productName: 'Hawaiian Black Salt',
+        description: 'With the Simple Truth Hawaiian Black Salt, every recipe will have great flavour. It is made with unrefined salt and activated charcoal from coconut shells.',
+        nutritionalInfo: ['100% pure', 'Unrefined salt']
       },
       {
         id: 61,
@@ -935,10 +963,10 @@ export default new Vuex.Store({
         imagePath: 'salt_persian_blue.png',
         imagePathThumbnail: 'salt_persian_blue.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
+        tags: ['organic', 'condiments-oils'],
         productName: 'Persian Blue Salt',
         description: 'Simple Truth Persian Blue Salt is unrefined and now available in-store.',
-        nutritionalInfo: ['100% pure','Unrefined salt']
+        nutritionalInfo: ['100% pure', 'Unrefined salt']
       },
       {
         id: 62,
@@ -946,13 +974,13 @@ export default new Vuex.Store({
         imagePath: 'seed_crackers_garlic_herb.png',
         imagePathThumbnail: 'seed_crackers_garlic_herb.jpg',
         flash: 'new',
-        tags: ['gluten-free'],
+        tags: ['gluten-free', 'vegan', 'snacks', 'preservative-free'],
         productName: 'Garlic & Herb Seed Crackers',
         description: 'Simple Truth Garlic & Herb Seed Crackers are vegan and high in fibre.',
         nutritionalInfo: ['Gluten free',
-        'Vegan',
-        'No added preservatives',
-        'High in fibre']
+          'Vegan',
+          'No added preservatives',
+          'High in fibre']
       },
       {
         id: 63,
@@ -960,13 +988,13 @@ export default new Vuex.Store({
         imagePath: 'seed_crackers.png',
         imagePathThumbnail: 'seed_crackers.jpg',
         flash: 'new',
-        tags: ['gluten-free','vegan'],
+        tags: ['gluten-free', 'vegan', 'snacks', 'preservative-free'],
         productName: 'Spicy BBQ Seed Crackers',
         description: 'Simple Truth Spicy BBQ Seed Crackers are vegan and high in fibre.',
         nutritionalInfo: ['Gluten free',
-        'Vegan',
-        'No added preservatives',
-        'High in fibre']
+          'Vegan',
+          'No added preservatives',
+          'High in fibre']
       },
       {
         id: 64,
@@ -981,9 +1009,9 @@ export default new Vuex.Store({
           'Biodegradable',
           'Cruelty free',
           'No artificial colours',
-          'Paraben free', 
+          'Paraben free',
           'Naturally derived cleaning ingredients'
-          ]
+        ]
       },
       {
         id: 65,
@@ -991,7 +1019,7 @@ export default new Vuex.Store({
         imagePath: 'ST_Chickpea_Bowl.png',
         imagePathThumbnail: 'ST_Chickpea_Bowl.jpg',
         flash: 'new',
-        tags: ['vegan','meals'],
+        tags: ['vegan', 'meals'],
         productName: 'Chickpea & Quinoa Bowl',
         description: 'The Simple Truth Chickpea & Quinoa Bowl is deliciously satisfying and a great source of protein too. Treat your senses to perfectly balanced flavours of this bowl, which has no added MSG.',
         nutritionalInfo: ['Source of fibre', 'No added preservatives']
@@ -1011,8 +1039,8 @@ export default new Vuex.Store({
           'Naturally derived cleaning ingredients',
           'No dyes',
           'No phosphate or optical brighteners',
-          'Paraben free' 
-          ]
+          'Paraben free'
+        ]
       },
       {
         id: 67,
@@ -1042,7 +1070,7 @@ export default new Vuex.Store({
         imagePath: 'noodles_moringa.png',
         imagePathThumbnail: 'noodles_moringa.jpg',
         flash: 'new',
-        tags: ['vegan', 'vegetarian', 'gmo-free', 'preservative-free', 'pantry'],
+        tags: ['vegan', 'vegetarian', 'gmo-free', 'essentials'],
         productName: 'Moringa Noodles',
         description: 'Stock your pantry with these delicious vegan Simple Truth Moringa Noodles. They have a unique flavour combined with the health benefits of moringa.',
         nutritionalInfo: ['No added preservatives',
@@ -1053,12 +1081,12 @@ export default new Vuex.Store({
       {
         id: 70,
         cardProportion: 127.5,
-        imagePath: 'noodles_moringa.png',
-        imagePathThumbnail: 'noodles_moringa.jpg',
+        imagePath: 'ST-Almond.png',
+        imagePathThumbnail: 'ST-Almond.jpg',
         flash: 'new',
-        tags: ['vegan', 'vegetarian', 'gmo-free', 'preservative-free', 'pantry'],
-        productName: 'Moringa Noodles',
-        description: 'Stock your pantry with these delicious vegan Simple Truth Moringa Noodles. They have a unique flavour combined with the health benefits of moringa.',
+        tags: ['vegan', 'vegetarian', 'essentials', 'gmo-free'],
+        productName: 'Turmeric Noodles ',
+        description: 'Stock your pantry with these delicious vegan Simple Truth Turmeric Noodles today. They have great flavour combined with the health benefits of turmeric.',
         nutritionalInfo: ['No added preservatives',
           'Source of fibre',
           'GMO free'
@@ -1070,7 +1098,7 @@ export default new Vuex.Store({
         imagePath: 'noodles_purple_sweet_potato.png',
         imagePathThumbnail: 'noodles_purple_sweet_potato.jpg',
         flash: 'new',
-        tags: ['vegan', 'vegetarian', 'gmo-free', 'preservative-free', 'pantry'],
+        tags: ['vegan', 'vegetarian', 'gmo-free', 'essentials'],
         productName: 'Purple Sweet Potato Noodles',
         description: 'Few things compare to the complexity of the vegan Simple Truth Purple Sweet Potato Noodles. They will transform any pasta dish from bland to extraordinary.',
         nutritionalInfo: ['No added preservatives',
@@ -1084,7 +1112,7 @@ export default new Vuex.Store({
         imagePath: 'raw_honey.png',
         imagePathThumbnail: 'raw_honey.jpg',
         flash: 'new',
-        tags: ['raw', 'organic'],
+        tags: ['raw', 'essentials'],
         productName: 'Raw Honey',
         description: 'The Simple Truth Raw Honey is sourced locally and is completely unheated and unfiltered. Try it today to discover its natural sweetness and satisfying flavour.',
         nutritionalInfo: ['100% pure', 'Unheated & unfiltered', 'Locally sourced']
@@ -1095,7 +1123,7 @@ export default new Vuex.Store({
         imagePath: 'peanut_butter_crunchy.png',
         imagePathThumbnail: 'peanut_butter_crunchy.jpg',
         flash: 'new',
-        tags: ['sugar-conscious', 'preservative-free', 'pantry'],
+        tags: ['sugar-conscious', 'preservative-free', 'essentials'],
         productName: 'Crunchy Peanut Butter',
         description: 'Find the Simple Truth Crunchy Peanut Butter in-store now for the perfect guilt-free treat. It contains no added sugar or salt.',
         nutritionalInfo: ['Nothing but peanuts',
@@ -1109,7 +1137,7 @@ export default new Vuex.Store({
         imagePath: 'peanut_butter_smooth.png',
         imagePathThumbnail: 'peanut_butter_smooth.jpg',
         flash: 'new',
-        tags: ['sugar-conscious', 'preservative-free', 'pantry'],
+        tags: ['sugar-conscious', 'preservative-free', 'essentials'],
         productName: 'Smooth Peanut Butter',
         description: 'The Simple Truth Smooth Peanut Butter contains no added sugar or salt which means that every spoonful is guilt-free indulgence.',
         nutritionalInfo: ['Nothing but peanuts',
@@ -1123,7 +1151,7 @@ export default new Vuex.Store({
         imagePath: 'apple_cider_vinegar.png',
         imagePathThumbnail: 'apple_cider_vinegar.jpg',
         flash: 'new',
-        tags: ['organic', 'raw', 'pantry'],
+        tags: ['organic', 'raw', 'essentials'],
         productName: 'Raw & Unfiltered Apple Cider Vinegar',
         description: 'Simple Truth Raw & Unfiltered Apple Cider Vinegar is a must-have in every home. This versatile product is organic, raw and contains nothing but apples.',
         nutritionalInfo: ['100% natural',
@@ -1140,11 +1168,14 @@ export default new Vuex.Store({
         imagePath: 'coconut_sugar.png',
         imagePathThumbnail: 'coconut_sugar.jpg',
         flash: 'new',
-        tags: ['organic'],
+        tags: ['organic', 'essentials', 'gmo-free'],
         productName: 'Coconut Sugar',
-        description: 'Simple Truth Coconut Water is made from organic young green coconuts and is sustainably farmed. ',
-        nutritionalInfo: ['100% pure',
-        'Sustainably farmed'
+        description: 'Once you enjoy the taste of our organic Simple Truth Coconut Sugar, it will be difficult to choose any other product! It is made from 100% natural ingredients and contains no preservatives.',
+        nutritionalInfo: ['Made from the golden nectar of coconut tree blossoms',
+          '100% natural & sustainable',
+          'Unrefined',
+          'Non-GMO',
+          'Preservative free'
         ]
       },
       {
@@ -1153,57 +1184,13 @@ export default new Vuex.Store({
         imagePath: 'ST-Rub.png',
         imagePathThumbnail: 'ST-Rub.jpg',
         flash: 'new',
-        tags: ['condiments-oils','pantry', 'preservative-free'],
-        productName: 'Steakhouse Rub',
-        description: 'Cook steak like never before when you make use of the Simple Truth Steakhouse Rub. It is made with sea salt and contains no preservatives.',
-        nutritionalInfo: ['Non-irradiated', 'No added MSG', 'No added preservatives' ,'Made with sea salt']
+        tags: ['condiments-oils', 'preservative-free'],
+        productName: 'Roast Chicken Rub',
+        description: 'Elevate your next chicken dish with the Simple Truth Roast Chicken Rub. It is made with sea salt and contains no added MSG.',
+        nutritionalInfo: ['Non-irradiated', 'No added MSG', 'No added preservatives', 'Made with sea salt']
       },
       {
         id: 78,
-        cardProportion: 127.5,
-        imagePath: 'rub_steak_house.png',
-        imagePathThumbnail: 'rub_steak_house.jpg',
-        flash: 'new',
-        tags: ['condiments-oils','pantry', 'preservative-free'],
-        productName: 'Steakhouse Rub',
-        description: 'Cook steak like never before when you make use of the Simple Truth Steakhouse Rub. It is made with sea salt and contains no preservatives.',
-        nutritionalInfo: ['Non-irradiated', 'No added MSG', 'No added preservatives' ,'Made with sea salt']
-      },
-      {
-        id: 79,
-        cardProportion: 127.5,
-        imagePath: 'rub_chipotle.png',
-        imagePathThumbnail: 'rub_chipotle.jpg',
-        flash: 'new',
-        tags: ['condiments-oils','pantry', 'preservative-free'],
-        productName: 'Chipotle Rub',
-        description: 'The Simple Truth Chipotle Rub is fantastic for a wide selection of dishes thanks to its unique flavour. Find this rub in-store now!',
-        nutritionalInfo: ['Non-irradiated', 'No added MSG', 'No added preservatives' ,'Made with sea salt']
-      },
-      {
-        id: 80,
-        cardProportion: 127.5,
-        imagePath: 'rub_garlic_herb.png',
-        imagePathThumbnail: 'rub_garlic_herb.jpg',
-        flash: 'new',
-        tags: ['condiments-oils','pantry', 'preservative-free'],
-        productName: 'Greek Garlic & Herb Rub',
-        description: 'You can’t go wrong with our Simple Truth Greek Garlic & Herb Rub. Consider it your secret weapon in the kitchen – and it contains no added MSG or added preservatives.',
-        nutritionalInfo: ['Non-irradiated', 'No added MSG', 'No added preservatives' ,'Made with sea salt']
-      },
-      {
-        id: 81,
-        cardProportion: 127.5,
-        imagePath: 'rub_sweet_spicy_bbq.png',
-        imagePathThumbnail: 'rub_sweet_spicy_bbq.jpg',
-        flash: 'new',
-        tags: ['condiments-oils','pantry', 'preservative-free'],
-        productName: 'Sweet & Spicy BBQ Rub',
-        description: 'The Simple Truth Sweet & Spicy BBQ Rub is a crowd-pleaser! Perfect for adding flavour to your braai meats or roasted chicken dishes.',
-        nutritionalInfo: ['Non-irradiated','No added MSG','No added preservatives', 'Made with sea salt']
-      },
-      {
-        id: 82,
         cardProportion: 127.5,
         imagePath: 'ST-FabricSoftner.png',
         imagePathThumbnail: 'ST-FabricSoftner.jpg',
@@ -1215,12 +1202,12 @@ export default new Vuex.Store({
           'Biodegradable',
           'Cruelty free',
           'Naturally derived cleaning ingredients',
-          'No artificial colours', 
+          'No artificial colours',
           'Paraben free'
-          ]
+        ]
       },
       {
-        id: 83,
+        id: 79,
         cardProportion: 127.5,
         imagePath: 'ST-Dishwashing-Liquid.png',
         imagePathThumbnail: 'ST-Dishwashing-Liquid.jpg',
@@ -1232,12 +1219,12 @@ export default new Vuex.Store({
           'Biodegradable',
           'Cruelty free',
           'Naturally derived cleaning ingredients',
-          'No artificial colours', 
+          'No artificial colours',
           'Paraben free'
-          ]
+        ]
       },
       {
-        id: 84,
+        id: 80,
         cardProportion: 127.5,
         imagePath: 'ST-MultiPurpose.png',
         imagePathThumbnail: 'ST-MultiPurpose.jpg',
@@ -1249,42 +1236,43 @@ export default new Vuex.Store({
           'Biodegradable',
           'Cruelty free',
           'Naturally derived cleaning ingredients',
-          'No artificial colours', 
+          'No artificial colours',
           'Paraben free'
-          ]
+        ]
       },
       {
-        id: 85,
+        id: 81,
         cardProportion: 127.5,
         imagePath: 'gums_mixed_berry.png',
         imagePathThumbnail: 'gums_mixed_berry.jpg',
         flash: 'new',
-        tags: ['sugar-free'],
+        tags: ['sugar-conscious', 'sweet-snacks', 'preservative-free'],
         productName: 'Mixed Berry Fruit Gums',
         description: 'Simple Truth Mixed Berry Fruit Gums are made with mostly real fruit and contain no added sugar. These gums are very high in vitamin C and are a source of fibre. ',
         nutritionalInfo: ['Made with 99% real fruit',
-        'Preservative free',
-        'No added sugar',
-        'Source of fibre',
-        'Very high in vitamin C']
+          'Preservative free',
+          'No added sugar',
+          'Source of fibre',
+          'Very high in vitamin C']
+      },
+      {
+        id: 82,
+        cardProportion: 127.5,
+        imagePath: 'tomato_sauce.png',
+        imagePathThumbnail: 'tomato_sauce.jpg',
+        flash: 'new',
+        tags: ['sugar-conscious', 'condiments-oils', 'preservative-free'],
+        productName: 'Tomato Sauce',
+        description: 'The Simple Truth Tomato Sauce is great tasting and is made with reduced sugar and sodium. Get this family-favourite sauce in-store now.',
+        nutritionalInfo: ['Reduced sugar',
+          'Reduced sodium',
+          'No thickeners',
+          'No added preservatives',
+          'No added colours or flavours'
+        ]
       }
     ],
-    tags: [
-      {code: 1, label: 'Meal Solutions', name: 'meals', selected: false},
-      {code: 2, label: 'Breakfast Solutions', name: 'breakfast', selected: false},
-      {code: 3, label: 'Pantry Essentials', name: 'pantry', selected: false},
-      {code: 4, label: 'Snacks', name: 'snacks', selected: false},
-      {code: 5, label: 'Sweet Snacks', name: 'sweet-snacks', selected: false},
-      {code: 6, label: 'Fresh Produce', name: 'fresh-produce', selected: false},
-      {code: 7, label: 'Condiments & oils', name: 'condiments-oils', selected: false},
-      {code: 8, label: 'Drinks', name: 'drinks', selected: false},
-      {code: 9, label: 'Reduced sugar', name: 'reduced-sugar', selected: false},
-      {code: 10, label: 'Raw', name: 'raw', selected: false},
-      {code: 11, label: 'Eco friendly', name: 'eco-friendly', selected: false},
-      {code: 11, label: 'Sugar Free', name: 'sugar-free', selected: false},
 
-      
-    ],
     sideDrawerOpen: false,
     sideDrawerId: 2,
     videoId: 'pga8mV8LJnE'
@@ -1316,7 +1304,5 @@ export default new Vuex.Store({
       return _state.videoId;
     }
   },
-  actions: {
-
-  }
+  actions: {}
 })

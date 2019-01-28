@@ -27,8 +27,6 @@
 
   export default class Home extends Vue {
 
-
-
     get homeCards() {
       return this.$store.state.homeCards
     }
