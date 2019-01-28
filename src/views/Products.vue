@@ -6,13 +6,13 @@
           <div class="col-12 col-sm-6">
             <div class="filter-wrapper width-constrain">
               <div class="select-label">BROWSE BY Dietary REQUIREMENT</div>
-              <multiselect v-model="filterValue" placeholder="Add a filter" label="name" track-by="code" :options="dFilters" :multiple="true" :searchable="false" @input="updateFilters"></multiselect>
+              <multiselect v-model="filterValue" placeholder="Add a filter" label="label" track-by="code" :options="dFilters" :multiple="true" :searchable="false" @input="updateFilters"></multiselect>
             </div>
           </div>
           <div class="col-12 col-sm-6">
             <div class="filter-wrapper width-constrain">
               <div class="select-label">BROWSE BY Category</div>
-              <multiselect v-model="categoryValue" placeholder="Add a filter" label="name" track-by="code" :options="cFilters" :multiple="true" :searchable="false" @input="updateFilters"></multiselect>
+              <multiselect v-model="categoryValue" placeholder="Add a filter" label="label" track-by="code" :options="cFilters" :multiple="true" :searchable="false" @input="updateFilters"></multiselect>
             </div>
           </div>
         </div>
