@@ -859,8 +859,8 @@ export default new Vuex.Store({
         flash: 'new',
         tags: ['vegan','meals'],
         productName: 'Chickpea & Quinoa Bowl',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        description: 'The Simple Truth Chickpea & Quinoa Bowl is deliciously satisfying and a great source of protein too. Treat your senses to perfectly balanced flavours of this bowl, which has no added MSG.',
+        nutritionalInfo: ['Source of fibre', 'No added preservatives']
       },
       {
         id: 70,
