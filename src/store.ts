@@ -1042,12 +1042,6 @@ export default new Vuex.Store({
         imagePath: 'rub_garlic_herb.png',
         imagePathThumbnail: 'rub_garlic_herb.jpg',
         flash: 'new',
-<<<<<<< HEAD
-        tags: ['pantry','gluten-free'],
-        productName: 'New Simple Truth Spaghetti',
-        description: 'The only ingredient that would make your famous pasta recipe even better is our gluten free, vegan Simple Truth Spaghetti. It is made without preservatives and is GMO free.',
-        nutritionalInfo: ['GMO free', 'No added preservatives']
-=======
         tags: ['condiments-oils','pantry', 'preservative-free'],
         productName: 'Greek Garlic & Herb Rub',
         description: 'You can’t go wrong with our Simple Truth Greek Garlic & Herb Rub. Consider it your secret weapon in the kitchen – and it contains no added MSG or added preservatives.',
@@ -1063,7 +1057,6 @@ export default new Vuex.Store({
         productName: 'Sweet & Spicy BBQ Rub',
         description: 'The Simple Truth Sweet & Spicy BBQ Rub is a crowd-pleaser! Perfect for adding flavour to your braai meats or roasted chicken dishes.',
         nutritionalInfo: ['Non-irradiated','No added MSG','No added preservatives', 'Made with sea salt']
->>>>>>> b90764ea108fb8cb143c41103b90325733265501
       }
     ],
     tags: [
