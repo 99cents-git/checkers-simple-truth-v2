@@ -6,14 +6,16 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     dietFilters: [
-      {code: 1, label: 'Gluten Free', name: 'gluten-free', selected: false},
+      {code: 1, label: 'Gluten-free', name: 'gluten-free', selected: false},
       {code: 2, label: 'Vegan', name: 'vegan', selected: false},
-      {code: 3, label: 'NO ADDED SUGAR/<br>Reduced Sugar', name: 'sugar-conscious', selected: false},
-      {code: 4, label: 'raw', name: 'raw', selected: false},
-      {code: 5, label: 'ORGANIC', name: 'organic', selected: false},
-      {code: 6, label: 'VEGETARIAN', name: 'vegetarian', selected: false},
-      {code: 7, label: 'DAIRY FREE', name: 'dairy-free', selected: false},
-      {code: 8, label: 'HIGH PROTEIN', name: 'high-protein', selected: false}
+      {code: 3, label: 'No added sugar/<br>Reduced Sugar', name: 'sugar-conscious', selected: false},
+      {code: 4, label: 'Raw', name: 'raw', selected: false},
+      {code: 5, label: 'Organic', name: 'organic', selected: false},
+      {code: 6, label: 'Vegetarian', name: 'vegetarian', selected: false},
+      {code: 7, label: 'Dairy-free', name: 'dairy-free', selected: false},
+      {code: 8, label: 'High Protein', name: 'high-protein', selected: false},
+      {code: 9, label: 'Preservative-free', name: 'preservative-free', selected: false},
+      {code: 9, label: 'GMO-free', name: 'gmo-free', selected: false}
     ],
     homeCards: [
       {
@@ -55,8 +57,7 @@ export default new Vuex.Store({
         headerText: `snacks`,
         subheaderText: `Healthy snacking is easier when you have tasty treats like these. Browse our variety of snacks that are simple, delicious and will easily complement your diet and lifestyle.`,
         category:'snacks'
-      }
-    ,
+      },
       {
         id: 5,
         cardProportion: 85,
@@ -67,8 +68,7 @@ export default new Vuex.Store({
         subheaderText: `Treat your taste buds without compromising on nutrition with delicious snacks and desserts. Choose from reduced sugar, gluten free, vegan options and more.`,
         category:'sweet-snacks'
 
-      }
-    ,
+      },
       {
         id: 6,
         cardProportion: 85,
@@ -78,8 +78,7 @@ export default new Vuex.Store({
         headerText: `drinks`,
         subheaderText: `Quench your thirst with great-tasting refreshments perfectly suited to your lifestyle requirements. Your choices include organic, sugar free and more.`,
         category:'drinks'
-      }
-    ,
+      },
       {
         id: 7,
         cardProportion: 85,
@@ -89,8 +88,7 @@ export default new Vuex.Store({
         headerText: `condiments & oils`,
         subheaderText: `For cooking, baking and roasting – there's no better choice! Our selection includes products which are unrefined, have no added preservatives and reduced sugar.`,
         category:'condiments-oils'
-      }
-    ,
+      },
       {
         id: 8,
         cardProportion: 85,
@@ -898,134 +896,174 @@ export default new Vuex.Store({
       {
         id: 75,
         cardProportion: 127.5,
-        imagePath: 'ST-Almond.png',
-        imagePathThumbnail: 'ST-Almond.jpg',
+        imagePath: 'noodles_moringa.png',
+        imagePathThumbnail: 'noodles_moringa.jpg',
         flash: 'new',
-        tags: ['vegan','vegetarian'],
-        productName: 'Turmeric Noodles',
-        description: 'Stock your pantry with these delicious vegan Simple Truth Turmeric Noodles today. They have great flavour combined with the health benefits of turmeric.',
-        nutritionalInfo: ['No added preservatives', 'Source of fibre', 'GMO']
+        tags: ['vegan', 'vegetarian', 'gmo-free', 'preservative-free', 'pantry'],
+        productName: 'Moringa Noodles',
+        description: 'Stock your pantry with these delicious vegan Simple Truth Moringa Noodles. They have a unique flavour combined with the health benefits of moringa.',
+        nutritionalInfo: ['No added preservatives',
+          'Source of fibre',
+          'GMO free'
+        ]
       },
       {
         id: 76,
         cardProportion: 127.5,
-        imagePath: 'ST-Coconut-Oil-Spray.png',
-        imagePathThumbnail: 'ST-Coconut-Oil-Spray.jpg',
+        imagePath: 'noodles_moringa.png',
+        imagePathThumbnail: 'noodles_moringa.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein','condiments-oils'],
-        productName: 'COCONUT OIL SPRAY',
-        description: 'The new Simple Truth Refined Coconut Oil Spray is vegan and is ideal for baking, frying and roasting.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['vegan', 'vegetarian', 'gmo-free', 'preservative-free', 'pantry'],
+        productName: 'Moringa Noodles',
+        description: 'Stock your pantry with these delicious vegan Simple Truth Moringa Noodles. They have a unique flavour combined with the health benefits of moringa.',
+        nutritionalInfo: ['No added preservatives',
+          'Source of fibre',
+          'GMO free'
+        ]
       },
       {
         id: 77,
         cardProportion: 127.5,
-        imagePath: 'ST-Dishwashing-Liquid.png',
-        imagePathThumbnail: 'ST-Dishwashing-Liquid.jpg',
+        imagePath: 'noodles_purple_sweet_potato.png',
+        imagePathThumbnail: 'noodles_purple_sweet_potato.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['vegan', 'vegetarian', 'gmo-free', 'preservative-free', 'pantry'],
+        productName: 'Purple Sweet Potato Noodles',
+        description: 'Few things compare to the complexity of the vegan Simple Truth Purple Sweet Potato Noodles. They will transform any pasta dish from bland to extraordinary.',
+        nutritionalInfo: ['No added preservatives',
+          'Source of fibre',
+          'GMO free'
+        ]
       },
       {
         id: 78,
         cardProportion: 127.5,
-        imagePath: 'ST-FabricSoftner.png',
-        imagePathThumbnail: 'ST-FabricSoftner.jpg',
+        imagePath: 'raw_honey.png',
+        imagePathThumbnail: 'raw_honey.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['raw', 'organic'],
+        productName: 'Raw Honey',
+        description: 'The Simple Truth Raw Honey is sourced locally and is completely unheated and unfiltered. Try it today to discover its natural sweetness and satisfying flavour.',
+        nutritionalInfo: ['100% pure', 'Unheated & unfiltered', 'Locally sourced']
       },
       {
         id: 79,
         cardProportion: 127.5,
-        imagePath: 'ST-MultiPurpose.png',
-        imagePathThumbnail: 'ST-MultiPurpose.jpg',
+        imagePath: 'peanut_butter_crunchy.png',
+        imagePathThumbnail: 'peanut_butter_crunchy.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['sugar-conscious', 'preservative-free', 'pantry'],
+        productName: 'Crunchy Peanut Butter',
+        description: 'Find the Simple Truth Crunchy Peanut Butter in-store now for the perfect guilt-free treat. It contains no added sugar or salt.',
+        nutritionalInfo: ['Nothing but peanuts',
+          'Preservative free',
+          'No added sugar or salt'
+        ]
       },
       {
         id: 80,
         cardProportion: 127.5,
-        imagePath: 'ST-Rub.png',
-        imagePathThumbnail: 'ST-Rub.jpg',
+        imagePath: 'peanut_butter_smooth.png',
+        imagePathThumbnail: 'peanut_butter_smooth.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['sugar-conscious', 'preservative-free', 'pantry'],
+        productName: 'Smooth Peanut Butter',
+        description: 'The Simple Truth Smooth Peanut Butter contains no added sugar or salt which means that every spoonful is guilt-free indulgence.',
+        nutritionalInfo: ['Nothing but peanuts',
+          'Preservative free',
+          'No added sugar or salt'
+        ]
       },
       {
         id: 81,
         cardProportion: 127.5,
-        imagePath: 'swiss_style_muesli.png',
-        imagePathThumbnail: 'swiss_style_muesli.jpg',
+        imagePath: 'apple_cider_vinegar.png',
+        imagePathThumbnail: 'apple_cider_vinegar.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['organic', 'raw', 'pantry'],
+        productName: 'Raw & Unfiltered Apple Cider Vinegar',
+        description: 'Simple Truth Raw & Unfiltered Apple Cider Vinegar is a must-have in every home. This versatile product is organic, raw and contains nothing but apples.',
+        nutritionalInfo: ['100% natural',
+          'Nothing but apples',
+          'Unpasteurised',
+          'Organic',
+          'Raw',
+          'Unfiltered'
+        ]
       },
       {
         id: 82,
         cardProportion: 127.5,
-        imagePath: 'toasted_berry_muesli.png',
-        imagePathThumbnail: 'toasted_berry_muesli.jpg',
+        imagePath: 'coconut_sugar.png',
+        imagePathThumbnail: 'coconut_sugar.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['organic', 'preservative-free', 'raw', 'pantry', 'gmo-free'],
+        productName: 'Coconut Sugar',
+        description: 'Once you enjoy the taste of our organic Simple Truth Coconut Sugar, it will be difficult to choose any other product! It is made from 100% natural ingredients and contains no preservatives.',
+        nutritionalInfo: ['Made from the golden nectar of coconut tree blossoms', '100% natural & sustainable', 'Unrefined', 'Non-GMO','Preservative free'
+        ]
       },
       {
         id: 83,
         cardProportion: 127.5,
-        imagePath: 'tomato_sauce.png',
-        imagePathThumbnail: 'tomato_sauce.jpg',
+        imagePath: 'ST-Rub.png',
+        imagePathThumbnail: 'ST-Rub.jpg',
         flash: 'new',
-        tags: ['condiments-oils'],
-        productName: 'Simple Truth Tomato Sauce',
-        description: 'Stock up on the new Simple Truth Tomato Sauce which is made with reduced sugar.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['condiments-oils','pantry', 'preservative-free'],
+        productName: 'Steakhouse Rub',
+        description: 'Cook steak like never before when you make use of the Simple Truth Steakhouse Rub. It is made with sea salt and contains no preservatives.',
+        nutritionalInfo: ['Non-irradiated', 'No added MSG', 'No added preservatives' ,'Made with sea salt']
       },
       {
         id: 84,
         cardProportion: 127.5,
-        imagePath: 'triple_choc_cookie.png',
-        imagePathThumbnail: 'triple_choc_cookie.jpg',
+        imagePath: 'rub_steak_house.png',
+        imagePathThumbnail: 'rub_steak_house.jpg',
         flash: 'new',
-        tags: ['sweet-snacks'],
-        productName: 'Simple Truth Triple Chocolate Cookie',
-        description: 'This Simple Truth Triple Chocolate Cookie is new to the range and is gluten free and is made with reduced sugar.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['condiments-oils','pantry', 'preservative-free'],
+        productName: 'Steakhouse Rub',
+        description: 'Cook steak like never before when you make use of the Simple Truth Steakhouse Rub. It is made with sea salt and contains no preservatives.',
+        nutritionalInfo: ['Non-irradiated', 'No added MSG', 'No added preservatives' ,'Made with sea salt']
       },
       {
         id: 85,
         cardProportion: 127.5,
-        imagePath: 'vanilla_shortbread.png',
-        imagePathThumbnail: 'vanilla_shortbread.jpg',
+        imagePath: 'rub_chipotle.png',
+        imagePathThumbnail: 'rub_chipotle.jpg',
         flash: 'new',
-        tags: ['organic', 'sweet-snacks', 'organic', 'sugar-conscious', 'high-protein'],
-        productName: 'BUTTERMILK RUSKS',
-        description: 'Buttermilk Rusks are a South African favourite and now you can enjoy this Simple Truth treat which is made by hand and is gluten free.',
-        nutritionalInfo: ['30% reduced sugar', 'Source of fibre', 'Lacto-ovo-vegetarian', 'No added preservatives']
+        tags: ['condiments-oils','pantry', 'preservative-free'],
+        productName: 'Chipotle Rub',
+        description: 'The Simple Truth Chipotle Rub is fantastic for a wide selection of dishes thanks to its unique flavour. Find this rub in-store now!',
+        nutritionalInfo: ['Non-irradiated', 'No added MSG', 'No added preservatives' ,'Made with sea salt']
       },
       {
         id: 86,
         cardProportion: 127.5,
-        imagePath: 'GLUTEN-FREE-SPAGHETTI.png',
-        imagePathThumbnail: 'GLUTEN-FREE-SPAGHETTI.jpg',
+        imagePath: 'rub_garlic_herb.png',
+        imagePathThumbnail: 'rub_garlic_herb.jpg',
         flash: 'new',
+<<<<<<< HEAD
         tags: ['pantry','gluten-free'],
         productName: 'New Simple Truth Spaghetti',
         description: 'The only ingredient that would make your famous pasta recipe even better is our gluten free, vegan Simple Truth Spaghetti. It is made without preservatives and is GMO free.',
         nutritionalInfo: ['GMO free', 'No added preservatives']
+=======
+        tags: ['condiments-oils','pantry', 'preservative-free'],
+        productName: 'Greek Garlic & Herb Rub',
+        description: 'You can’t go wrong with our Simple Truth Greek Garlic & Herb Rub. Consider it your secret weapon in the kitchen – and it contains no added MSG or added preservatives.',
+        nutritionalInfo: ['Non-irradiated', 'No added MSG', 'No added preservatives' ,'Made with sea salt']
+      },
+      {
+        id: 87,
+        cardProportion: 127.5,
+        imagePath: 'rub_sweet_spicy_bbq.png',
+        imagePathThumbnail: 'rub_sweet_spicy_bbq.jpg',
+        flash: 'new',
+        tags: ['condiments-oils','pantry', 'preservative-free'],
+        productName: 'Sweet & Spicy BBQ Rub',
+        description: 'The Simple Truth Sweet & Spicy BBQ Rub is a crowd-pleaser! Perfect for adding flavour to your braai meats or roasted chicken dishes.',
+        nutritionalInfo: ['Non-irradiated','No added MSG','No added preservatives', 'Made with sea salt']
+>>>>>>> b90764ea108fb8cb143c41103b90325733265501
       }
     ],
     tags: [
