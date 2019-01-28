@@ -28,10 +28,9 @@
   import Vue from 'vue';
   import {Component} from 'vue-property-decorator';
   import CheckersProduct from '@/components/CheckersProduct.vue';
-  import isotope from 'vueisotope';
 
   @Component({
-    components: {CheckersProduct, isotope}
+    components: {CheckersProduct}
   })
 
   export default class ProductsController extends Vue {
@@ -44,7 +43,6 @@
     public dFilters: any[] = this.dietFilters;
     public activeFilters: string[] = [];
     public filteredProducts: any[] = this.allProducts;
-    public isotopeInstance:any = isotope;
 
     constructor() {
       super();
@@ -63,17 +61,19 @@
     }
 
     public mounted(filterValue, categoryValue) {
-      console.log(this.isotopeInstance);
       if (this.$route.params.diet_Id) {
-        this.filterValue.push({name: this.$route.params.diet_Id});
-        this.updateFilters(filterValue);
+        this.filterValue = this.dietFilters.filter(_value => {
+          return _value.name === this.$route.params.diet_Id;
+        });
       } else if (this.$route.params.cat_Id) {
-        this.categoryValue.push({name: this.$route.params.cat_Id});
-        this.updateFilters(categoryValue);
+        this.categoryValue = this.categoryFilters.filter(_value => {
+          return _value.name === this.$route.params.cat_Id;
+        });
       }
+      this.updateFilters();
     }
 
-    public updateFilters(_thing: any): void {
+    public updateFilters(): void {
       let _concatFilters: any[] = this.filterValue.concat(this.categoryValue);
       this.activeFilters = _concatFilters.map((_value: any) => {
         return _value.name;
@@ -94,7 +94,6 @@
         this.$nextTick(() => {
           this.filteredProducts = this.$store.state.productCards;
         });
-        //this.isotopeInstance.methods.arrange();
       } else {
         this.$nextTick(() => {
           this.filteredProducts = this.allProducts.filter((_product: any) => {
