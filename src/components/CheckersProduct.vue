@@ -5,7 +5,7 @@
     <div class="checkers-product-content d-flex flex-column">
       <div class="checkers-product-image" v-if="productConfig.imagePath">
         <div class="checkers-product-image-wrapper">
-          <img :src="'./static/'+productConfig.imagePathThumbnail" class="img-max-100" alt="">
+          <img :src="'./static/'+productConfig.imagePathThumbnail" alt="">
         </div>
       </div>
       <div class="checkers-product-footer">
@@ -30,7 +30,6 @@
     @Prop() productConfig!: any;
 
     triggerClick():void {
-      console.log('remove routing');
         this.$router.push(
         { 
           path: '/filtered'
@@ -80,10 +79,20 @@
 
     &-image {
 
-      flex: 7;
+      flex: 5;
 
       @media @smart-phone {
         flex: 30;
+      }
+
+      img {
+        max-height: 22vw;
+        max-width: 20vw;
+
+        @media @smart-phone {
+          max-width: 96vw;
+          max-height: 80vw;
+        }
       }
 
       &-wrapper {

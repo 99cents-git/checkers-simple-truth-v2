@@ -22,13 +22,23 @@
           </div>
           <div class="details product-desc p-2 p-lg-4" v-html="currentSidebarItem.description"></div>
           <div class="sidebar-details-entry">
-            <div class="header p-4 d-flex flex-column">
+            <div class="header p-4">
               NUTRITIONAL INFO
             </div>
             <div class="contents" >
               <ul>
                 <li v-for="nutritionalInfo in currentSidebarItem.nutritionalInfo" class="nutritional-info"><img src="@/assets/tags-tick.svg" alt="">{{ nutritionalInfo }}</li>
               </ul>
+            </div>
+            <div v-if="currentSidebarItem.nutritionalTable" class="nutrition-table">
+              <table>
+                <tr><th v-for="header in currentSidebarItem.nutritionalTable.headers">{{header}}</th></tr>
+                <tr v-for="item in currentSidebarItem.nutritionalTable.items">
+                  <td class="text-left">{{item.label}}</td>
+                  <td>{{item.val1}}</td>
+                  <td>{{item.val2}}</td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
@@ -90,6 +100,28 @@
   .nutritional-info > img {
     margin-top: -.1em;
     padding-right: 0.3rem;
+  }
+
+  .nutrition-table  {
+
+    margin-top: 3vh;
+    border-top: 1px solid grey;
+    border-right: 1px solid grey;
+
+    > table {
+      width: 100%;
+      font-size: 0.9rem;
+
+      td, th {
+        border-left: 1px solid grey;
+        border-bottom: 1px solid grey;
+        padding: 3px;
+      }
+
+      th:first-of-type {
+        text-align: left;
+      }
+    }
   }
 
   .product-desc {

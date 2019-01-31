@@ -129,7 +129,32 @@ export default new Vuex.Store({
           'Belgian chocolate',
           'High in fibre',
           'No artificial colours or flavours'
-        ]
+        ],
+        nutritionalTable: {
+          headers: ['Typical Nutritional Information', 'Per 100 ml', 'Per 15 ml Serving'],
+          items: [
+            {
+              label: 'Energy (kJ)',
+              val1: '3336',
+              val2: '500'
+            },
+            {
+              label: 'Protein (g)',
+              val1: '0.6',
+              val2: '0.1'
+            },
+            {
+              label: 'Glycaemic Carbohydrate (g)',
+              val1: '0',
+              val2: '0'
+            },
+            {
+              label: 'Of which Total Sugar (g)',
+              val1: '0',
+              val2: '0'
+            },
+          ]
+        }
       },
       {
         id: 2,
@@ -1272,7 +1297,6 @@ export default new Vuex.Store({
         ]
       }
     ],
-
     sideDrawerOpen: false,
     sideDrawerId: 2,
     videoId: 'pga8mV8LJnE'
