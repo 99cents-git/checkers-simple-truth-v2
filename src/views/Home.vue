@@ -50,7 +50,7 @@
 
     }
 
-    selectDiet(_item:any):void {
+    selectDiet(_item: any): void {
       this.$router.push(
           {
             path: `/filtered/diet/${_item.name}`

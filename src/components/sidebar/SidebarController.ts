@@ -20,6 +20,8 @@ export default class SidebarController extends Vue {
   public sideBarWidth: number = 0;
   public videoHeight: number = 300;
   public videoVisible: boolean = false;
+  public imageLoaded: boolean = false;
+  public cachedProduct: any = {};
 
   mounted(): void {
     //@ts-ignore
@@ -38,21 +40,25 @@ export default class SidebarController extends Vue {
   }
 
   private openSidebar(_event: any): void {
+    this.imageLoaded = this.currentSidebarItem.id === this.cachedProduct.id;
     this.isOpen = true;
     document.body.classList.add('no-scroll')
-    
-
   }
 
   private closeSidebar(_event: any): void {
     this.isOpen = false;
     this.videoVisible = false;
+    this.cachedProduct = this.currentSidebarItem;
     window.setTimeout(() => {
       document.body.classList.remove('no-scroll')
     }, 500);
   }
 
-  get currentSidebarItem(): number {
+  private imgLoaded(_any:any):void {
+    this.imageLoaded = true;
+  }
+
+  get currentSidebarItem(): any {
     return this.$store.getters.sideDrawerCard;
   }
 

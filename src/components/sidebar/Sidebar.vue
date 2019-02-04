@@ -9,9 +9,10 @@
         <div class="sidebar-video" v-if="videoVisible">
           <youtube :videoId="currentVideoId" player-width="100%" :player-height="videoHeight"></youtube>
         </div>
-        <div class="sidebar-image spinner" v-if="!videoVisible">
+        <div class="sidebar-image" v-bind:class="{spinner: !imageLoaded}" v-if="!videoVisible">
           <div class="sidebar-image-wrapper" v-bind:style="{'background-image': 'url(./static/products-bg.png)'}">
-            <img class="product-shot" v-bind:src="'./static/'+currentSidebarItem.imagePath+''"></div>
+            <img v-show="imageLoaded" class="product-shot" v-bind:src="'./static/'+currentSidebarItem.imagePath+''" @load="imgLoaded">
+          </div>
         </div>
         <div class="sidebar-details p-4 p-lg-5">
           <div class="product mb-4" v-html="currentSidebarItem.productName"></div>
