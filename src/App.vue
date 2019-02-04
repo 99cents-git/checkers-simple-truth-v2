@@ -89,6 +89,11 @@
   import {EVENTS} from "./components/Constants";
   import Multiselect from 'vue-multiselect';
   import '../node_modules/normalize.css/normalize.css';
+  import * as $ from 'jquery';
+
+  const API_CONFIG = {
+    ENDPOINT: 'http://localhost:63342/checkers-simple-truth-v2/public/dummyData.html?_ijt=hca1fspuf37p8uak7s9dut3eho'
+  };
 
   @Component({
     components: {
@@ -100,6 +105,20 @@
     },
   })
   export default class App extends Vue {
+
+    private dataLoaded:boolean = false;
+
+    public created() {
+      return $.ajax({
+        url: API_CONFIG.ENDPOINT,
+        method: "GET"
+      }).done((_data:any) => {
+        this.$store.commit('updateProducts', JSON.parse(_data));
+        this.dataLoaded = true;
+      }).fail((_failure:any) => {
+        console.warn('Could not load products');
+      })
+    }
 
     public mounted(): void {
       EventBus.$on('button-clicked', (a: any) => {

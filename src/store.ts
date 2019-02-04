@@ -1312,6 +1312,9 @@ export default new Vuex.Store({
     },
     updateVideoId(_state, _id) {
       _state.videoId = _id;
+    },
+    updateProducts(_state, _products) {
+      _state.productCards = _products;
     }
   },
   getters: {

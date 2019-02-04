@@ -21,7 +21,7 @@ export default class SidebarController extends Vue {
   public videoHeight: number = 300;
   public videoVisible: boolean = false;
   public imageLoaded: boolean = false;
-  public cachedProduct: any = {};
+  public cachedProduct: any = {id: 0};
 
   mounted(): void {
     //@ts-ignore
