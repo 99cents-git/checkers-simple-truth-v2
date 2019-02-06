@@ -124,12 +124,7 @@ export default new Vuex.Store({
         tags: ['vegan', 'vegetarian', 'sugar-conscious'],
         productName: 'Skinny Dipped Roasted Almonds (Mint)',
         description: 'Simple Truth Skinny Dipped Roasted Almonds with mint-flavoured Belgian dark chocolate are guilt-free treats that are made with reduced sugar.',
-        nutritionalInfo: ['Reduced sugar',
-          'No added preservatives',
-          'Belgian chocolate',
-          'High in fibre',
-          'No artificial colours or flavours'
-        ]
+        nutritionalInfo: ['Reduced sugar',          'No added preservatives',          'Belgian chocolate',          'High in fibre',          'No artificial colours or flavours'        ]
       },
       {
         id: 2,
