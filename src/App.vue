@@ -504,13 +504,17 @@
       max-width: @narrow-content-width;
       margin: 0 auto;
       font-size: 1.1rem;
+
+      @media @smart-phone {
+          margin: 0 6vw;
+      }
     }
   }
 
   .content-filters {
     margin: 0 auto;
     background: url('assets/filter-bg.jpg') repeat;
-    padding: 30px 0;
+
 
     @media @smart-phone {
         padding: 6vw;
@@ -520,9 +524,22 @@
       background: @dark-green;
     }
 
+    .filters {
+      display: flex;
+
+      @media @smart-phone {
+        flex-direction: column;
+      }
+    }
+
     .filter-wrapper {
+      flex: 1;
+      margin: 30px;
       justify-content: center;
-      margin-bottom: 20px;
+
+      @media @smart-phone {
+          margin: 0 0 6vw 0;
+      }
     }
 
     .filter-item {

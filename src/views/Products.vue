@@ -1,27 +1,20 @@
 <template>
   <div class="page products-page">
     <div class="content-filters ">
-      <div class="width-constrain">
-        <div class="row">
-          <div class="col-12 col-sm-6">
-            <div class="filter-wrapper width-constrain">
-              <div class="select-label">BROWSE BY Dietary REQUIREMENT</div>
-              <multiselect v-model="filterValue" placeholder="Add a filter" label="label" track-by="code" :options="dFilters" :multiple="true" :searchable="false" @input="updateFilters"></multiselect>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6">
-            <div class="filter-wrapper width-constrain">
-              <div class="select-label">BROWSE BY Category</div>
-              <multiselect v-model="categoryValue" placeholder="Add a filter" label="label" track-by="code" :options="cFilters" :multiple="true" :searchable="false" @input="updateFilters"></multiselect>
-            </div>
-          </div>
+      <div class="filters width-constrain">
+        <div class="filter-wrapper">
+          <div class="select-label">BROWSE BY Dietary REQUIREMENT</div>
+          <multiselect v-model="filterValue" placeholder="Add a filter" label="label" track-by="code" :options="dFilters" :multiple="true" :searchable="false" @input="updateFilters"></multiselect>
+        </div>
+        <div class="filter-wrapper">
+          <div class="select-label">BROWSE BY Category</div>
+          <multiselect v-model="categoryValue" placeholder="Add a filter" label="label" track-by="code" :options="cFilters" :multiple="true" :searchable="false" @input="updateFilters"></multiselect>
         </div>
       </div>
     </div>
     <div class="width-constrain checkers-grid">
       <CheckersProduct v-for="card in filteredProducts" :key="card.id" v-bind:productConfig="card"/>
     </div>
-    <div class="clear"></div>
   </div>
 </template>
 <script lang="ts">
