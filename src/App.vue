@@ -1,82 +1,85 @@
 <template>
   <div id="app">
-    <Sidebar config="is-right is-portrait has-video"></Sidebar>
-    <CheckersHeader/>
-    <div class="breadcrumbs">
-      <div class="width-constrain h-100">
-        <div class="breadcrumbs-back-button">
-          <a href="https://www.checkers.co.za">< Back</a>
-        </div>
-        <div class="breadcrumbs-crumbs h-100 d-flex align-items-center justify-content-center">
-          <ul class="d-flex flex-row">
-            <li><a href="https://www.checkers.co.za">Home</a></li>
-            <li><a href="https://www.checkers.co.za/live-better.html">Live Better</a></li>
-            <li>Simple Truth</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="page-header">
-      <div class="page-header-text w-100">
-        <picture>
-          <source media="(max-width: 640px)" srcset="./assets/simple-truth-logo-m.svg">
-          <img src="./assets/simple-truth-logo.svg">
-        </picture>
-      </div>
-    </div>
-    <div class="promise d-flex align-items-center">
-      <ul class="width-constrain d-flex justify-content-around flex-column flex-lg-row w-100 py-3 py-sm-0 pb-lg-0">
-        <li class="promise-item">NO ARTIFICIAL COLOURS OR FLAVOURS</li>
-        <li class="promise-item">NO ARTIFICIAL SWEETENERS</li>
-        <li class="promise-item">NO ADDED MSG</li>
-      </ul>
-    </div>
-    <div class="intro">
-      <div class="py-4 pt-lg-5 pb-lg-4">
-        <div class="width-constrain">
-          <div class="mb-3">
-            <h1>
-              EXPLORE THE SIMPLE TRUTH RANGE </h1>
+    <div v-if="!appConfig" class="loader spinner"></div>
+    <div v-if="appConfig" class="loaded-wrapper">
+      <Sidebar config="is-right is-portrait has-video" :is-open="sidebarOpen" :card="sidebarCard"></Sidebar>
+      <CheckersHeader/>
+      <div class="breadcrumbs">
+        <div class="width-constrain h-100">
+          <div class="breadcrumbs-back-button">
+            <a href="https://www.checkers.co.za">< Back</a>
           </div>
-          <div class="info-subheading mb-4">
-            Our Simple Truth range is designed to give you a variety of healthier choices to complement your lifestyle
-            and it includes no artificial colours, flavours or sweeteners and no added MSG. Explore our gluten free,
-            organic and eco-friendly products – and so much more – below.
+          <div class="breadcrumbs-crumbs h-100 d-flex align-items-center justify-content-center">
+            <ul class="d-flex flex-row">
+              <li><a href="https://www.checkers.co.za">Home</a></li>
+              <li><a href="https://www.checkers.co.za/live-better.html">Live Better</a></li>
+              <li>Simple Truth</li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-    <router-view/>
-    <div class="page-footer">
-      <div class="page-footer-content">
-        <div class="page-footer-header">
-          <img src="./assets/stand-to-win.svg" alt="" class="img-fluid">
-        </div>
-        <div class="page-footer-details">
-          Competition ends 10 February 2019.
-        </div>
-        <div class="page-footer-buttons d-flex align-items-center flex-column">
-          <ActionButton buttonLabel="Share photo now" buttonType="text" buttonLink="https://www.checkers.co.za/specials/newsletter.html"></ActionButton>
-          <span class="page-footer-tcs mt-3"><a class="link-text" href="http://www.termsconditions.co.za/index.aspx" target="_blank">T&Cs apply</a></span>
+      <div class="page-header">
+        <div class="page-header-text w-100">
+          <picture>
+            <source media="(max-width: 640px)" srcset="./assets/simple-truth-logo-m.svg">
+            <img src="./assets/simple-truth-logo.svg">
+          </picture>
         </div>
       </div>
-    </div>
-    <div class="page-newsletter py-4">
-      <div class="page-newsletter-content w-100 width-constrain d-flex justify-content-between align-items-center flex-column flex-lg-row">
-        <div class="page-newsletter-signup">
-          <div class="page-newsletter-signup-bold">
-            SIGN UP TO OUR NEWSLETTER
+      <div class="promise d-flex align-items-center">
+        <ul class="width-constrain d-flex justify-content-around flex-column flex-lg-row w-100 py-3 py-sm-0 pb-lg-0">
+          <li class="promise-item">NO ARTIFICIAL COLOURS OR FLAVOURS</li>
+          <li class="promise-item">NO ARTIFICIAL SWEETENERS</li>
+          <li class="promise-item">NO ADDED MSG</li>
+        </ul>
+      </div>
+      <div class="intro">
+        <div class="py-4 pt-lg-5 pb-lg-4">
+          <div class="width-constrain">
+            <div class="mb-3">
+              <h1>
+                EXPLORE THE SIMPLE TRUTH RANGE </h1>
+            </div>
+            <div class="info-subheading mb-4">
+              Our Simple Truth range is designed to give you a variety of healthier choices to complement your lifestyle
+              and it includes no artificial colours, flavours or sweeteners and no added MSG. Explore our gluten free,
+              organic and eco-friendly products – and so much more – below.
+            </div>
           </div>
-          <div class="page-newsletter-signup-description">
-            Stay up to date with all of our specials, promotions and more.
-          </div>
-        </div>
-        <div class="page-newsletter-button">
-          <ActionButton buttonLabel="Sign Up Now" buttonType="text" buttonTheme="light" buttonLink="https://www.checkers.co.za/specials/newsletter.html"></ActionButton>
         </div>
       </div>
+      <router-view :configuration="appConfig"/>
+      <div class="page-footer">
+        <div class="page-footer-content">
+          <div class="page-footer-header">
+            <img src="./assets/stand-to-win.svg" alt="" class="img-fluid">
+          </div>
+          <div class="page-footer-details">
+            Competition ends 10 February 2019.
+          </div>
+          <div class="page-footer-buttons d-flex align-items-center flex-column">
+            <ActionButton buttonLabel="Share photo now" buttonType="text" buttonLink="https://www.checkers.co.za/specials/newsletter.html"></ActionButton>
+            <span class="page-footer-tcs mt-3"><a class="link-text" href="http://www.termsconditions.co.za/index.aspx" target="_blank">T&Cs apply</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="page-newsletter py-4">
+        <div class="page-newsletter-content w-100 width-constrain d-flex justify-content-between align-items-center flex-column flex-lg-row">
+          <div class="page-newsletter-signup">
+            <div class="page-newsletter-signup-bold">
+              SIGN UP TO OUR NEWSLETTER
+            </div>
+            <div class="page-newsletter-signup-description">
+              Stay up to date with all of our specials, promotions and more.
+            </div>
+          </div>
+          <div class="page-newsletter-button">
+            <ActionButton buttonLabel="Sign Up Now" buttonType="text" buttonTheme="light" buttonLink="https://www.checkers.co.za/specials/newsletter.html"></ActionButton>
+          </div>
+        </div>
+      </div>
+      <CheckersFooter></CheckersFooter>
     </div>
-    <CheckersFooter></CheckersFooter>
   </div>
 </template>
 <script lang="ts">
@@ -89,6 +92,7 @@
   import {EVENTS} from "./components/Constants";
   import Multiselect from 'vue-multiselect';
   import '../node_modules/normalize.css/normalize.css';
+  import NinjaComms from "./ninja/NinjaComms";
 
   @Component({
     components: {
@@ -97,27 +101,43 @@
       ActionButton,
       Sidebar,
       Multiselect
-    },
+    }
   })
   export default class App extends Vue {
+
+    public appConfig: any = null;
+    public sidebarOpen: boolean = false;
+    public sidebarCard: any = {};
+
+    public created() {
+      NinjaComms.fetchConfiguration().done((data: any) => {
+        this.appConfig = JSON.parse(data);
+        this.appConfig.forEach(_product => {
+          _product.tags = _product.category.split(',').concat(_product.tags.split(','));
+          _product.nutritionalInfo = _product.nutritionalinfo.split('|');
+        })
+      })
+    }
 
     public mounted(): void {
       EventBus.$on('button-clicked', (a: any) => {
         switch (a.buttonAction) {
           case 'show-info':
-            this.$store.commit('openDrawer', a.card);
-            EventBus.$emit(EVENTS.UIEVENTS.SIDEBAR_SHOW);
+            this.sidebarCard = a.card;
+            this.sidebarOpen = true;
+            break;
+          case 'close-sidebar':
+            this.sidebarOpen = false;
             break;
         }
       })
     }
 
     public closeSidebar(): void {
-      this.$store.commit('closeDrawer');
-      document.body.classList.remove('no-scroll');
+      this.sidebarOpen = false;
     }
 
-    public toggleItem(_event:MouseEvent):void {
+    public toggleItem(_event: MouseEvent): void {
 
     }
   }
@@ -126,9 +146,7 @@
   @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
   @import './css/overrides.less';
 </style>
-
 <style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
-
 <style lang="less">
   @import './css/variables.less';
 
@@ -149,6 +167,46 @@
 
   body {
     font-family: 'Roboto', sans-serif !important;
+  }
+
+  .loader {
+    .cover-parent;
+    background: url('./assets/checkers-loader-text.svg') no-repeat center center #E5A339;
+    background-size: 20%;
+  }
+
+  @keyframes loader {
+    0% {
+      opacity: 0.2
+    }
+    50% {
+      opacity: 1
+    }
+    100% {
+      opacity: 0.2
+    }
+  }
+
+  @keyframes spinner {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22vw;
+    height: 22vw;
+    margin-top: -11vw;
+    margin-left: -11vw;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: rgba(255, 255, 255, 1);
+    animation: spinner .6s linear infinite;
   }
 
   .img-max-100 {
@@ -506,7 +564,7 @@
       font-size: 1.1rem;
 
       @media @smart-phone {
-          margin: 0 6vw;
+        margin: 0 6vw;
       }
     }
   }
@@ -515,9 +573,8 @@
     margin: 0 auto;
     background: url('assets/filter-bg.jpg') repeat;
 
-
     @media @smart-phone {
-        padding: 6vw;
+      padding: 6vw;
     }
 
     .multiselect__tag {
@@ -538,7 +595,7 @@
       justify-content: center;
 
       @media @smart-phone {
-          margin: 0 0 6vw 0;
+        margin: 0 0 6vw 0;
       }
     }
 
@@ -570,10 +627,10 @@
         background: white;
       }
 
-        &:hover {
+      &:hover {
         background: white;
-        color:#7AB629;
-          cursor: pointer;
+        color: #7AB629;
+        cursor: pointer;
       }
     }
 
@@ -640,5 +697,4 @@
   p:last-of-type {
     margin-bottom: 0;
   }
-
 </style>

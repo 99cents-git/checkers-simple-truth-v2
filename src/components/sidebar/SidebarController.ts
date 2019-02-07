@@ -1,9 +1,9 @@
-import {Component, Prop, Vue} from 'vue-property-decorator';
+import {Component, Prop, Vue, Watch} from 'vue-property-decorator';
 import ActionButton from '../ActionButton.vue';
 import {EventBus} from '../EventBus';
 import {EVENTS} from '../Constants';
 // @ts-ignore
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import {disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks} from 'body-scroll-lock';
 import $ from 'jquery';
 
 @Component({
@@ -13,10 +13,11 @@ import $ from 'jquery';
 })
 export default class SidebarController extends Vue {
 
-  @Prop() config!:any;
+  @Prop() config!: any;
+  @Prop() isOpen: boolean = false;
+  @Prop() card!: any;
 
   public hasVideo!: boolean;
-  public isOpen: boolean = false;
   public sideBarWidth: number = 0;
   public videoHeight: number = 300;
   public videoVisible: boolean = false;
@@ -27,12 +28,6 @@ export default class SidebarController extends Vue {
     //@ts-ignore
     this.sideBarWidth = $('.sidebar').width();
     this.videoHeight = this.sideBarWidth * (9 / 16);
-    EventBus.$on(EVENTS.UIEVENTS.SIDEBAR_SHOW, this.openSidebar);
-    EventBus.$on(EVENTS.UIEVENTS.SIDEBAR_HIDE, this.closeSidebar);
-    EventBus.$on(EVENTS.UIEVENTS.SIDEBAR_TOGGLE, (_emitterEvent: any) => {
-      this.isOpen ? this.closeSidebar(_emitterEvent) : this.openSidebar(_emitterEvent)
-    });
-    
   }
 
   public showVideo(): void {
@@ -40,26 +35,26 @@ export default class SidebarController extends Vue {
   }
 
   private openSidebar(_event: any): void {
-    this.imageLoaded = this.currentSidebarItem.id === this.cachedProduct.id;
-    this.isOpen = true;
-    document.body.classList.add('no-scroll')
+    this.imageLoaded = this.card.id === this.cachedProduct.id;
   }
 
   private closeSidebar(_event: any): void {
-    this.isOpen = false;
     this.videoVisible = false;
-    this.cachedProduct = this.currentSidebarItem;
-    window.setTimeout(() => {
-      document.body.classList.remove('no-scroll')
-    }, 500);
+    EventBus.$emit('button-clicked', {buttonAction: 'close-sidebar'});
   }
 
-  private imgLoaded(_any:any):void {
+  private imgLoaded(_any: any): void {
     this.imageLoaded = true;
   }
 
-  get currentSidebarItem(): any {
-    return this.$store.getters.sideDrawerCard;
+  @Watch('isOpen') onOpen(_newValue, _oldValue) {
+    if (_newValue) {
+      this.imageLoaded = false;
+      this.imageLoaded = this.card.id === this.cachedProduct.id;
+    }
+    if (_oldValue) {
+      this.cachedProduct = this.card;
+    }
   }
 
   get currentVideoId(): string {

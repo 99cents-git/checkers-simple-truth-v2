@@ -11,30 +11,36 @@
         </div>
         <div class="sidebar-image" v-bind:class="{spinner: !imageLoaded}" v-if="!videoVisible">
           <div class="sidebar-image-wrapper" v-bind:style="{'background-image': 'url(./static/products-bg.png)'}">
-            <img v-show="imageLoaded" class="product-shot" v-bind:src="'./static/'+currentSidebarItem.imagePath+''" @load="imgLoaded">
+            <img v-show="imageLoaded" class="product-shot" v-bind:src="'./static/'+card.imagePath+''" @load="imgLoaded">
           </div>
         </div>
         <div class="sidebar-details p-4 p-lg-5">
-          <div class="product mb-4" v-html="currentSidebarItem.productName"></div>
+          <div class="product mb-4" v-html="card.productName"></div>
           <div class="d-flex flex-row flex-wrap justify-content-center">
-            <div class="bg-info tags tag-justice" v-for="tag in currentSidebarItem.tags">
+            <div class="bg-info tags tag-justice" v-for="tag in card.tags">
               <img src="@/assets/tags-tick.svg" alt=""> {{ tag }}
             </div>
           </div>
-          <div class="details product-desc p-2 p-lg-4" v-html="currentSidebarItem.description"></div>
+          <div class="details product-desc p-2 p-lg-4" v-html="card.description"></div>
           <div class="sidebar-details-entry">
-            <div class="header p-4">
-              NUTRITIONAL INFO
-            </div>
+
             <div class="contents" >
               <ul>
-                <li v-for="nutritionalInfo in currentSidebarItem.nutritionalInfo" class="nutritional-info"><img src="@/assets/tags-tick.svg" alt="">{{ nutritionalInfo }}</li>
+                <li v-for="nutritionalInfo in card.nutritionalInfo" class="nutritional-info">
+                  <img src="@/assets/tags-tick.svg" alt="">
+                  {{ nutritionalInfo }}
+                </li>
               </ul>
             </div>
-            <div v-if="currentSidebarItem.nutritionalTable" class="nutrition-table">
+            <div v-if="card.nutritionalTable" class="nutrition-table">
+              <div class="header p-4">
+                NUTRITIONAL INFO
+              </div>
               <table>
-                <tr><th v-for="header in currentSidebarItem.nutritionalTable.headers">{{header}}</th></tr>
-                <tr v-for="item in currentSidebarItem.nutritionalTable.items">
+                <tr>
+                  <th v-for="header in card.nutritionalTable.headers">{{header}}</th>
+                </tr>
+                <tr v-for="item in card.nutritionalTable.items">
                   <td class="text-left">{{item.label}}</td>
                   <td>{{item.val1}}</td>
                   <td>{{item.val2}}</td>
@@ -103,7 +109,7 @@
     padding-right: 0.3rem;
   }
 
-  .nutrition-table  {
+  .nutrition-table {
 
     margin-top: 3vh;
     border-top: 1px solid grey;

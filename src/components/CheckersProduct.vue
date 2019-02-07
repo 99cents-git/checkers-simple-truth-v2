@@ -1,8 +1,10 @@
 <template>
-
-  <div @click="triggerClick" class="checkers-product" :class="productConfig.tags">
+  <div @click="triggerClick" class="checkers-product">
     <div class="checkers-product-spacer"></div>
     <div class="checkers-product-content d-flex flex-column">
+      <div v-if="productConfig.flash === 'New'" class="new-wrapper">
+        <img :src="require('@/assets/flash-new.svg')" alt="" class="img-fluid">
+      </div>
       <div class="checkers-product-image" v-if="productConfig.imagePath">
         <div class="checkers-product-image-wrapper">
           <img :src="'./static/'+productConfig.imagePathThumbnail" alt="">
@@ -31,7 +33,7 @@
 
     triggerClick():void {
         this.$router.push(
-        { 
+          {
           path: '/filtered'
         })
       EventBus.$emit('button-clicked', {buttonAction: 'show-info', card: this.productConfig});
@@ -61,6 +63,14 @@
       transition: all 0.5s;
     }
 
+    .new-wrapper {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      height: 5rem;
+      width: 5rem;
+    }
+
     &-content {
       position: absolute;
       top: 0;
@@ -86,8 +96,8 @@
       }
 
       img {
-        max-height: 22vw;
-        max-width: 20vw;
+        max-height: 22rem;
+        max-width: 20rem;
 
         @media @smart-phone {
           max-width: 96vw;

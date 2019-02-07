@@ -13,6 +13,14 @@
     </ul>
   </div>
 </template>
+<script lang="ts">
+  import {Component, Vue} from 'vue-property-decorator';
+
+  @Component
+  export default class CheckersFooter extends Vue {
+
+  }
+</script>
 <style scoped lang="less">
   @import '../css/variables';
 

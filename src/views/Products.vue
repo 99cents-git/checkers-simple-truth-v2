@@ -19,7 +19,7 @@
 </template>
 <script lang="ts">
   import Vue from 'vue';
-  import {Component} from 'vue-property-decorator';
+  import {Component, Prop} from 'vue-property-decorator';
   import CheckersProduct from '@/components/CheckersProduct.vue';
 
   @Component({
@@ -28,6 +28,7 @@
 
   export default class ProductsController extends Vue {
 
+    @Prop() configuration!: any;
 
     public filterValue: any = [];
     //public filterValue: any = [{lable: '',name: ''}];
@@ -85,7 +86,7 @@
     public filterProducts() {
       if (!this.activeFilters || this.activeFilters.length === 0) {
         this.$nextTick(() => {
-          this.filteredProducts = this.$store.state.productCards;
+          this.filteredProducts = this.allProducts;
         });
       } else {
         this.$nextTick(() => {
@@ -105,7 +106,7 @@
     }
 
     get allProducts() {
-      return this.$store.state.productCards
+      return this.configuration
     }
 
 
