@@ -111,7 +111,7 @@
 
     public created() {
       NinjaComms.fetchConfiguration().done((data: any) => {
-        this.appConfig = JSON.parse(data);
+        this.appConfig = data;
         this.appConfig.forEach(_product => {
           _product.tags = _product.category.split(',').concat(_product.tags.split(','));
           _product.nutritionalInfo = _product.nutritionalinfo.split('|');

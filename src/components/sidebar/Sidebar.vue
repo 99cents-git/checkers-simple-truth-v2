@@ -23,7 +23,6 @@
           </div>
           <div class="details product-desc p-2 p-lg-4" v-html="card.description"></div>
           <div class="sidebar-details-entry">
-
             <div class="contents" >
               <ul>
                 <li v-for="nutritionalInfo in card.nutritionalInfo" class="nutritional-info">
@@ -32,20 +31,11 @@
                 </li>
               </ul>
             </div>
-            <div v-if="card.nutritionalTable" class="nutrition-table">
+            <div v-if="card.ingredientsinfo">
               <div class="header p-4">
                 NUTRITIONAL INFO
               </div>
-              <table>
-                <tr>
-                  <th v-for="header in card.nutritionalTable.headers">{{header}}</th>
-                </tr>
-                <tr v-for="item in card.nutritionalTable.items">
-                  <td class="text-left">{{item.label}}</td>
-                  <td>{{item.val1}}</td>
-                  <td>{{item.val2}}</td>
-                </tr>
-              </table>
+              <table v-html="card.ingredientsinfo" class="nutrition-table"></table>
             </div>
           </div>
         </div>
@@ -58,94 +48,96 @@
 
   export default SidebarController;
 </script>
-<style scoped lang="less">
+<style lang="less">
   @import './SidebarStyles';
 
-  .tag-justice {
-    justify-content: space-evenly;
-  }
+  .sidebar-wrapper {
 
-  .tags {
-
-    background-color: #F0ECE6 !important;
-    height: 3em;
-    border-radius: 35px;
-    color: #333333;
-    text-transform: uppercase;
-    margin: 0.5rem;
-
-    display: flex;
-    padding: 0 15px;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.4rem;
-
-    @media @smart-phone {
-      font-size: 0.8rem;
+    .tag-justice {
+      justify-content: space-evenly;
     }
-  }
 
+    .tags {
 
-  .tags > img {
-    padding-right: 0.3rem;
-  }
+      background-color: #F0ECE6 !important;
+      height: 3em;
+      border-radius: 35px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 0.5rem;
 
-  .sidebar-text-colour {
-    color: #828282;
-  }
-
-  .nutritional-info {
-    color: #4F4F4F;
-    font-size: 1rem;
-    text-align: left;
-    padding-left: 0;
-  }
-
-  .nutritional-info > img {
-    margin-top: -.1em;
-    padding-right: 0.3rem;
-  }
-
-  .nutrition-table {
-
-    margin-top: 3vh;
-    border-top: 1px solid grey;
-    border-right: 1px solid grey;
-
-    > table {
-      width: 100%;
+      display: flex;
+      padding: 0 15px;
+      align-items: center;
+      justify-content: center;
       font-size: 0.9rem;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.4rem;
 
-      td, th {
-        border-left: 1px solid grey;
-        border-bottom: 1px solid grey;
-        padding: 3px;
+      @media @smart-phone {
+        font-size: 0.8rem;
       }
+    }
 
-      th:first-of-type {
+
+    .tags > img {
+      padding-right: 0.3rem;
+    }
+
+    .sidebar-text-colour {
+      color: #828282;
+    }
+
+    .nutritional-info {
+      color: #4F4F4F;
+      font-size: 1rem;
+      text-align: left;
+      padding-left: 0;
+    }
+
+    .nutritional-info > img {
+      margin-top: -.1em;
+      padding-right: 0.3rem;
+    }
+
+    .nutrition-table {
+      width: 100%;
+      font-size: 0.8rem;
+      border-right: 1px solid grey;
+      border-top: 1px solid grey;
+    }
+
+    tr {
+
+    }
+
+    td {
+      border-left: 1px solid grey;
+      border-bottom: 1px solid grey;
+      padding: 3px;
+
+      &:first-of-type {
         text-align: left;
       }
     }
-  }
 
-  .product-desc {
-    color: #828282;
-    font-size: 1.2rem;
-  }
+    .product-desc {
+      color: #828282;
+      font-size: 1.2rem;
+    }
 
-  .product-shot {
-    max-height: 100%;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+    .product-shot {
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
   }
 </style>

@@ -8,7 +8,7 @@ export default class NinjaComms {
 
   static fetchConfiguration(): any {
     return $.ajax({
-      url: 'http://localhost:56777/checkers-simple-truth-v2/public/dummydata.html?_ijt=1hsvfeuu4ejmcn9gllgkhg0mpk',
+      url: 'https://checkers.99api.ninja/api/products',
       method: "GET"
     })
   }

@@ -96,7 +96,7 @@
       }
 
       img {
-        max-height: 22rem;
+        max-height: 20rem;
         max-width: 20rem;
 
         @media @smart-phone {
