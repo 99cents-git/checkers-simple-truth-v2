@@ -6,15 +6,15 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     dietFilters: [
-      {code: 1, label: 'Gluten-free', name: 'Gluten free', selected: false},
+      {code: 1, label: 'Gluten-free', name: 'Gluten-free', selected: false},
       {code: 2, label: 'Vegan', name: 'Vegan', selected: false},
-      {code: 3, label: 'Reduced Sugar', name: 'Reduced sugar', selected: false},
+      {code: 3, label: 'Reduced Sugar', name: 'Reduced-sugar', selected: false},
       {code: 4, label: 'Raw', name: 'Raw', selected: false},
       {code: 5, label: 'Organic', name: 'Organic', selected: false},
       {code: 6, label: 'Vegetarian', name: 'Vegetarian', selected: false},
-      {code: 7, label: 'Dairy-free', name: 'dairy-free', selected: false},
-      {code: 8, label: 'High Protein', name: 'High protein', selected: false},
-      {code: 9, label: 'No added preservatives', name: 'No added preservatives', selected: false},
+      {code: 7, label: 'Dairy-free', name: 'Dairy-free', selected: false},
+      {code: 8, label: 'High Protein', name: 'High-protein', selected: false},
+      {code: 9, label: 'No added preservatives', name: 'No-added-preservatives', selected: false},
       {code: 10, label: 'GMO-free', name: 'GMO-free', selected: false},
     ],
     tags: [

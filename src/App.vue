@@ -12,9 +12,10 @@
           <div class="breadcrumbs-crumbs h-100 d-flex align-items-center justify-content-center">
             <ul class="d-flex flex-row">
               <li><a href="https://www.checkers.co.za">Home</a></li>
-              <li><a href="https://www.checkers.co.za/live-better.html">Live Better</a></li>
+              <li><a href="https://www.checkers.co.za/food/live-better.html">Live Better</a></li>
               <li>Simple Truth</li>
             </ul>
+
           </div>
         </div>
       </div>
@@ -113,7 +114,7 @@
       NinjaComms.fetchConfiguration().done((data: any) => {
         this.appConfig = data;
         this.appConfig.forEach(_product => {
-          _product.tags = _product.category.split(',').concat(_product.tags.split(','));
+          _product.tags = _product.category.split(',').concat(_product.tags.split(' '));
           _product.nutritionalInfo = _product.nutritionalinfo.split('|');
         })
       })
