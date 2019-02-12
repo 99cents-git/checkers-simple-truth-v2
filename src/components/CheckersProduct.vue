@@ -92,7 +92,7 @@
       flex: 5;
 
       @media @smart-phone {
-        flex: 30;
+        flex: 5;
       }
 
       img {
@@ -112,7 +112,18 @@
         justify-content: center;
         align-items: center;
       }
+
+
     }
+    &-cta {
+      height: 55px;
+      overflow: hidden;
+
+      @media @smart-phone {
+        height: 49px;
+      }
+    }
+
 
     &-flash {
       position: absolute;
@@ -123,7 +134,9 @@
     &-footer {
       flex: 1;
       text-align: center;
-
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
     }
 
   }

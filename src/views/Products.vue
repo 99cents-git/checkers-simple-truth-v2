@@ -12,8 +12,13 @@
         </div>
       </div>
     </div>
-    <div class="width-constrain checkers-grid">
+    <div class="grid-wrapper py-3 width-constrain">
+    <div class="checkers-grid">
       <CheckersProduct v-for="card in filteredProducts" :key="card.id" v-bind:productConfig="card"/>
+    </div>
+    <div class="back-button">
+      <ActionButton buttonLabel="Back to Categories" buttonType="text" @trigger-click="backToCategories"></ActionButton>
+    </div>
     </div>
   </div>
 </template>
@@ -21,9 +26,10 @@
   import Vue from 'vue';
   import {Component, Prop} from 'vue-property-decorator';
   import CheckersProduct from '@/components/CheckersProduct.vue';
+  import ActionButton from "@/components/ActionButton.vue";
 
   @Component({
-    components: {CheckersProduct}
+    components: {ActionButton, CheckersProduct}
   })
 
   export default class ProductsController extends Vue {
@@ -75,6 +81,11 @@
       this.filterProducts();
     }
 
+    public backToCategories(_event:any):void {
+      console.log(_event);
+      this.$router.push({path: '/'})
+    }
+
     get dietFilters() {
       return this.$store.state.dietFilters
     }
@@ -113,6 +124,11 @@
   }
 </script>
 <style lang="less">
+
+  .back-button {
+    text-align: center;
+  }
+
   .products-page {
     background: url('../assets/main-bg.jpg') repeat;
   }
@@ -126,6 +142,7 @@
   .checkers-grid {
     display: flex;
     flex-wrap: wrap;
+    padding: 1.5rem 0;
   }
 
   .clear {

@@ -35,7 +35,7 @@
         </ul>
       </div>
       <div class="intro">
-        <div class="py-4 pt-lg-5 pb-lg-4">
+        <div class="py-4 px-3 pt-lg-5 pb-lg-4">
           <div class="width-constrain">
             <div class="mb-3">
               <h1>
@@ -173,7 +173,11 @@
   .loader {
     .cover-parent;
     background: url('./assets/checkers-loader-text.svg') no-repeat center center #E5A339;
-    background-size: 20%;
+    background-size: 220px;
+
+    @media @smart-phone {
+        background-size: 220px;
+    }
   }
 
   @keyframes loader {
@@ -200,10 +204,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 22vw;
-    height: 22vw;
-    margin-top: -11vw;
-    margin-left: -11vw;
+    width: 250px;
+    height: 250px;
+    margin-top: -125px;
+    margin-left: -125px;
     border-radius: 50%;
     border: 2px solid rgba(255, 255, 255, 0.4);
     border-top-color: rgba(255, 255, 255, 1);
@@ -306,7 +310,7 @@
 
     @media @smart-phone {
       height: unset;
-      padding: 42vh 5vw 20vh 5vw;
+      padding: 21rem 2rem 9rem 2rem;
       text-align: center;
       background-image: url('./assets/footer-top-m.jpg'), url('./assets/footer-bottom-m.jpg'), url('./assets/footer-tile-m.jpg');
       background-position: top, bottom, center;
@@ -573,6 +577,7 @@
   .content-filters {
     margin: 0 auto;
     background: url('assets/filter-bg.jpg') repeat;
+    padding: 1rem 0;
 
     @media @smart-phone {
       padding: 6vw;
@@ -580,6 +585,7 @@
 
     .multiselect__tag {
       background: @dark-green;
+      margin-bottom: 0px;
     }
 
     .filters {
@@ -603,7 +609,7 @@
     .filter-item {
       background: fade(#3A6500, 30);
       height: 70px;
-      width: 20%;
+      width: 17%;
       border-radius: 35px;
       color: white;
       text-transform: uppercase;

@@ -21,7 +21,7 @@
               <img src="@/assets/tags-tick.svg" alt=""> {{ tag }}
             </div>
           </div>
-          <div class="details product-desc p-2 p-lg-4" v-html="card.description"></div>
+          <div class="details product-desc p-4 p-lg-4" v-html="card.description"></div>
           <div class="sidebar-details-entry">
             <div class="contents" >
               <ul>

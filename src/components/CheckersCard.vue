@@ -43,7 +43,7 @@
 
   .checkers-card {
     position: relative;
-    background: @grey-ed;
+    background: #fff;
     transform: scale(1);
     transition: all 0.5s;
     cursor: pointer;
