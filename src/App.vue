@@ -50,20 +50,6 @@
         </div>
       </div>
       <router-view :configuration="appConfig"/>
-      <div class="page-footer">
-        <div class="page-footer-content">
-          <div class="page-footer-header">
-            <img src="./assets/stand-to-win.svg" alt="" class="img-fluid">
-          </div>
-          <div class="page-footer-details">
-            Competition ends 10 February 2019.
-          </div>
-          <div class="page-footer-buttons d-flex align-items-center flex-column">
-            <ActionButton buttonLabel="Share photo now" buttonType="text" buttonLink="https://www.checkers.co.za/specials/newsletter.html"></ActionButton>
-            <span class="page-footer-tcs mt-3"><a class="link-text" href="http://www.termsconditions.co.za/index.aspx" target="_blank">T&Cs apply</a></span>
-          </div>
-        </div>
-      </div>
       <div class="page-newsletter py-4">
         <div class="page-newsletter-content w-100 width-constrain d-flex justify-content-between align-items-center flex-column flex-lg-row">
           <div class="page-newsletter-signup">
