@@ -14,11 +14,11 @@
             <img v-show="imageLoaded" class="product-shot" v-bind:src="'./static/'+card.imagePath+''" @load="imgLoaded">
           </div>
         </div>
-        <div class="sidebar-details p-4 p-lg-5">
+        <div class="sidebar-details p-4">
           <div class="product mb-4" v-html="card.productName"></div>
           <div class="d-flex flex-row flex-wrap justify-content-center">
-            <div class="bg-info tags tag-justice" v-for="tag in card.tags">
-              <img src="@/assets/tags-tick.svg" alt=""> {{ tag }}
+            <div class="bg-info tags tag-justice" v-for="tag in card.tags" v-if="tag !== ''">
+              <img src="@/assets/tags-tick.svg" alt=""> {{ tag.replace(/-/g, ' ') }}
             </div>
           </div>
           <div class="details product-desc p-4 p-lg-4" v-html="card.description"></div>

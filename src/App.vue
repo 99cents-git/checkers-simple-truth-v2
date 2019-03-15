@@ -98,9 +98,11 @@
 
     public created() {
       NinjaComms.fetchConfiguration().done((data: any) => {
+
         this.appConfig = data;
         this.appConfig.forEach(_product => {
-          _product.tags = _product.category.split(',').concat(_product.tags.split(' '));
+          _product.ingredientsinfo = _product.ingredientsinfo.replace(/Ê/g, '');
+          _product.tags = _product.category.split(' ').concat(_product.tags.split(' '));
           _product.nutritionalInfo = _product.nutritionalinfo.split('|');
         })
       })

@@ -8,7 +8,7 @@ export default class NinjaComms {
 
   static fetchConfiguration(): any {
     return $.ajax({
-      url: 'https://checkers.99api.ninja/api/products',
+      url: 'https://checkersapi.99c.co.za/99api.ninja/public/api/products',
       method: "GET"
     })
   }
