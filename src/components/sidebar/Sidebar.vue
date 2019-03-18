@@ -64,7 +64,7 @@
       border-radius: 35px;
       color: #333333;
       text-transform: uppercase;
-      margin: 0.5rem;
+      margin: 0.2rem 0.5rem;
 
       display: flex;
       padding: 0 15px;

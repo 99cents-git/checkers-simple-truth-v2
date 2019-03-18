@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <div id="app" >
     <div v-if="!appConfig" class="loader spinner"></div>
+    <Sidebar config="is-right is-portrait has-video" :is-open="sidebarOpen" :card="sidebarCard"></Sidebar>
     <div v-if="appConfig" class="loaded-wrapper">
-      <Sidebar config="is-right is-portrait has-video" :is-open="sidebarOpen" :card="sidebarCard"></Sidebar>
       <CheckersHeader/>
       <div class="breadcrumbs">
         <div class="width-constrain h-100">
@@ -80,6 +80,7 @@
   import Multiselect from 'vue-multiselect';
   import '../node_modules/normalize.css/normalize.css';
   import NinjaComms from "./ninja/NinjaComms";
+  import * as $ from 'jquery';
 
   @Component({
     components: {
@@ -96,6 +97,8 @@
     public sidebarOpen: boolean = false;
     public sidebarCard: any = {};
 
+    private $:any;
+
     public created() {
       NinjaComms.fetchConfiguration().done((data: any) => {
 
@@ -104,7 +107,8 @@
           _product.ingredientsinfo = _product.ingredientsinfo.replace(/Ê/g, '');
           _product.tags = _product.category.split(' ').concat(_product.tags.split(' '));
           _product.nutritionalInfo = _product.nutritionalinfo.split('|');
-        })
+        });
+        this.appConfig.sort((a, b) => (a.category.split(' ')[0] > b.category.split(' ')[0]) ? 1 : -1)
       })
     }
 
@@ -124,6 +128,14 @@
 
     public closeSidebar(): void {
       this.sidebarOpen = false;
+    }
+
+    public applyBodyScroll(_state:boolean):void {
+      if (_state) {
+        document.body.classList.add("no-scroll")
+      } else {
+        document.body.classList.remove("no-scroll")
+      }
     }
 
     public toggleItem(_event: MouseEvent): void {
@@ -156,6 +168,30 @@
 
   body {
     font-family: 'Roboto', sans-serif !important;
+
+    &.no-scroll {
+
+    }
+  }
+
+  #app {
+
+  }
+
+  .loaded-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    z-index: 5;
+
+    @media @smart-phone {
+      position: relative;
+      height: unset;
+      width: unset;
+    }
   }
 
   .loader {
