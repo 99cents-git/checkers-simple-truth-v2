@@ -82,6 +82,9 @@
   import NinjaComms from "./ninja/NinjaComms";
   import * as $ from 'jquery';
 
+  declare var $gtm: any;
+  declare var $ga: any;
+
   @Component({
     components: {
       CheckersHeader,
@@ -97,6 +100,8 @@
     public sidebarOpen: boolean = false;
     public sidebarCard: any = {};
 
+    private $gtm: any;
+    private $ga: any;
     private $:any;
 
     public created() {
@@ -118,28 +123,55 @@
           case 'show-info':
             this.sidebarCard = a.card;
             this.sidebarOpen = true;
+            this.trackGTAEvent({
+              action: 'click',
+              category: 'Simple Truth',
+              event: 'Clicked on product',
+              label: 'Sidebar open',
+              value: a.card.productName
+            });
             break;
           case 'close-sidebar':
             this.sidebarOpen = false;
             break;
         }
-      })
+      });
+      EventBus.$on('track-click', (_event: any) => {
+        this.trackGTAEvent({
+          action: 'click',
+          category: 'Simple Truth',
+          label: _event.label,
+          value: _event.value
+        })
+      });
     }
 
     public closeSidebar(): void {
       this.sidebarOpen = false;
     }
 
-    public applyBodyScroll(_state:boolean):void {
-      if (_state) {
-        document.body.classList.add("no-scroll")
-      } else {
-        document.body.classList.remove("no-scroll")
-      }
+    private trackGTMEvent(_config:any):void {
+      this.$gtm.trackEvent({
+        event: _config.event,
+        category: _config.category,
+        action: _config.action,
+        label: _config.label,
+        value: _config.value
+      });
     }
 
-    public toggleItem(_event: MouseEvent): void {
+    private trackGTAEvent(_config:any):void {
+      console.log(_config);
+      this.$ga.event({
+        eventCategory: _config.category,
+        eventAction: _config.action,
+        eventLabel: _config.label,
+        eventValue: _config.value
+      })
+    }
 
+    private trackGTMPage(_config:any):void {
+      this.$gtm.trackView(_config.pageTitle, _config.pageURL);
     }
   }
 </script>

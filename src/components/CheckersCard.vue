@@ -30,7 +30,10 @@
     @Prop() cardConfig!: ProductCard;
 
     categoryClick (cat_Id):void {
-      console.log(cat_Id);
+      EventBus.$emit('track-click', {
+        label: 'Chose Product Category',
+        value: cat_Id
+      });
       this.$router.push(
         { 
           path: `/filtered/category/${cat_Id}`

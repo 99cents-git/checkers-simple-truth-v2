@@ -27,6 +27,7 @@
   import {Component, Prop} from 'vue-property-decorator';
   import CheckersProduct from '@/components/CheckersProduct.vue';
   import ActionButton from "@/components/ActionButton.vue";
+  import {EventBus} from "@/components/EventBus";
 
   @Component({
     components: {ActionButton, CheckersProduct}
@@ -74,15 +75,19 @@
     }
 
     public updateFilters(): void {
+
       let _concatFilters: any[] = this.filterValue.concat(this.categoryValue);
       this.activeFilters = _concatFilters.map((_value: any) => {
         return _value.name;
+      });
+      EventBus.$emit('track-click', {
+        label: 'Filtered Products',
+        value: this.activeFilters.join(', ')
       });
       this.filterProducts();
     }
 
     public backToCategories(_event:any):void {
-      console.log(_event);
       this.$router.push({path: '/'})
     }
 

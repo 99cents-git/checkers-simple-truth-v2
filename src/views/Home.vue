@@ -18,6 +18,7 @@
   /// <reference path="../interfaces.ts" />
   import {Component, Prop, Vue} from 'vue-property-decorator';
   import CheckersCard from "@/components/CheckersCard.vue";
+  import {EventBus} from '@/components/EventBus';
 
   @Component({
     components: {
@@ -43,20 +44,24 @@
     }
 
     dietaryClick(diet_Id) {
-      this.$router.push(
-          {
-            path: `/filtered/diet/${diet_Id}`
-          })
-
+      EventBus.$emit('track-click', {
+        label: 'Chose Dietary Category',
+        value: diet_Id
+      });
+      this.$router.push({
+        path: `/filtered/diet/${diet_Id}`
+      })
     }
 
     selectDiet(_item: any): void {
-      this.$router.push(
-          {
-            path: `/filtered/diet/${_item.name}`
-          })
+      EventBus.$emit('track-click', {
+        label: 'Chose Dietary Category',
+        value: _item.name
+      });
+      this.$router.push({
+        path: `/filtered/diet/${_item.name}`
+      })
     }
-
   }
 </script>
 <style scoped lang="less">
