@@ -10,8 +10,8 @@
           <youtube :videoId="currentVideoId" player-width="100%" :player-height="videoHeight"></youtube>
         </div>
         <div class="sidebar-image" v-bind:class="{spinner: !imageLoaded}" v-if="!videoVisible">
-          <div class="sidebar-image-wrapper" v-bind:style="{'background-image': 'url(./static/products-bg.png)'}">
-            <img v-show="imageLoaded" class="product-shot" v-bind:src="'./static/'+card.imagePath+''" @load="imgLoaded">
+          <div class="sidebar-image-wrapper" v-bind:style="{'background-image': 'url(https://s3.amazonaws.com/checkershosting/simple-truth/static/products-bg.png)'}">
+            <img v-show="imageLoaded" class="product-shot" v-bind:src="'https://s3.amazonaws.com/checkershosting/simple-truth/static/'+card.imagePath+''" @load="imgLoaded">
           </div>
         </div>
         <div class="sidebar-details p-4">

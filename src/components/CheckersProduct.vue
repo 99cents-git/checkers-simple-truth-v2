@@ -7,7 +7,7 @@
       </div>
       <div class="checkers-product-image" v-if="productConfig.imagePath">
         <div class="checkers-product-image-wrapper">
-          <img :src="'./static/'+productConfig.imagePathThumbnail" alt="">
+          <img :src="'https://s3.amazonaws.com/checkershosting/simple-truth/static/'+productConfig.imagePathThumbnail" alt="">
         </div>
       </div>
       <div class="checkers-product-footer">

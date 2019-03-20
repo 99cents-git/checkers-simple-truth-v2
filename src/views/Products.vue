@@ -38,7 +38,6 @@
     @Prop() configuration!: any;
 
     public filterValue: any = [];
-    //public filterValue: any = [{lable: '',name: ''}];
     public categoryValue: any = [];
     public cFilters: any[] = this.categoryFilters;
     public dFilters: any[] = this.dietFilters;

@@ -4,7 +4,7 @@
     <div class="checkers-card-content d-flex flex-column">
       <div class="checkers-card-image" v-if="cardConfig.hasImage">
         <div class="checkers-card-image-wrapper">
-          <img :src="'./static/'+cardConfig.imagePath" class="img-fluid" alt="">
+          <img :src="'https://s3.amazonaws.com/checkershosting/simple-truth/static/'+cardConfig.imagePath" class="img-fluid" alt="">
         </div>
       </div>
       <div class="checkers-card-footer d-flex flex-column p-4">
