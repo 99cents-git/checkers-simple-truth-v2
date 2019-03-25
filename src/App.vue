@@ -1,5 +1,5 @@
 <template>
-  <div id="app" >
+  <div id="app">
     <div v-if="!appConfig" class="loader spinner"></div>
     <Sidebar config="is-right is-portrait has-video" :is-open="sidebarOpen" :card="sidebarCard"></Sidebar>
     <div v-if="appConfig" class="loaded-wrapper">
@@ -15,7 +15,6 @@
               <li><a href="https://www.checkers.co.za/food/live-better.html">Live Better</a></li>
               <li>Simple Truth</li>
             </ul>
-
           </div>
         </div>
       </div>
@@ -34,6 +33,9 @@
           <li class="promise-item">NO ADDED MSG</li>
         </ul>
       </div>
+      <div class="banner-wrapper width-constrain">
+        <img src="@/assets/new-snacks-banner.jpg" alt="" class="img-fluid">
+      </div>
       <div class="intro">
         <div class="py-4 px-3 pt-lg-5 pb-lg-4">
           <div class="width-constrain">
@@ -49,6 +51,7 @@
           </div>
         </div>
       </div>
+
       <router-view :configuration="appConfig"/>
       <div class="page-newsletter py-4">
         <div class="page-newsletter-content w-100 width-constrain d-flex justify-content-between align-items-center flex-column flex-lg-row">
@@ -102,7 +105,7 @@
 
     private $gtm: any;
     private $ga: any;
-    private $:any;
+    private $: any;
 
     public created() {
       NinjaComms.fetchConfiguration().done((data: any) => {
@@ -150,7 +153,7 @@
       this.sidebarOpen = false;
     }
 
-    private trackGTMEvent(_config:any):void {
+    private trackGTMEvent(_config: any): void {
       this.$gtm.trackEvent({
         event: _config.event,
         category: _config.category,
@@ -160,7 +163,7 @@
       });
     }
 
-    private trackGTAEvent(_config:any):void {
+    private trackGTAEvent(_config: any): void {
       console.log(_config);
       this.$ga.event({
         eventCategory: _config.category,
@@ -170,7 +173,7 @@
       })
     }
 
-    private trackGTMPage(_config:any):void {
+    private trackGTMPage(_config: any): void {
       this.$gtm.trackView(_config.pageTitle, _config.pageURL);
     }
   }
@@ -210,6 +213,10 @@
 
   }
 
+  .banner-wrapper {
+    margin-bottom: 3rem;
+  }
+
   .loaded-wrapper {
     position: fixed;
     top: 0;
@@ -232,7 +239,7 @@
     background-size: 220px;
 
     @media @smart-phone {
-        background-size: 220px;
+      background-size: 220px;
     }
   }
 
