@@ -614,6 +614,12 @@
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@types/sizzle/-/sizzle-2.3.2.tgz#a811b8c18e2babab7d542b3365887ae2e4d9de47"
 
+"@types/vue-scrollto@^2.14.0":
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/@types/vue-scrollto/-/vue-scrollto-2.14.0.tgz#04dc4f5183b266cacdb4ea1550acc0ef8b291b10"
+  dependencies:
+    vue "^2.4.4"
+
 "@types/webpack-env@^1.13.6":
   version "1.13.6"
   resolved "http://registry.npmjs.org/@types/webpack-env/-/webpack-env-1.13.6.tgz#128d1685a7c34d31ed17010fc87d6a12c1de6976"
@@ -7057,7 +7063,6 @@ vm-browserify@0.0.4:
 vue-analytics@^5.16.4:
   version "5.16.4"
   resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.16.4.tgz#7f9e197cbc64afac96884a05214b17efaf8e9d09"
-  integrity sha512-M67cUqpPeyk2rftrvlx2uU+BQ/C4E8SkF2Ct9LizOYUoTccZtCCJwhMJfQ3XL8xep6p3K8KYz58FzRWvx5zlPw==
 
 vue-class-component@^6.0.0, vue-class-component@^6.2.0:
   version "6.3.2"
@@ -7070,7 +7075,6 @@ vue-functional-data-merge@^2.0.5:
 vue-gtm@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/vue-gtm/-/vue-gtm-2.0.0.tgz#8e6ce2408410abda9787e68d257cb1a957c75805"
-  integrity sha512-9h2FI8Z4kZQ5SP55uFFQVHDwdr5UsJav8HpaRmsWB9D4lbP/HAzcsNxLPbgr/pLOMP+0ZXIYte90Cj0Uqyj2bg==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.1"
@@ -7122,6 +7126,10 @@ vue-youtube-embed@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/vue-youtube-embed/-/vue-youtube-embed-2.2.1.tgz#a3be445d2c8e647be2608c90993d5e8791107207"
 
+vue@^2.4.4:
+  version "2.6.10"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
+
 vue@^2.5.17:
   version "2.5.21"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.21.tgz#3d33dcd03bb813912ce894a8303ab553699c4a85"
@@ -7129,7 +7137,6 @@ vue@^2.5.17:
 vueisotope@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/vueisotope/-/vueisotope-3.1.2.tgz#df9d3e32d9770ff97a409d6baca68ec830f03ae7"
-  integrity sha512-mPlHr+YT1kaXXPLzAEwLxgE8Q3gauqj7hfs1U0ww2oeO9cYCdI8sWbJL1iNRDZTSd6p7Lks+6el+FwWcnXLHvQ==
   dependencies:
     isotope-layout "^3.0.1"
     lodash "^4.13.1"

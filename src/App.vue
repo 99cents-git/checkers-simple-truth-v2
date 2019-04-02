@@ -33,8 +33,11 @@
           <li class="promise-item">NO ADDED MSG</li>
         </ul>
       </div>
-      <div class="banner-wrapper width-constrain">
-        <img src="@/assets/new-snacks-banner.jpg" alt="" class="img-fluid">
+      <div class="banner-wrapper width-constrain d-none d-sm-block" @click="goToHeaderLink">
+        <img src="@/assets/new-snacks-banner.jpg" alt="" class="img-fluid" >
+      </div>
+      <div class="banner-wrapper width-constrain d-block d-sm-none" @click="goToHeaderLink">
+        <img src="@/assets/new-snacks-banner-mobi.jpg" alt="" class="img-fluid">
       </div>
       <div class="intro">
         <div class="py-4 px-3 pt-lg-5 pb-lg-4">
@@ -51,7 +54,7 @@
           </div>
         </div>
       </div>
-
+      <a name="scroll-target"></a>
       <router-view :configuration="appConfig"/>
       <div class="page-newsletter py-4">
         <div class="page-newsletter-content w-100 width-constrain d-flex justify-content-between align-items-center flex-column flex-lg-row">
@@ -79,11 +82,11 @@
   import Sidebar from '@/components/sidebar/Sidebar.vue';
   import CheckersFooter from '@/components/CheckersFooter.vue';
   import {EventBus} from "./components/EventBus";
-  import {EVENTS} from "./components/Constants";
   import Multiselect from 'vue-multiselect';
-  import '../node_modules/normalize.css/normalize.css';
   import NinjaComms from "./ninja/NinjaComms";
-  import * as $ from 'jquery';
+  import VueScrollTo from 'vue-scrollto';
+
+  import '../node_modules/normalize.css/normalize.css';
 
   declare var $gtm: any;
   declare var $ga: any;
@@ -149,6 +152,18 @@
       });
     }
 
+    private goToHeaderLink(_event:any):void {
+      this.trackGTAEvent({
+        action: 'click',
+        category: 'Simple Truth',
+        label: 'Snacks Banner',
+        value: ''
+      });
+      this.$router.push({
+        path: `/filtered/category/snacks`
+      });
+    }
+
     public closeSidebar(): void {
       this.sidebarOpen = false;
     }
@@ -164,7 +179,6 @@
     }
 
     private trackGTAEvent(_config: any): void {
-      console.log(_config);
       this.$ga.event({
         eventCategory: _config.category,
         eventAction: _config.action,
@@ -214,7 +228,12 @@
   }
 
   .banner-wrapper {
-    margin-bottom: 3rem;
+    margin-top: 3rem !important;
+    cursor: pointer;
+
+    @media @smart-phone {
+      margin-top: 0 !important;
+    }
   }
 
   .loaded-wrapper {
