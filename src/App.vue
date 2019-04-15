@@ -33,12 +33,6 @@
           <li class="promise-item">NO ADDED MSG</li>
         </ul>
       </div>
-      <div class="banner-wrapper width-constrain d-none d-sm-block" @click="goToHeaderLink">
-        <img src="@/assets/new-snacks-banner.jpg" alt="" class="img-fluid" >
-      </div>
-      <div class="banner-wrapper width-constrain d-block d-sm-none" @click="goToHeaderLink">
-        <img src="@/assets/new-snacks-banner-mobi.jpg" alt="" class="img-fluid">
-      </div>
       <div class="intro">
         <div class="py-4 px-3 pt-lg-5 pb-lg-4">
           <div class="width-constrain">
