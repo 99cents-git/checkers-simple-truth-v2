@@ -50,21 +50,6 @@
       </div>
       <a name="scroll-target"></a>
       <router-view :configuration="appConfig"/>
-      <div class="page-newsletter py-4">
-        <div class="page-newsletter-content w-100 width-constrain d-flex justify-content-between align-items-center flex-column flex-lg-row">
-          <div class="page-newsletter-signup">
-            <div class="page-newsletter-signup-bold">
-              SIGN UP TO OUR NEWSLETTER
-            </div>
-            <div class="page-newsletter-signup-description">
-              Stay up to date with all of our specials, promotions and more.
-            </div>
-          </div>
-          <div class="page-newsletter-button">
-            <ActionButton buttonLabel="Sign Up Now" buttonType="text" buttonTheme="light" buttonLink="https://www.checkers.co.za/specials/newsletter.html"></ActionButton>
-          </div>
-        </div>
-      </div>
       <CheckersFooter></CheckersFooter>
     </div>
   </div>
