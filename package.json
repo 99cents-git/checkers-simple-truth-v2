@@ -35,6 +35,6 @@
     "less-loader": "^4.1.0",
     "typescript": "^3.0.0",
     "vue-template-compiler": "^2.5.17",
-    "yarn": "^1.13.0"
+    "yarn": "^1.22.0"
   }
 }
